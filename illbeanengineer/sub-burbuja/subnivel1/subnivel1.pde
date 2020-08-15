@@ -9,4 +9,4 @@ void draw(){
   background(250);
 
 burbuja.dibujo();
-    } 
+    }
