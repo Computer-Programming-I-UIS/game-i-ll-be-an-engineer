@@ -16,7 +16,7 @@ textos ingles6;
 textos ingles7;
 textos ingles8;
 textos ingles9;
-//burbujas burbuja;
+burbujas burbuja;
 botones nivel1;
 botones nivel2;
 botones nivel3;
@@ -154,26 +154,26 @@ for(int i=0; i<14; i++){
   
 }
 
-//burbuja= new burbujas();
-// burbuja.condiciones();
+burbuja= new burbujas();
+
 
 nivelesss[0]=true;
-nivel1= new botones(strokeniveles[0],610,1380,1,nivelesss[0]);
-nivel2= new botones(strokeniveles[1],645,1320,2,nivelesss[1]);
-nivel3= new botones(strokeniveles[2],635,1225,3,nivelesss[2]);
-nivel4= new botones(strokeniveles[3],500,1160,4,nivelesss[3]);
-nivel5= new botones(strokeniveles[4],205,1060,5,nivelesss[4]);
-nivel6= new botones(strokeniveles[5],300,960,6,nivelesss[5]);
-nivel7= new botones(strokeniveles[6],435,910,7,nivelesss[6]);
+nivel1= new botones(strokeniveles[0],615,1380,1,nivelesss[0]);
+nivel2= new botones(strokeniveles[1],645,1260,2,nivelesss[1]);
+nivel3= new botones(strokeniveles[2],635,1170,3,nivelesss[2]);
+nivel4= new botones(strokeniveles[3],500,1140,4,nivelesss[3]);
+nivel5= new botones(strokeniveles[4],360,1120,5,nivelesss[4]);
+nivel6= new botones(strokeniveles[5],210,1030,6,nivelesss[5]);
+nivel7= new botones(strokeniveles[6],320,950,7,nivelesss[6]);
 
-nivel8= new botones(strokeniveles[7],650,815,8,nivelesss[7]);
-nivel9= new botones(strokeniveles[8],590,1440,9,nivelesss[8]);
-nivel10= new botones(strokeniveles[9],590,1440,10,nivelesss[9]);
-nivel11= new botones(strokeniveles[10],590,1440,11,nivelesss[10]);
-nivel12= new botones(strokeniveles[11],590,1440,12,nivelesss[11]);
-nivel13= new botones(strokeniveles[9],590,1440,13,nivelesss[12]);
-nivel14= new botones(strokeniveles[10],590,1440,14,nivelesss[13]);
-nivel15= new botones(strokeniveles[11],590,1440,15,nivelesss[14]);
+nivel8= new botones(strokeniveles[7],500,895,8,nivelesss[7]);
+nivel9= new botones(strokeniveles[8],680,820,9,nivelesss[8]);
+nivel10= new botones(strokeniveles[9],610,640,10,nivelesss[9]);
+nivel11= new botones(strokeniveles[10],480,600,11,nivelesss[10]);
+nivel12= new botones(strokeniveles[11],340,530,12,nivelesss[11]);
+nivel13= new botones(strokeniveles[9],230,440,13,nivelesss[12]);
+nivel14= new botones(strokeniveles[10],450,370,14,nivelesss[13]);
+nivel15= new botones(strokeniveles[11],490,270,15,nivelesss[14]);
 
 espanol1 = new textos(espanol, 0, 15, 15,200,27,0,0);
 espanol2 = new textos(espanol,17,17,34,200,27,0,0);
@@ -268,7 +268,9 @@ menuprincipal();}
 else if(playy==true){
 
 menuniveles();
-
+nivel1.niveles(); nivel2.niveles(); nivel3.niveles(); nivel4.niveles(); nivel5.niveles(); nivel6.niveles(); nivel7.niveles(); 
+nivel8.niveles();nivel9.niveles(); nivel10.niveles();nivel11.niveles(); nivel12.niveles();nivel13.niveles();
+nivel14.niveles();nivel15.niveles();
 
 
   
@@ -296,6 +298,8 @@ else if(yimg<-962){
 
 }
 void mousePressed(){
+  nivel1.mousePressed();
+nivel2.mousePressed();
   if(playy==false){
   
   if(mouseX>=435 && mouseX<=545 && mouseY>=385 && mouseY<=475){
@@ -325,8 +329,7 @@ if(mouseX>=xsettings-35 && mouseX<=xsettings+35 && mouseY>=ysettings-35 && mouse
     dianoche=true;
   }
   }
-nivel1.mousePressed();
-nivel2.mousePressed();
+
 
 if(playy==true && next<10){
 

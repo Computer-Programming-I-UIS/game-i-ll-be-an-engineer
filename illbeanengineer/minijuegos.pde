@@ -2,8 +2,9 @@
 void minijuegos(){
   
   if(nivelesss[0]==true){
-    colorfondo=color(#FFFFFF);
-    
+
+    burbuja.condiciones();
+    burbuja.dibujo();
     
   }
   
@@ -14,7 +15,8 @@ void minijuegos(){
 
 
 
-class burbujas {
+class burbujas{
+ 
   int score=0;
  float[] x2=new float[15] ;// ancho de las burbujas
  float[] y1=new float[15] ;//posición en y
@@ -35,6 +37,8 @@ y1[j]=random(-500,0);
   }
   
   void dibujo (){
+     nubeee1=false; nubeee2=false; solsol=false; pastoo=false; flores=false; estrellitas=false; gusanitoo=false; cohetesss=false; planetas=false;shipss=false;
+rayoo=false; thinkerr=false;lunaaa=false;
         for (int i = 0; i < x2.length; i++) {
        //burbuja.t();
       // ellipseMode(RADIUS);

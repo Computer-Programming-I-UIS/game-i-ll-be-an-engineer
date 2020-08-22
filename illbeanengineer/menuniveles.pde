@@ -14,7 +14,7 @@ ydianoche=-250;
  if(dianoche==true){
     blanco=color(#FFFFFF);
     negro=color(#000000);
-  colorfondo=color(counterflor*2,50,99);
+  colorfondo=color(#E8F4FF);
 nubeee1=true; nubeee2=true; solsol=true; pastoo=true; flores=true; estrellitas=false; gusanitoo=true; cohetesss=false; planetas=false;shipss=false;
 rayoo=false; thinkerr=false;lunaaa=false;
 if(next>=4){
@@ -57,9 +57,7 @@ yflor3=1475+yimg;
 yflor4=1475+yimg;
 yflor5=1475+yimg;
 x=0;
-nivel1.niveles(); nivel2.niveles(); nivel3.niveles(); nivel4.niveles(); nivel5.niveles(); nivel6.niveles(); nivel7.niveles(); 
-nivel8.niveles();nivel9.niveles(); nivel10.niveles();nivel11.niveles(); nivel12.niveles();nivel13.niveles();
-nivel14.niveles();nivel15.niveles();
+
 
 
   }
