@@ -123,7 +123,7 @@ if(counterstars>=0 && counterstars<30){
   ////////////////////////////////////////////////////////////
 if(planetas==true){
 image(p1,xp1,yp1,wp1,hp1);//planeta1
-image(p2,xp2,yp2,wp2,hp2);//planeta2
+image(p2,xpp2,ypp2,wp2,hp2);//planeta2
 if(next>=4){
 image(p2,140,1300+yimg,wp2,hp2);//planeta2
 }
@@ -190,14 +190,7 @@ yship2=550+y;
 }
 }
 
-////////////////////////////////////////////////////////////
-  ////////////////////      SHIPS  //////////////////////
-  ////////////////////////////////////////////////////////////
-if(shipss==true){
-  image(s1,xshipp1,yshipp1,wshipp1,wshipp1);
-  image(s2,xshipp2,yshipp2,wshipp2,wshipp2);
-  image(s3,xshipp3,yshipp3,wshipp3,wshipp3);
-}
+
 
 ////////////////////////////////////////////////////////////
   ////////////////////      RAYO  //////////////////////

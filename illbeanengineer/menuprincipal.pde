@@ -29,9 +29,9 @@ textSize(80);
 fill(illbe);
 textAlign(CENTER, CENTER);
 if(idioma==false){
-text("I'LL BE AN ENGINEER",500,310);}
+text("HELLO",500,310);}
 else if(idioma==true){
-text("gineth no se que titulo poner:(",500,310);
+text("HOLA",500,310);
 }
 
  strokeWeight(strokewp);
