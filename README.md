@@ -13,7 +13,9 @@ Tener Processing instalado en tu dispositivo
 
 
 ## NIVELES 🚀
-
+El juego consta de 15 niveles, los cuales serán desbloqueados cuando se completen los niveles anteriores.
+Cada nivel tiene 3 minijuegos que se mostrarán en pantalla en forma de menú al seleccionar el nivel. Los minijuegos consisten en lo siguiente:
+   ## NIVELES 🚀
     - El primero consiste en burbujas con operaciones matemáticas que van cayendo. Para ganar puntos y completar el minijuego debes 
       presionar solamente las burbujas con ecuaciones correctas, estas serán identificadas cuando al presionar sobre ellas queden del mismo color; 
       si se presiona una incorrecta la burbuja se tornará de un color fucsia. Debes obtener 20 puntos para completar este minijuego.
