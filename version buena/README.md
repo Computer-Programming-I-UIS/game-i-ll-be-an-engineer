@@ -1,7 +1,7 @@
 # I'LL BE AN ENGINEER
 
 Este es un juego para practicar tus habilidades matemáticas, que va aumentando su complejidad a medida de que se van desbloqueando los niveles.
-![alt tag](version buena/illbeanengineer/Screen Shot 2020-08-26 at 12.56.57 PM.png)
+![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-08-26%20at%2012.56.57%20PM.png)
 
 ## AJUSTES ⚙️
 -Este juego cuenta con un botón de de ajustes que al ser presionado puedes cambiar idioma del juego y en el que puedes activar o desactivar la
@@ -55,8 +55,9 @@ la asignatura programación de computadores I
 * **GINETH VANESSA MUÑOZ CADENA-2191476** 
 
 ## CRÉDITOS
-A nosotras y a nuestros padres por probar el juego.
-Sonidos:
+-A nosotras y a nuestros padres por probar el juego.
+
+-Sonidos: freesound.org
 
 
 
