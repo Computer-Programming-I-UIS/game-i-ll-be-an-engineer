@@ -1,105 +1,40 @@
-# Título del Proyecto
+# I'LL BE AN ENGINEER
 
-_Acá va un párrafo que describa lo que es el proyecto_
+Este es un juego para practicar tus habilidades matemáticas, que va aumentando su complejidad a medida de que se van desbloqueando los niveles.
 
-## Comenzando 🚀
+## AJUSTES ⚙️
+Este juego cuenta con un botón de de ajustes que al ser presionado puedes cambiar idioma del juego y en el que puedes activar o desactivar la
+musica del juego. También cuenta con un botón que cambia el entorno del modo diurno (claro) al modo nocturno(oscuro). 
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+## NIVELES 🚀
+El juego consta de 15 niveles, los cuales serán desbloqueados cuando se completen los niveles anteriores.
+Cada nivel tiene 3 minijuegos que se mostrarán en pantalla en forma de menú al seleccionar el nivel. Los minijuegos consisten en lo siguiente:
+-El primero consiste en burbujas con operaciones matemáticas que van cayendo. Para ganar puntos y completar el minijuego debes 
+ presionar solamente las burbujas con ecuaciones correctas, estas serán identificadas cuando al presionar sobre ellas queden del mismo color; 
+ si se presiona una incorrecta la burbuja se tornará de un color fucsia. Debes obtener 20 puntos para completar este minijuego.
+- El segundo juego es sobre un cohete que quiere llegar a la tierra, y cada vez que llega aparece una ventan con una operación matematica que 
+ debes resolver en menos de 10 segundos, ya que si demoras más tiempo se cerrará y no podrás hacer un punto. Este minijuego tiene diez preguntas,
+ pero para pasarlo se deden acertar un mínimo de 7. El cohete se deplazará con las teclas de dirección arriba, abajo, izquierda y derecha de tu teclado.
+ -En el tercer minijuego debes ayudar a lolaboa a comer sus dulces que se vayan aproximando a ella, pero ella solo debe comer los que tengan la 
+  respueta correcta a la operación  que aparezca la parte de arriba.Podrás mover a lola con las teclas de de dirección arriba y abajo.
+  
 
-Mira **Deployment** para conocer como desplegar el proyecto.
+### REQUISISTOS 📋
+
+Tener Processing instalado en tu dispositivo
 
 
-### Pre-requisitos 📋
-
-_Que cosas necesitas para instalar el software y como instalarlas_
-
-```
-Da un ejemplo
-```
-
-### Instalación 🔧
-
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
-
-_Dí cómo será ese paso_
-
-```
-Da un ejemplo
-```
-
-_Y repite_
-
-```
-hasta finalizar
-```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
-## Ejecutando las pruebas ⚙️
-
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-## Despliegue 📦
-
-_Agrega notas adicionales sobre como hacer deploy_
-
-## Construido con 🛠️
-
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
-
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
-
-## Autores ✒️
-
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
-
-## Expresiones de Gratitud 🎁
-
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* etc.
+### CODIFICACIÓN ⌨️
 
 
 
----
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
+
+## AUTORAS ✒️
+Este video juego fue realizado por las estudiantes de programación de computadores I de la Universidad indsutrial de Santander
+
+* **PAULA ANDREA ARGUELLO GUTIERREZ-2191444**
+* **GINETH VANESSA MUÑOZ CADENA-2191476** 
+
+
+
+
