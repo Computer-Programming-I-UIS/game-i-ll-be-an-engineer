@@ -1,6 +1,6 @@
 void introduccion(){
 
-
+musicamenu=true;
 
 if(next<4){
   w+=20;
@@ -106,16 +106,13 @@ yflor5=1475+yimg;
    }
    
    if(next==5){
+
      
-     if(minijuegos==true){
-       next=6;
-      
-     }
      if(yimg>-950){
        fill(negro);
        rect(235,270,15,50);
        triangle(220,320,265,320,242,335);}
-     if(yimg<=-950 && minijuegos==false){
+     if(yimg<=-950 && jugarnivel[0]==false){
        strokeWeight(15);
        stroke(countercolor,99,99);
        line(460,380,560,yimg+1380);
@@ -123,7 +120,8 @@ yflor5=1475+yimg;
        noStroke();
        triangle(562,yimg+1360,550,yimg+1395,590,yimg+1390);
        
-     nivel1.niveles();}  
+     
+ }  
        
    if(idioma==false){
      ingles8.escribir();
@@ -140,17 +138,78 @@ yflor5=1475+yimg;
      }
      
    }
-   if(next==6){
-      nubeee1=false; nubeee2=false; solsol=false; pastoo=false; flores=false; estrellitas=false; gusanitoo=false; cohetesss=false; planetas=false;shipss=false;
-rayoo=false; thinkerr=false;lunaaa=false;
-       burbujasnivel1.dibujar();
-       xnext=-150;
-       ynext=300;
-   }
+   if(minijuegos==false){
+   nivel1.niveles();
+   
+ if (animacionjugar==true) {
+      creditos=false;
+      fill(color(sizejugarrr, 99, 99));
+      noStroke();
+      ellipse(500, 430, sizejugar, sizejugar);
+      sizejugarrr+=4;
+      if (sizejugarrr>=120) {
+        sizejugarrr=0;
+      }
+      sizejugar+=35;
+    }}
+
+
+       nubeee1=false; 
+      nubeee2=false; 
+      solsol=false; 
+      pastoo=false; 
+      flores=false; 
+      estrellitas=false; 
+      gusanitoo=false; 
+      cohetesss=false; 
+      planetas=false;
+      shipss=false;
+      rayoo=false; 
+      thinkerr=false;
+      lunaaa=false;
+     
+     
+        if (jugarnivel[0]==true) {
+     next=6;
+      jugarnivel[1]=false;jugarnivel[14]=false;
+      tutorialburbujas=true;
+        burbujasnivel0.dibujar();
+      
+
+      if (tutorialburbujas==false) {
+        jugandoCohetes = true;
+
+        cohetenivel0.move();
+        cohetenivel0.dibujo();
+        cohetenivel0.collide();
+        cohetenivel0.punto();
+      }else {
+        jugandoCohetes = false;
+        
+      }
+      
+
+      if (tutorialcohetes==false) {
+menuminijuegos=false;
+        lolaboanivel0.dibujar();
+      }
+      if(tutoriallolaboa==false){
+        next=10;
+      }
+      
+
+    }
+//   if(next==6){
+//      nubeee1=false; nubeee2=false; solsol=false; pastoo=false; flores=false; estrellitas=false; gusanitoo=false; cohetesss=false; planetas=false;shipss=false;
+//rayoo=false; thinkerr=false;lunaaa=false;
+//       burbujasnivel1.dibujar();
+//       xnext=-150;
+//       ynext=300;
+//   }
    
    
    
-   if(next!=5){
+   if(next!=5 && jugarnivel[0]==false){
    strokeJoin(ROUND);
    fill(negro);
    stroke(negro);
@@ -165,7 +224,7 @@ rayoo=false; thinkerr=false;lunaaa=false;
     text("sig.",316+xnext,325+ynext);
    }}
    
-   if(next>=1){
+   if(next>=1 && jugarnivel[0]==false){
      stroke(negro);
      strokeJoin(ROUND);
    fill(negro);

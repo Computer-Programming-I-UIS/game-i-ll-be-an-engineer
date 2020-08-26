@@ -410,9 +410,6 @@ triangle(657+xdianoche,447+ydianoche,667+xdianoche,437+ydianoche,666+xdianoche,4
   
 
 
-////////////////////////////////////////////////////////////
-  ///////////////////////// SETTINGS//////////////////////////
-  ////////////////////////////////////////////////////////////
   
   
 
@@ -422,5 +419,10 @@ triangle(657+xdianoche,447+ydianoche,667+xdianoche,437+ydianoche,666+xdianoche,4
  countercolor++;
 if(countercolor ==100){
   countercolor=0;
-} 
+}
+
+
+
+
+
 }

@@ -1,5 +1,7 @@
 
 void menuprincipal(){
+musicamenu=true;
+ 
   
   if(dianoche==true){
     
@@ -29,9 +31,9 @@ textSize(80);
 fill(illbe);
 textAlign(CENTER, CENTER);
 if(idioma==false){
-text("HELLO",500,310);}
+text("I'LL BE AN ENGEENIER",500,310);}
 else if(idioma==true){
-text("HOLA",500,310);
+text("MINI INGENIEROS",500,310);
 }
 
  strokeWeight(strokewp);
@@ -42,6 +44,7 @@ noStroke();
 fill(play);
 triangle(480,400,480,460,535,430);
 if(animacionplay==true){
+  creditos=false;
 fill(color(sizeplayyyy,99,99));
   ellipse(500,430,sizeplay,sizeplay);
   sizeplayyyy+=4;
@@ -50,6 +53,7 @@ fill(color(sizeplayyyy,99,99));
   }
   sizeplay+=25;
  if(sizeplay>=2000){
+   creditos=true;
         playy=true;
         animacionplay=false;
         
@@ -62,6 +66,10 @@ else{
 play = color(negro);
 strokeplay = color(negro);  
 }
+
+image(edad,0,550,100,150);
+
+
 }
 
 

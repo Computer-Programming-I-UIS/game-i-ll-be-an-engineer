@@ -11,6 +11,7 @@ class lolaboa{
       aleatorioy3[j]=random(450,550);
       aleatoriortas[j]=random(0,3);
       comer[j]=false;
+        
     }
     
     op=_op;
@@ -21,7 +22,7 @@ class lolaboa{
 
 
 void dibujar(){
-  
+  musicamenu=false;
   for(int i=0;i<15;i++){
       if(aleatoriocandys[i]<=1){
       candys1[i]=candy1;
@@ -124,9 +125,13 @@ pushMatrix();
     if(dist(200,yroll+90,xcandys,aleatorioy1[i])<=20 && comer[i]==false){
      comer[i]=true;
       if(rtas1[i]==lolaboacorrectass[i+op]){
+        candybueno.rewind();
+        candybueno.play();
         puntos++;
       }
       else{
+        candymalo.rewind();
+        candymalo.play();
         puntos+=0;
       }
       
@@ -134,9 +139,13 @@ pushMatrix();
     else if(dist(200,yroll+90,xcandys,aleatorioy2[i])<=20 && comer[i]==false){
     comer[i]=true;
       if(rtas2[i]==lolaboacorrectass[i+op]){
+        candybueno.rewind();
+        candybueno.play();
         puntos++;
       }
       else{
+        candymalo.rewind();
+        candymalo.play();
         puntos+=0;
       }
       
@@ -144,9 +153,13 @@ pushMatrix();
     else if(dist(200,yroll+90,xcandys,aleatorioy3[i])<=20 && comer[i]==false){
      comer[i]=true;
       if(rtas3[i]==lolaboacorrectass[i+op]){
+        candybueno.rewind();
+        candybueno.play();
         puntos++;
       }
       else{
+        candymalo.rewind();
+        candymalo.play();
         puntos+=0;
       }
       
@@ -176,6 +189,7 @@ text(puntos,950,330);
     
    if(comer[14]==true){ 
 if(puntos>=10){
+  levelcompleted.play();
       todosjuegos[nivel]=true;
       fill(#FF00A6);
     textSize(50);
@@ -187,6 +201,7 @@ if(puntos>=10){
     }
     }
     else{
+      gameover.play();
       fill(#FF00A6);
       textSize(50);
     if(enes==false){
@@ -218,6 +233,7 @@ void mousePressed(){
   if(mouseX>=915 && mouseX<=985 && mouseY>=595 && mouseY<=665){
   minijuegos=false;
   puntos=0;
+  xcandys=1000;
   i=0;
   for(int j=0;j<15;j++){
       aleatoriocandys[j]=random(0,4);
