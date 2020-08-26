@@ -28,5 +28,36 @@ d/dx(ln(x))
 ∫(1/(1-x))dx
 d/dx((sinx)(cos2x))dx
 ∫(x²/√x)dx
+2+2
+4+5
+6-4
+5+3
+55-17
+12+35
+48+18
+15-9
+82-12
+9+21
+2x2
+4/2
+3x6
+5x8
+12/4
+10/2
+7x7
+6x8
+8x9
+11x5
+d/dx(sin²x)
+∫(e^(2x))dx
+d/dx(1/x)
+∫(x³)dx
+d/dx(√x)
+∫(cos(2x))dx
+d/dx(ln(x))
+∫(1/(1-x))dx
+d/dx((sinx)(cos2x))dx
+∫(x²/√x)dx
+
 
 

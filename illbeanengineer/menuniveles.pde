@@ -62,7 +62,7 @@ void menuniveles() {
 
 
 
-  if (next>=10 && minijuegos ==false) {
+  if (next>=5 && minijuegos ==false) {
     w=1000;
     h=8*w/5;
     yp1=yimg+720;
@@ -85,6 +85,7 @@ void menuniveles() {
 
 
     nivel1.niveles(); 
+    if(next>=10){
     nivel2.niveles(); 
     nivel3.niveles(); 
     nivel4.niveles(); 
@@ -98,8 +99,9 @@ void menuniveles() {
     nivel12.niveles();
     nivel13.niveles();
     nivel14.niveles();
-    nivel15.niveles();
+    nivel15.niveles();}
     if (animacionjugar==true) {
+     
       creditos=false;
       fill(color(sizejugarrr, 99, 99));
       noStroke();
@@ -110,7 +112,7 @@ void menuniveles() {
       }
       sizejugar+=35;
     }
-  } else if (minijuegos==true && next>10) {
+  } else if (minijuegos==true) {
 
 
     if (menuminijuegos==true) {
@@ -164,6 +166,12 @@ void menuniveles() {
     }
 
     if (jugarnivel[0]==true && nivelesss[0]==true) {
+       if(next==5){
+        next=6;
+      }
+      if(tutorialburbujas==false && tutoriallolaboa==false && tutorialcohetes==false){
+        next=10;
+      }
       jugarnivel[1]=false;jugarnivel[14]=false;
       if (entergame1==true) {
         menuminijuegos=false;
@@ -244,7 +252,7 @@ void menuniveles() {
 
 
 
-  if (next<10) {
+  if (next<6) {
 
     introduccion();
   }

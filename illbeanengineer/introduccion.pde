@@ -56,7 +56,7 @@ yflor5=1475+yimg;
      ypasto=1515+yimg;}
      if(x<=0){
      x=0;}}
- if(next>=5){
+ if(next==5){
    y=yimg; 
   }
 
@@ -138,67 +138,9 @@ yflor5=1475+yimg;
      }
      
    }
-   if(minijuegos==false){
-   nivel1.niveles();
+ 
    
- if (animacionjugar==true) {
-      creditos=false;
-      fill(color(sizejugarrr, 99, 99));
-      noStroke();
-      ellipse(500, 430, sizejugar, sizejugar);
-      sizejugarrr+=4;
-      if (sizejugarrr>=120) {
-        sizejugarrr=0;
-      }
-      sizejugar+=35;
-    }}
 
-
-       nubeee1=false; 
-      nubeee2=false; 
-      solsol=false; 
-      pastoo=false; 
-      flores=false; 
-      estrellitas=false; 
-      gusanitoo=false; 
-      cohetesss=false; 
-      planetas=false;
-      shipss=false;
-      rayoo=false; 
-      thinkerr=false;
-      lunaaa=false;
-     
-     
-        if (jugarnivel[0]==true) {
-     next=6;
-      jugarnivel[1]=false;jugarnivel[14]=false;
-      tutorialburbujas=true;
-        burbujasnivel0.dibujar();
-      
-
-      if (tutorialburbujas==false) {
-        jugandoCohetes = true;
-
-        cohetenivel0.move();
-        cohetenivel0.dibujo();
-        cohetenivel0.collide();
-        cohetenivel0.punto();
-      }else {
-        jugandoCohetes = false;
-        
-      }
-      
-
-      if (tutorialcohetes==false) {
-menuminijuegos=false;
-        lolaboanivel0.dibujar();
-      }
-      if(tutoriallolaboa==false){
-        next=10;
-      }
-      
-
-    }
 //   if(next==6){
 //      nubeee1=false; nubeee2=false; solsol=false; pastoo=false; flores=false; estrellitas=false; gusanitoo=false; cohetesss=false; planetas=false;shipss=false;
 //rayoo=false; thinkerr=false;lunaaa=false;
@@ -209,7 +151,7 @@ menuminijuegos=false;
    
    
    
-   if(next!=5 && jugarnivel[0]==false){
+   if(next<5 ){
    strokeJoin(ROUND);
    fill(negro);
    stroke(negro);
@@ -224,7 +166,7 @@ menuminijuegos=false;
     text("sig.",316+xnext,325+ynext);
    }}
    
-   if(next>=1 && jugarnivel[0]==false){
+   if(next<=5){
      stroke(negro);
      strokeJoin(ROUND);
    fill(negro);

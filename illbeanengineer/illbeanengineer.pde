@@ -155,10 +155,10 @@ float ypasto=550;
 
 boolean nubeee1=true, nubeee2=true, solsol=true, pastoo=true, flores=true, estrellitas=false, gusanitoo=false, cohetesss=false, planetas=false, ships=false, shipss=false;
 boolean rayoo=false, thinkerr=false, lunaaa=false, jugar=true, nightshifttt=true, musiquita=false, configuraciones=true, enes=false;
-boolean tutorialburbujas=false, tutoriallolaboa=false, tutorialcohetes=false;
+boolean tutorialburbujas=true, tutoriallolaboa=true, tutorialcohetes=true;
 
 boolean saludo=false; 
-boolean musicaa=false; 
+boolean musicaa=true; 
 boolean settings=false; 
 boolean idioma = false; 
 boolean dianoche=true; 
@@ -194,7 +194,7 @@ int yimg=0;
 float w = 0;
 float h = 8*w/5;
 
-int next=5;
+int next=0;
 int weighttt=30;
 int counterstars = 0;
 int sizeplay=0;
@@ -297,22 +297,19 @@ void setup() {
     todosjuegos[i]=false;
   }
 
-burbujasnivel0= new burbujas(0, 0.8, 0);/////////////////////////////posicion de la linea
-  cohetenivel0= new cohetes(0, 0);
-  lolaboanivel0=new lolaboa(0, 1.5, 0);
 
   burbujasnivel1= new burbujas(0, 0.8, 0);/////////////////////////////posicion de la linea
   cohetenivel1= new cohetes(0, 1);
   lolaboanivel1=new lolaboa(0, 1.5, 2);
   
-  burbujasnivel2= new burbujas(0, 0.8, 3);/////////////////////////////posicion de la linea
-  cohetenivel2= new cohetes(0, 4);
-  lolaboanivel2=new lolaboa(0, 1.5, 5);
+  burbujasnivel2= new burbujas(30, 0.8, 3);/////////////////////////////posicion de la linea
+  cohetenivel2= new cohetes(10, 4);
+  lolaboanivel2=new lolaboa(15, 1.5, 5);
   
 
-  burbujasnivel15= new burbujas(32, 0.8, 42);
-  cohetenivel15= new cohetes(0, 43);
-  lolaboanivel15=new lolaboa(0, 1.5, 44);
+  burbujasnivel15= new burbujas(60, 0.8, 42);
+  cohetenivel15= new cohetes(20, 43);
+  lolaboanivel15=new lolaboa(30, 1.5, 44);
 
 
   nivel1= new botones(615, 1380, 0);
@@ -537,13 +534,7 @@ void mousePressed() {
     burbujasnivel1.mousePressed();
     lolaboanivel1.mousePressed();
     cohetenivel1.mousePressed();
-    if(next<10){
-      nivel1.mousePressed();
-    burbujasnivel0.mousePressed();
-    lolaboanivel0.mousePressed();
-    cohetenivel0.mousePressed();
-      
-    }
+    
   }
   
   if (nivelesss[1]==true ) {
@@ -652,4 +643,14 @@ void mousePressed() {
   if (mouseX>=0 && mouseX<=50 && mouseY>=0 && mouseY<=50 && seecredits==true) {
     seecredits=false;
   }
+  
+  
+  if (mouseX>=430 && mouseX<=570 && mouseY>=550 && mouseY<=610 && tutorialburbujas==true && entergame1==true) {
+    tutorialburbujas=false;
+  }
+  if (mouseX>=430 && mouseX<=570 && mouseY>=420 && mouseY<=480 && tutoriallolaboa==true && entergame3==true) {
+    tutoriallolaboa=false;
+  }
+  
+  
 }

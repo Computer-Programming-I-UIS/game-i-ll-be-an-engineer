@@ -32,6 +32,24 @@ class cohetes {
 
 
     musicamenu=false;
+    if(tutorialcohetes==true && !preguntando){
+        textSize(30);
+
+        if(enes==true){
+        fill(#EFEAFF);
+       text("Ayuda al cohete a llegar a la tierra!!!!",500,450);
+       fill(#EAF2FF);
+       text("Utiliza las flechas para moverlo",500,490);
+       
+      }
+      if(enes==false){
+        fill(#EFEAFF);
+       text("Help the rocket ship to reach the Earth",500,450);
+       fill(#EAF2FF);
+       text("Use arrow keys to move it",500,490);
+
+      }       
+      }
     if (keyPressed && (key == CODED)  && !preguntando) {  //condicional si se oprime una tecla
       if (keyCode==LEFT) {      //si oprime la flecha izquierda
         coheteplay=coheteplayh2;
@@ -54,6 +72,11 @@ class cohetes {
     }
   }
   void dibujo() {
+    
+    
+     
+    
+    
     colorfondo=#0F064B;
     estrellitas=true;
     noStroke();
@@ -101,13 +124,17 @@ class cohetes {
     }
   }
   void punto() { 
-    if (dist(x1, y1, xp, yp)<=120) { //
+    if (dist(x1, y1, xp, yp)<=120) {//
       if (!preguntando) {
         t1 = millis();
         preguntando = true;
       }
       t2 = millis();
       if (t2 - t1 < tiempoEsperar_ms) {
+        
+        
+        
+        
         if ( cohetestiktak.position() == cohetestiktak.length() )
         {
           cohetestiktak.rewind();
@@ -126,7 +153,7 @@ class cohetes {
         fill(0);
         textSize(50);
         textAlign(CENTER, CENTER);
-        text(preguntas[selector], 500, 200);
+        text(preguntas[selector+op], 500, 200);
         text("La respuesta es:", 500, 300);/////////////////////////////////////////////
 
         fill(a);
@@ -134,16 +161,42 @@ class cohetes {
         fill(b);  
         rect(600, 450, 100, 100);////////////////////////////////////////////////////
         fill(0);
+        if(nivel==43){
+        textSize(15);}
         if (j<=0.5) {
-          text(correctas[selector], 350, 500);
-          text(incorrectas[selector], 650, 500);
+          text(correctas[selector+op], 350, 500);
+          text(incorrectas[selector+op], 650, 500);
         }
         if (j>=0.5) {
-          text(incorrectas[selector], 350, 500);
-          text(correctas[selector], 650, 500);
+          text(incorrectas[selector+op], 350, 500);
+          text(correctas[selector+op], 650, 500);
         }
         text(10-((t2-t1)/1000), 700, 100);
         t2 = millis();
+        
+        
+        if(tutorialcohetes==true){
+        textSize(30);
+
+        if(enes==true){
+        fill(#9BC0FF);
+       text("Escoje la respuesta correcta en menos de 10 segundos!",500,580);
+       
+       
+      }
+      if(enes==false){
+        fill(#9BC0FF);
+       text("choose the correct answer in less than 10 seconds!",500,580);
+ 
+      
+
+      }       
+      }
+        
+        
+        
+        
+        
       } else {
         //Cambiar de posicion el punto
         do {
@@ -151,6 +204,7 @@ class cohetes {
           yp = random(30, 670);
           j=random(0, 1);
         } while (dist(x1, y1, xp, yp)<=120);
+        tutorialcohetes=false;
         a=#FFFFFF;
         b=#FFFFFF;
         press1=false;
@@ -162,7 +216,7 @@ class cohetes {
 
           if (cont>=7) {
             todosjuegos[nivel]=true;
-            levelcompleted.play();
+            //levelcompleted.play();
             fill(#FF00A6);
             textSize(50);
             if (enes==false) {

@@ -103,8 +103,45 @@ fill(#C90083);
  text(rtas1[i],xcandys,aleatorioy1[i]);
  text(rtas2[i],xcandys,aleatorioy2[i]);
  text(rtas3[i],xcandys,aleatorioy3[i]);
+ 
+ 
+ 
+ if(tutoriallolaboa==true){
+   xcandys=900;
+        textSize(30);
 
- xcandys-=vel;
+        if(enes==true){
+        fill(#FF58EC);
+       text("Hola! ayudame a comer los dulces buenos",500,300);
+       text("Dulces toxicos = respuestas incorrectas",500,340);
+       text("Dulces buenos = respuestas correctas",500,380);
+       
+      }
+      if(enes==false){
+        fill(#FF58EC);
+       text("Hi! help me eat good candys",500,300);
+       text("Toxic candys = wrong answers",500,340);
+       text("Good candys = correct answers",500,380);
+      
+
+      }
+      noFill();
+      stroke(#C5B2FF);
+      strokeWeight(7);
+      rect(430,420,140,60);
+      fill(#C5B2FF);
+      text("ok",500,440);
+      }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ if(tutoriallolaboa==false){
+ xcandys-=vel;}
 pushMatrix();
   imageMode(CORNER);
  scale(-1.0, 1.0);
@@ -189,7 +226,7 @@ text(puntos,950,330);
     
    if(comer[14]==true){ 
 if(puntos>=10){
-  levelcompleted.play();
+//  levelcompleted.play();
       todosjuegos[nivel]=true;
       fill(#FF00A6);
     textSize(50);

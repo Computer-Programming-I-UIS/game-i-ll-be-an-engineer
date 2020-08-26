@@ -45,24 +45,57 @@ class burbujas {
 
 
   void dibujar() {
-    if(next<10 && tutorialburbujas==true){
-      
-      mov=100;
-      text("alonose",0,0);
-      
-    }
-
+   
  musicamenu=false;
  
- if(tutorialburbujas==false){
     if (dianoche==true) {
       colorfondo=color(#E0F9FF);
     }
     if (dianoche==false) {
       colorfondo=color(#7386AA);
     }
+    
+   
+      
+      
+      
+      
+      if(tutorialburbujas==true){
+        textSize(30);
+        movy=100;
+        if(enes==true){
+        fill(#EEB2FF);
+       text("Clickea las burbujas que contengan operaciones correctas",500,450);
+       fill(#FFB2F5);
+       text("Las burbujas buenas suman 2 puntos, las malas te quitan 1",500,490);
+       fill(#FFB2C1);
+       text("Con 20 puntos pasas el nivel :)",500,530);
+      }
+      if(enes==false){
+        fill(#EEB2FF);
+       text("Click bubbles that contain correct operations",500,450);
+       fill(#FFB2F5);
+       text("Good bubbles add 2 points, bad bubbles take 1",500,490);
+       fill(#FFB2C1);
+       text("With 20 points you complete level :)",500,530);
+      }
+      noFill();
+      stroke(#C5B2FF);
+      rect(430,550,140,60);
+      fill(#C5B2FF);
+      text("ok",500,590);
+        
+        
+      }
+      
 
-    if (nivelll==0 || nivelll==3) {
+    if(tutorialburbujas==false){
+      movy+=mov;
+    }
+    
+    
+
+ 
       numburbujas=30;
       for (int j=0; j<50; j++) {
 
@@ -86,41 +119,15 @@ class burbujas {
         if (u>=10) {
           u=0;
         }
-      }
+      
+      
     } 
-    if (nivelll==42) {
-      numburbujas=48;
-      for (int j=0; j<50; j++) {
-
-        wburbuja[j]=200+animburbujas2*animburbuja[j];
-      }
-
-      for (int i=0; i<numburbujas; i++) {
-        if (i<12) {
-          xburbujas[i]= 150+xburbujasrandom[i];
-        } else if (i>=12 && i<24) {
-          xburbujas[i]= 350+xburbujasrandom[i];
-        } else if (i>=24 && i<36) {
-          xburbujas[i]=550+xburbujasrandom[i];
-        } else if (i>=36 && i<48) {
-          xburbujas[i]=750+xburbujasrandom[i];
-        }
-      }
-
-      for (int i=0; i<numburbujas; i++) {
-
-        yburbujas[i]=150-u*300+yburbujasrandom[i];
-        u++;
-        if (u>=12) {
-          u=0;
-        }
-      }
-    }
- }
+    
+ 
 
 
 
-    movy+=mov;
+    
     fill(blanco);
     stroke(#E5E5E5);
     strokeWeight(7);
@@ -174,7 +181,7 @@ class burbujas {
 
     if (yburbujas[numburbujas]+movy>=3100) {
       if (puntos>=20) {
-        levelcompleted.play();
+        //levelcompleted.play();
         todosjuegos[nivelll]=true;
         textSize(50);
         if (enes==false) {
