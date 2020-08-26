@@ -4,8 +4,7 @@ Este es un juego para practicar tus habilidades matemáticas, que va aumentando 
 ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-08-26%20at%2012.56.57%20PM.png)
 
 ## AJUSTES ⚙️
--Este juego cuenta con un botón de de ajustes que al ser presionado puedes cambiar idioma del juego y en el que puedes activar o desactivar la
-musica del juego. 
+-Este juego cuenta con un botón de de ajustes que al ser presionado puedes cambiar idioma del juego y en el que puedes activar o desactivar la musica del juego. 
 ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-08-26%20at%2012.57.25%20PM.png)
 
 
