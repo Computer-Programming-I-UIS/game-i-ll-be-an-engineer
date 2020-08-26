@@ -49,7 +49,7 @@ Cada nivel tiene 3 minijuegos que se mostrarán en pantalla en forma de menú al
 ## AUTORAS ✒️
 Este video juego fue realizado por las estudiantes de ingeniería electrónica de la Universidad indsutrial de Santander para 
 la asignatura programación de computadores I 
- ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-08-26%20at%2012.58.49%20PM.png)
+ 
   
 
 * **PAULA ANDREA ARGUELLO GUTIERREZ-2191444**
