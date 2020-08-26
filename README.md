@@ -25,13 +25,7 @@ Tener Processing instalado en tu dispositivo
 
 
 ### CODIFICACIÓN ⌨️
-
-
-
-
-## AUTORAS ✒️
-Este video juego fue realizado por las estudiantes de programación de computadores I de la Universidad indsutrial de Santander
- - El primero consiste en burbujas con operaciones matemáticas que van cayendo. Para ganar puntos y completar el minijuego debes 
+    - El primero consiste en burbujas con operaciones matemáticas que van cayendo. Para ganar puntos y completar el minijuego debes 
       presionar solamente las burbujas con ecuaciones correctas, estas serán identificadas cuando al presionar sobre ellas queden del mismo color; 
       si se presiona una incorrecta la burbuja se tornará de un color fucsia. Debes obtener 20 puntos para completar este minijuego.
     - El segundo juego es sobre un cohete que quiere llegar a la tierra, y cada vez que llega aparece una ventan con una operación matematica que 
@@ -39,6 +33,13 @@ Este video juego fue realizado por las estudiantes de programación de computado
      pero para pasarlo se deden acertar un mínimo de 7. El cohete se deplazará con las teclas de dirección arriba, abajo, izquierda y derecha de tu teclado.
     - En el tercer minijuego debes ayudar a lolaboa a comer sus dulces que se vayan aproximando a ella, pero ella solo debe comer los que tengan la 
      respueta correcta a la operación  que aparezca la parte de arriba.Podrás mover a lola con las teclas de de dirección arriba y abajo.
+  
+
+
+
+## AUTORAS ✒️
+Este video juego fue realizado por las estudiantes de programación de computadores I de la Universidad indsutrial de Santander
+ 
   
 
 * **PAULA ANDREA ARGUELLO GUTIERREZ-2191444**
