@@ -3,8 +3,10 @@
 Este es un juego para practicar tus habilidades matemáticas, que va aumentando su complejidad a medida de que se van desbloqueando los niveles.
 
 ## AJUSTES ⚙️
-Este juego cuenta con un botón de de ajustes que al ser presionado puedes cambiar idioma del juego y en el que puedes activar o desactivar la
-musica del juego. También cuenta con un botón que cambia el entorno del modo diurno (claro) al modo nocturno(oscuro). 
+-Este juego cuenta con un botón de de ajustes que al ser presionado puedes cambiar idioma del juego y en el que puedes activar o desactivar la
+musica del juego. 
+![alt tag]()
+-También cuenta con un botón que cambia el entorno del modo diurno (claro) al modo nocturno(oscuro). 
 
   
 ### REQUISISTOS 📋
