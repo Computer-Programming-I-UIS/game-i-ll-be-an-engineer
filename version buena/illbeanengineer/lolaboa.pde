@@ -114,7 +114,7 @@ fill(#C90083);
         if(enes==true){
         fill(#FF58EC);
        text("Hola! ayudame a comer los dulces buenos",500,300);
-       text("Dulces toxicos = respuestas incorrectas",500,340);
+       text("Dulces tóxicos = respuestas incorrectas",500,340);
        text("Dulces buenos = respuestas correctas",500,380);
        text("Con 10 puntos o más pasas el nivel",500,420);
       }
@@ -134,13 +134,6 @@ fill(#C90083);
       text("ok",500,480);
       }
  
- 
- 
- 
- 
- 
- 
- 
  if(tutoriallolaboa==false){
  xcandys-=vel;}
 pushMatrix();
@@ -152,6 +145,7 @@ pushMatrix();
   if(keyPressed == true){
     if(keyCode==UP){
       yroll-=5;
+     
     }
     if(keyCode==DOWN){
       yroll+=5;
@@ -204,6 +198,13 @@ pushMatrix();
     }
     else if(xcandys<=10&&comer[i]==false){
       comer[i]=true;
+    }
+     
+    if (yroll > 450) {
+      yroll=450 ;
+    }
+    if (yroll < 0) {
+      yroll=0 ;
     }
     
 if(comer[i]==true){
