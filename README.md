@@ -4,15 +4,17 @@ Este es un juego para practicar tus habilidades matemáticas, que va aumentando 
 ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-08-26%20at%2012.56.57%20PM.png)
 
 ## AJUSTES ⚙️
--Este juego cuenta con un botón de de ajustes que al ser presionado puedes cambiar idioma del juego y en el que puedes activar o desactivar la musica del juego. 
+
+ -Este juego cuenta con un botón de de ajustes que al ser presionado puedes cambiar idioma del juego y en el que puedes activar o desactivar la musica del juego. 
 
 ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-08-26%20at%2012.57.25%20PM.png)
 
 
 
--También cuenta con un botón que cambia el entorno del modo diurno (claro) al modo nocturno(oscuro). 
+ -También cuenta con un botón que cambia el entorno del modo diurno (claro) al modo nocturno(oscuro). 
 ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-08-26%20at%2012.57.11%20PM.png)
-- Cuenta con un botón de créditos y otro para salir.
+
+ - Cuenta con un botón de créditos y otro para salir.
 ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-08-26%20at%2012.57.56%20PM.png)
   
 ### REQUISISTOS 📋
@@ -36,8 +38,8 @@ Cada nivel tiene 3 minijuegos que se mostrarán en pantalla en forma de menú al
     matematica que  debes resolver en menos de 10 segundos, ya que si demoras más tiempo se cerrará y no podrás hacer un punto. 
     Este minijuego tiene diez preguntas,pero para pasarlo se deden acertar un mínimo de 7. El cohete se deplazará con las teclas de 
     dirección arriba, abajo, izquierda y derecha de tu teclado.    
-      ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-08-26%20at%2012.59.12%20PM.png)
       ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-08-26%20at%201.48.13%20PM.png)
+      ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-08-26%20at%2012.59.12%20PM.png)
    - En el tercer minijuego debes ayudar a lolaboa a comer sus dulces que se vayan aproximando a ella, pero ella solo debe comer
      los que tengan la  respueta correcta a la operación  que aparezca la parte de arriba.Podrás mover a lola con las teclas de de 
      dirección arriba y abajo.
@@ -45,7 +47,8 @@ Cada nivel tiene 3 minijuegos que se mostrarán en pantalla en forma de menú al
        
 ## CLASIFICACIÓN
  Para todo público
-  ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/data/e.jpeg)
+ 
+   ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/data/e.jpeg)
 ## AUTORAS ✒️
 Este video juego fue realizado por las estudiantes de ingeniería electrónica de la Universidad indsutrial de Santander para 
 la asignatura programación de computadores I 
