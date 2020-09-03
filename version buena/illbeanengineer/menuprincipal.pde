@@ -32,7 +32,7 @@ textSize(80);
 fill(illbe);
 textAlign(CENTER, CENTER);
 if(idioma==false){
-text("I'LL BE AN ENGEENIER",500,310);}
+text("I'LL BE AN ENGINEER",500,310);}
 else if(idioma==true){
 text("MINI INGENIEROS",500,310);
 }
