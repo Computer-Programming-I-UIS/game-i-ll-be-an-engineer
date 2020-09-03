@@ -5,13 +5,13 @@ Este es un juego para practicar tus habilidades matemáticas, que va aumentando 
 
 ## AJUSTES ⚙️
 
- -Este juego cuenta con un botón de de ajustes que al ser presionado puedes cambiar idioma del juego y en el que puedes activar o desactivar la musica del juego. 
+ - Este juego cuenta con un botón de de ajustes que al ser presionado puedes cambiar idioma del juego y en el que puedes activar o desactivar la musica del juego. 
 
 ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-08-26%20at%2012.57.25%20PM.png)
 
 
 
- -También cuenta con un botón que cambia el entorno del modo diurno (claro) al modo nocturno(oscuro). 
+ - También cuenta con un botón que cambia el entorno del modo diurno (claro) al modo nocturno(oscuro). 
 ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-08-26%20at%2012.57.11%20PM.png)
 
  - Cuenta con un botón de créditos y otro para salir.
@@ -19,7 +19,7 @@ Este es un juego para practicar tus habilidades matemáticas, que va aumentando 
   
 ### REQUISISTOS 📋
 
-Tener Processing instalado en tu dispositivo
+Tener Processing instalado en tu dispositivo.
 
 
 ## NIVELES 🚀
@@ -46,7 +46,7 @@ Cada nivel tiene 3 minijuegos que se mostrarán en pantalla en forma de menú al
        ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-08-26%20at%201.47.46%20PM.png)
        
 ## CLASIFICACIÓN
- Para todo público
+ Para todo público.
  
    ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/data/e.jpeg)
 ## AUTORAS ✒️
@@ -59,6 +59,6 @@ la asignatura programación de computadores I
 * **GINETH VANESSA MUÑOZ CADENA-2191476** 
 
 ## CRÉDITOS
--A nosotras y a nuestros padres por probar el juego.
+- A nosotras y a nuestros padres por probar el juego.
 
--Sonidos: https://freesound.org/
+- Sonidos: https://freesound.org/
