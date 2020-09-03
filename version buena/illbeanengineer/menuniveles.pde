@@ -168,9 +168,6 @@ void menuniveles() {
     }salir=false;
 
     if (jugarnivel[0]==true && nivelesss[0]==true) {
-       if(next==5){
-        next=6;
-      }
        next=10;
       
       if (entergame1==true) {
@@ -197,7 +194,7 @@ void menuniveles() {
 
     }
     
-    if (jugarnivel[1]==true && nivelesss[1]==true) {
+    else if (jugarnivel[1]==true && nivelesss[1]==true) {
       if (entergame1==true) {
         menuminijuegos=false;
         burbujasnivel2.dibujar();
@@ -223,7 +220,7 @@ void menuniveles() {
     
     
 
-    if (jugarnivel[14]==true && nivelesss[14]==true) {
+    else if (jugarnivel[14]==true && nivelesss[14]==true) {
       if (entergame1==true) {
         menuminijuegos=false;
         burbujasnivel15.dibujar();
@@ -321,8 +318,15 @@ class botones {
 
 
     if (nivelesss[nivel]==true && mouseX>=xnivel && mouseX<=xnivel+60 && mouseY>=ynivel+yimg && mouseY<=ynivel+yimg+60 ) {
+      for(int i=0; i<nivel; i++){
+        jugarnivel[i]=false;
+      }
+      for(int j=nivel; j<14; j++){
+        jugarnivel[j]=false;
+      }
       animacionjugar=true;
       jugarnivel[nivel]=true;
+      
     }
     
   }
