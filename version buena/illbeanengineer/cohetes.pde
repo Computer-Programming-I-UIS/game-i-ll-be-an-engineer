@@ -40,14 +40,14 @@ class cohetes {
        text("Ayuda al cohete a llegar a la tierra!!!!",500,450);
        fill(#EAF2FF);
        text("Utiliza las flechas para moverlo",500,490);
-       
+        text("Con 7 puntos o más pasas el nivel",500,490);
       }
       if(enes==false){
         fill(#EFEAFF);
        text("Help the rocket ship to reach the Earth",500,450);
        fill(#EAF2FF);
        text("Use arrow keys to move it",500,490);
-
+        text("With 7 points or more you complete level :)",500,530);
       }       
       }
     if (keyPressed && (key == CODED)  && !preguntando) {  //condicional si se oprime una tecla

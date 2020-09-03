@@ -116,22 +116,22 @@ fill(#C90083);
        text("Hola! ayudame a comer los dulces buenos",500,300);
        text("Dulces toxicos = respuestas incorrectas",500,340);
        text("Dulces buenos = respuestas correctas",500,380);
-       
+       text("Con 10 puntos o más pasas el nivel",500,420);
       }
       if(enes==false){
         fill(#FF58EC);
        text("Hi! help me eat good candys",500,300);
        text("Toxic candys = wrong answers",500,340);
        text("Good candys = correct answers",500,380);
-      
+       text("With 10 points or more you complete level :)",500,420);
 
       }
       noFill();
       stroke(#C5B2FF);
       strokeWeight(7);
-      rect(430,420,140,60);
+      rect(430,460,140,60);
       fill(#C5B2FF);
-      text("ok",500,440);
+      text("ok",500,480);
       }
  
  
