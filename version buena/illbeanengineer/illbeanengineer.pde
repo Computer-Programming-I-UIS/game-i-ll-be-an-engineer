@@ -1,5 +1,4 @@
 
-aaaaaaaaaaaaaaaaaa
 textos espanol1;
 textos espanol2;
 textos espanol3;
@@ -362,7 +361,7 @@ void setup() {
 
 
 
-  myFont = createFont("Noteworthy-Bold", 48);
+  myFont = createFont("ComicSansMS-Bold", 48);
   textFont(myFont);
 
   normal= loadImage("gusanitonormal.png");
