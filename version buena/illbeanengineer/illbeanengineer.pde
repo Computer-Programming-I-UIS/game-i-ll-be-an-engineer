@@ -361,7 +361,7 @@ void setup() {
 
 
 
-  myFont = createFont("ComicSansMS", 48);
+  myFont = loadFont("ComicSansMS-Bold-48.vlw");
   textFont(myFont);
 
   normal= loadImage("gusanitonormal.png");
