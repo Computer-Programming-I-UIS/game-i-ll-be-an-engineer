@@ -528,7 +528,7 @@ void mouseWheel(MouseEvent event) {
   if (playy==true && next>=5) {
     int e = event.getCount();
     if (yimg<=0 && yimg>=-962) {
-      yimg+=e;
+      yimg+=-e*10;
     } else if (yimg>0) {
       yimg=0;
     } else if (yimg<-962) {
