@@ -73,8 +73,6 @@ class cohetes {
     }
   }
   void dibujo() {
-    
-    
      
     salir=false;
     
@@ -82,9 +80,6 @@ class cohetes {
     estrellitas=true;
     noStroke();
     imageMode(CENTER);
-
-
-
     image(earth, xp, yp, 100, 100); 
     image(coheteplay, x1, y1, 200, 200);
 
@@ -129,7 +124,6 @@ class cohetes {
          //if(preguntando==true){
       if (mouseX>=300&&mouseX<=700&&mouseY>=350&&mouseY<=450) {////////iz
        
-
           if (j<=0.5 && !puntoContado ) {
             a=#54FF46;
             cont=cont+1;
@@ -152,11 +146,7 @@ class cohetes {
 
               cont=cont+1;
               puntoContado=true;
-              //if (selector>0&&cont<=selector) {
-              //  cont=cont+1;
-              //} else if (selector==0) {
-              //  cont=cont+1;
-              //}
+
             }
             if (j<=0.5) {
               b=#FF3195;
@@ -174,7 +164,12 @@ class cohetes {
       i=0;
       selector=0;
     }
-   
+    if (mouseX>=300&&mouseX<=700&&mouseY>=470&&mouseY<=570&&preguntando==true) {
+      tiempoEsperar_ms = 0;
+    }
+    else if (mouseX>=300&&mouseX<=700&&mouseY>=350&&mouseY<=450&&preguntando==true){
+       tiempoEsperar_ms = 0;
+    }
  
   }
   void punto() { 
@@ -263,6 +258,7 @@ class cohetes {
         preguntando = false;
          press1=false; 
         puntoContado=false;
+        tiempoEsperar_ms = 10000;
         selector ++;
         if (selector>9) {
           selector= 9;
