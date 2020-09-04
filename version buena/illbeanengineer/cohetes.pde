@@ -127,15 +127,15 @@ class cohetes {
     void mousePressed() {
     if (press1==false  && jugandoCohetes==true&&preguntando==true) {
          //if(preguntando==true){
-      if (mouseX>=300&&mouseX<=400) {////////iz
-        if (mouseY>=450&&mouseY<=550) {
+      if (mouseX>=300&&mouseX<=700&&mouseY>=350&&mouseY<=450) {////////iz
+       
 
           if (j<=0.5 && !puntoContado ) {
             a=#54FF46;
             cont=cont+1;
             puntoContado=true;
             
-          }
+        
         }
         if (j>=0.5) {
           a=#FF3195;
@@ -144,8 +144,8 @@ class cohetes {
       
        }else {
          // if(preguntando==true){
-        if (mouseX>=600&&mouseX<=700) {
-          if (mouseY>=450&&mouseY<=550) {
+        if (mouseX>=300&&mouseX<=700&&mouseY>=470&&mouseY<=570) {
+          
 
             if (j>=0.5 && !puntoContado) {
               b=#54FF46;
@@ -162,7 +162,7 @@ class cohetes {
               b=#FF3195;
             }
           }
-        }
+        
         press1=true;
 
       }
@@ -213,20 +213,21 @@ class cohetes {
         /////////////////////////////////////////////
 
         fill(a);
-        rect(300, 450, 100, 100);//////////////////////////////////////////////
+        rect(300, 350, 400, 100);//////////////////////////////////////////////
         fill(b);  
-        rect(600, 450, 100, 100);////////////////////////////////////////////////////
+        rect(300, 470, 400, 100);////////////////////////////////////////////////////
         fill(0);
         if(nivel==43){
-        textSize(15);}
+        textSize(25);}
         if (j<=0.5) {
-          text(correctas[selector+op], 350, 500);
-          text(incorrectas[selector+op], 650, 500);
+          text(correctas[selector+op], 500, 400);
+          text(incorrectas[selector+op], 500, 520);
         }
         if (j>=0.5) {
-          text(incorrectas[selector+op], 350, 500);
-          text(correctas[selector+op], 650, 500);
+          text(incorrectas[selector+op], 500, 400);
+          text(correctas[selector+op], 500, 520);
         }
+        textSize(50);
         text(10-((t2-t1)/1000), 700, 100);
         t2 = millis();
         
