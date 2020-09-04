@@ -135,7 +135,7 @@ fill(#C90083);
       }
  
  if(tutoriallolaboa==false){
- xcandys-=vel;}
+ xcandys-=vel+1;}
 pushMatrix();
   imageMode(CORNER);
  scale(-1.0, 1.0);

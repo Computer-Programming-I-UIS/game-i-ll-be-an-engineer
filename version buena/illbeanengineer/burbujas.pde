@@ -55,10 +55,6 @@ class burbujas {
       colorfondo=color(#7386AA);
     }
     
-   
-      
-      
-      
       
       if(tutorialburbujas==true){
         textSize(30);
@@ -90,7 +86,7 @@ class burbujas {
       
 
     if(tutorialburbujas==false){
-      movy+=mov;
+      movy+=mov+0.75;
     }
     
     
@@ -123,10 +119,6 @@ class burbujas {
       
     } 
     
- 
-
-
-
     
     fill(blanco);
     stroke(#E5E5E5);
