@@ -30,10 +30,10 @@
 1
 sinx
 sinx/2
-cos²x
+(cosx)^2
 2
 2sinx
-x²+c
+(x^2)+c
 cscx+c
 cosx+c
 x

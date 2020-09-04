@@ -32,15 +32,15 @@
 sin(2x)
 cos(2x)
 cos(2x)
-sin²x
-x²+c
+(sinx)^2
+(x^2)+c
 tanx+c
 -cosx+c
 1
 1/x
--csc²x
-7x-x²/2+c
-3x²+4
+-(cscx)^2
+7x-(x^2)/2+c
+3(x^2)+4
 -2
 12x
 

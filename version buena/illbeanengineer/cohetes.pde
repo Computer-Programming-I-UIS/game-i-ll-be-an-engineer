@@ -51,6 +51,7 @@ class cohetes {
       }       
       }
     if (keyPressed && (key == CODED)  && !preguntando) {  //condicional si se oprime una tecla
+  
       if (keyCode==LEFT) {      //si oprime la flecha izquierda
         coheteplay=coheteplayh2;
         x1 -=speedx;
@@ -94,7 +95,7 @@ class cohetes {
       text("Puntos "+ str(cont), 950, 300);
     }
     if (enes==false) {
-      text("Points "+ str(cont), 950, 300);
+      text("Points ² "+ str(cont), 950, 300);
     }
     fill(blanco);
     stroke(#E5E5E5);
@@ -123,18 +124,69 @@ class cohetes {
       y1=height + 25;
     }
   }
+    void mousePressed() {
+    if (press1==false  && jugandoCohetes==true&&preguntando==true) {
+         //if(preguntando==true){
+      if (mouseX>=300&&mouseX<=400) {////////iz
+        if (mouseY>=450&&mouseY<=550) {
+
+          if (j<=0.5 && !puntoContado ) {
+            a=#54FF46;
+            cont=cont+1;
+            puntoContado=true;
+            
+          }
+        }
+        if (j>=0.5) {
+          a=#FF3195;
+        }
+        press1=true;
+      
+       }else {
+         // if(preguntando==true){
+        if (mouseX>=600&&mouseX<=700) {
+          if (mouseY>=450&&mouseY<=550) {
+
+            if (j>=0.5 && !puntoContado) {
+              b=#54FF46;
+
+              cont=cont+1;
+              puntoContado=true;
+              //if (selector>0&&cont<=selector) {
+              //  cont=cont+1;
+              //} else if (selector==0) {
+              //  cont=cont+1;
+              //}
+            }
+            if (j<=0.5) {
+              b=#FF3195;
+            }
+          }
+        }
+        press1=true;
+
+      }
+      }
+   // }
+    if (mouseX>=915 && mouseX<=985 && mouseY>=595 && mouseY<=665) {
+      minijuegos=false;
+      cont=0;
+      i=0;
+      selector=0;
+    }
+   
+ 
+  }
   void punto() { 
     if (dist(x1, y1, xp, yp)<=120) {//
       if (!preguntando) {
         t1 = millis();
         preguntando = true;
+       
       }
       t2 = millis();
       if (t2 - t1 < tiempoEsperar_ms) {
-        
-        
-        
-        
+        //if(press1==false){
         if ( cohetestiktak.position() == cohetestiktak.length() )
         {
           cohetestiktak.rewind();
@@ -186,22 +238,18 @@ class cohetes {
         fill(#9BC0FF);
        text("Escoje la respuesta correcta en menos de 10 segundos!",500,580);
        
-       
       }
       if(enes==false){
         fill(#9BC0FF);
        text("choose the correct answer in less than 10 seconds!",500,580);
  
-      
-
-      }       
+          
       }
-        
-        
-        
-        
-        
-      } else {
+        }
+   
+      } 
+      
+      else {
         //Cambiar de posicion el punto
         do {
           xp = random(30, 770);
@@ -211,8 +259,8 @@ class cohetes {
         tutorialcohetes=false;
         a=#FFFFFF;
         b=#FFFFFF;
-        press1=false;
         preguntando = false;
+         press1=false; 
         puntoContado=false;
         selector ++;
         if (selector>9) {
@@ -239,66 +287,13 @@ class cohetes {
             }
           }
 
-
-
-
           xp=3000000;
           yp=3000000;///////////////////////////////////////////////////////////////////
         }
       }
-    }
-  }
-  void mousePressed() {
-    if (press1==false  && jugandoCohetes==true) {
-
-      if (mouseX>=300&&mouseX<=400) {////////iz
-        if (mouseY>=450&&mouseY<=550) {
-
-          if (j<=0.5 && !puntoContado ) {
-            a=#54FF46;
-            cont=cont+1;
-            puntoContado=true;
-            //if (selector>0&&cont<=selector) {
-            //  cont=cont+1;
-            //} else if (selector==0) {
-            //  cont=cont+1;
-            //}
-          }
-        }
-        if (j>=0.5) {
-          a=#FF3195;
-        }
-        press1=true;
-      } else {
-
-        if (mouseX>=600&&mouseX<=700) {
-          if (mouseY>=450&&mouseY<=550) {
-
-            if (j>=0.5 && !puntoContado) {
-              b=#54FF46;
-
-              cont=cont+1;
-              puntoContado=true;
-              //if (selector>0&&cont<=selector) {
-              //  cont=cont+1;
-              //} else if (selector==0) {
-              //  cont=cont+1;
-              //}
-            }
-            if (j<=0.5) {
-              b=#FF3195;
-            }
-          }
-        }
-        press1=true;
-
       }
-    }
-    if (mouseX>=915 && mouseX<=985 && mouseY>=595 && mouseY<=665) {
-      minijuegos=false;
-      cont=0;
-      i=0;
-      selector=0;
-    }
+    
   }
+  
+  
 }

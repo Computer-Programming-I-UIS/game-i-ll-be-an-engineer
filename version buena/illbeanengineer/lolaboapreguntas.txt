@@ -28,36 +28,21 @@
 100/25=
 10x7=
 6x9=
-sin²x+cos²x
-2(sinx)(cosx)
-1-2sin²x
-2cos²x-1
-1/2(1-cos2x)
-∫xdx
-∫(sec²x)dx
-∫(sinx)dx
-d/dx(x)
-d/dx(ln(x))
-d/dx(cotx)
-∫(7-x)dx
-d/dx(x³+4x)
-d/dx(1-2x)
-d/dx(6x²+9)
-sin²x+cos²x=
+(sinx)^2+(cosx)^2=
 2(sinx)(cosx)=
-1-2sin²x=
-2cos²x-1=
+1-2(sinx)^2=
+2(cosx)^2-1=
 1/2(1-cos2x)=
 ∫xdx=
-∫(sec²x)dx=
+∫((secx)^3)dx=
 ∫(sinx)dx=
 d/dx(x)=
 d/dx(ln(x))=
 d/dx(cotx)=
 ∫(7-x)dx=
-d/dx(x³+4x)=
+d/dx((x^3)+4x)=
 d/dx(1-2x)=
-d/dx(6x²+9)=
+d/dx(6(x^2)+9)=
 
 
 
@@ -70,10 +55,6 @@ d/dx(6x²+9)=
 
 
 
-
-
-
->>>>>>> entrega 1
 
 
 
