@@ -14,7 +14,7 @@ class cohetes {
   color b=#FFFFFF;
   int con=0;
   int cont=0;
-  int t1, t2, tiempoEsperar_ms = 10000;
+  int t1, t2, tiempoEsperar_ms = 20000;
   int selector = 0;
   boolean pregunta;
   boolean preguntando = false;
@@ -252,7 +252,7 @@ class cohetes {
         preguntando = false;
          press1=false; 
         puntoContado=false;
-        tiempoEsperar_ms = 10000;
+        tiempoEsperar_ms = 20000;
         selector ++;
         if (selector>9) {
           selector= 9;

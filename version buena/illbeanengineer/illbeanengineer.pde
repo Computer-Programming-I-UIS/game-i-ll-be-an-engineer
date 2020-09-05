@@ -310,12 +310,12 @@ void setup() {
   lolaboanivel1=new lolaboa(0, 1.5, 2);
 
   burbujasnivel2= new burbujas(30, 0.8, 3);/////////////////////////////posicion de la linea
-  cohetenivel2= new cohetes(10, 4);
+  cohetenivel2= new cohetes(11, 4);
   lolaboanivel2=new lolaboa(15, 1.5, 5);
 
 
   burbujasnivel15= new burbujas(60, 0.8, 42);
-  cohetenivel15= new cohetes(20, 43);
+  cohetenivel15= new cohetes(22, 43);
   lolaboanivel15=new lolaboa(30, 1.5, 44);
 
 
