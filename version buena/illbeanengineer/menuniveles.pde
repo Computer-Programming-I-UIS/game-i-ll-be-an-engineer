@@ -271,13 +271,12 @@ class botones {
 
     for (int i=0; i<12; i++) {
       strokeniveles[i]=color(negro);
-      nivelesss[i]=false;
+      nivelesss[i]=true;
       jugarnivel[i]=false;
     }
   }
   void niveles() {
-    nivelesss[0]=true;
-    nivelesss[1]=true;
+    
 
     if (nivelesss[nivel]==true) {
       if (mouseX>=xnivel && mouseX<=xnivel+60 && mouseY>=ynivel+yimg && mouseY<=ynivel+yimg+60) {
