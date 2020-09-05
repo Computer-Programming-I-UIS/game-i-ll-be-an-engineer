@@ -4,6 +4,7 @@ void IMAGENES(){
   ////////////////////////////////////////////////////////////
   
   if(nubeee1==true){
+    imageMode(CORNER);
 image(nube1,xn1,yn1+yimg,wn1,hn1);
 image(nube1,xn2,yn1+yimg,wn1,hn1);//nube1
 if(xn1>=0 && xn1<=1000){
@@ -29,6 +30,7 @@ if(xn1==1000){xn1=0; xn2=-300;}
   ////////////////////////////////////////////////////////////
   
   if(nubeee2==true){
+    imageMode(CORNER);
 image(nube2,xn3,yn2,wn2,hn2);//nube2
 image(nube2,xn4,yn2,wn2,hn2);//nube2
 if(xn3>=0 && xn3<=1000){
@@ -262,7 +264,7 @@ else if(dianoche==false){
   lolabocaabierta=lolanochebocaabierta;
   lolabocacerrada=lolanochebocacerrada;
 }
-  lolaboa=lolabocacerrada;
+  
   image(lolaboa,x,y,w,h);
 
 

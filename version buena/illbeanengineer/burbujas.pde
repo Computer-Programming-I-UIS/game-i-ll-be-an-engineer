@@ -48,12 +48,7 @@ class burbujas {
 
  musicamenu=false;
  
-    if (dianoche==true) {
-      colorfondo=color(#E0F9FF);
-    }
-    if (dianoche==false) {
-      colorfondo=color(#7386AA);
-    }
+    
     
       
       if(tutorialburbujas==true){
@@ -175,6 +170,14 @@ class burbujas {
         respuestasburbujas[num]=burbujasincorrectass[num+op];
       }
       text(respuestasburbujas[num], xburbujas[num], yburbujas[num]+movy);
+    }
+    if (dianoche==true) {
+      colorfondo=color(#E0F9FF);
+
+    }
+    else if (dianoche==false) {
+      colorfondo=color(#000000);
+
     }
 
     if (yburbujas[numburbujas]+movy>=3100) {

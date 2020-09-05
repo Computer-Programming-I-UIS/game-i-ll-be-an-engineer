@@ -114,6 +114,8 @@ PImage candy3;
 PImage candy4;
 PImage earth, coheteplay1, coheteplay2, coheteplayh1, coheteplayh2, coheteplay;
 PImage edad;
+PImage baneradia;
+PImage baneranoche;
 int i=5; 
 
 int xn1 = 0; 
@@ -199,7 +201,7 @@ int yimg=0;
 float w = 0;
 float h = 8*w/5;
 
-int next=10;
+int next=0;
 int weighttt=30;
 int counterstars = 0;
 int sizeplay=0;
@@ -371,8 +373,8 @@ void setup() {
   loladiabocacerrada= loadImage("lolaboadiabocacerrada.png");
   lolanochebocaabierta= loadImage("lolaboanochebocaabierta.png");
   lolanochebocacerrada= loadImage("lolaboanochebocacerrada.png");
-
-
+lolabocacerrada=loladiabocacerrada;
+lolaboa=lolabocacerrada;
   flor1 = loadImage("flor1.png");
   flor2 = loadImage("flor2.png");
   flor3 = loadImage("flor3.png");
@@ -419,6 +421,8 @@ void setup() {
   coheteplayh2=loadImage("coheteplayh2.png");
   coheteplay=coheteplay1;
   edad=loadImage("e.jpeg");
+  baneradia=loadImage("bañeradia.png");
+  baneranoche=loadImage("bañeranoche.png");
 
   for (int j=0; j<50; j++) {
     burbuja[j]=burbujanormal;

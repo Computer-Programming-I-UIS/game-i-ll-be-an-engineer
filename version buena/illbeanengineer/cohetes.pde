@@ -76,7 +76,7 @@ class cohetes {
      
 
     
-    colorfondo=#0F064B;
+    colorfondo=#000000;
     estrellitas=true;
     noStroke();
     imageMode(CENTER);
@@ -206,8 +206,7 @@ class cohetes {
         fill(b);  
         rect(300, 470, 400, 100);////////////////////////////////////////////////////
         fill(0);
-        if(nivel==43){
-        textSize(25);}
+        
         if (j<=0.5) {
           text(correctas[selector+op], 500, 400);
           text(incorrectas[selector+op], 500, 520);
