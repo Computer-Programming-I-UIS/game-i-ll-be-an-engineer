@@ -74,7 +74,7 @@ class cohetes {
   }
   void dibujo() {
      
-    salir=false;
+
     
     colorfondo=#0F064B;
     estrellitas=true;
@@ -92,18 +92,14 @@ class cohetes {
     if (enes==false) {
       text("Points ² "+ str(cont), 950, 300);
     }
-    fill(blanco);
-    stroke(#E5E5E5);
-    strokeWeight(7);
-    ellipse(950, 630, 70, 70);
-    fill(#E5E5E5);
-    textSize(20);
-    if (enes==true) {
-      text("salir", 950, 620);
-    }
-    if (enes==false) {
-      text("exit", 950, 620);
-    }
+   
+   if(reset){
+     cont=0;
+      i=0;
+      selector=0;
+       reset=false;
+   }
+   
   }
   void collide() { //metodo para que pase de un lado de la pantalla a otro
     if (x1 > width + 25) {
@@ -158,12 +154,9 @@ class cohetes {
       }
       }
    // }
-    if (mouseX>=915 && mouseX<=985 && mouseY>=595 && mouseY<=665) {
-      minijuegos=false;
-      cont=0;
-      i=0;
-      selector=0;
-    }
+  
+     
+    
     if (mouseX>=300&&mouseX<=700&&mouseY>=470&&mouseY<=570&&preguntando==true) {
       tiempoEsperar_ms = 0;
     }
@@ -182,12 +175,13 @@ class cohetes {
       t2 = millis();
       if (t2 - t1 < tiempoEsperar_ms) {
         //if(press1==false){
+          if(musicaa){
         if ( cohetestiktak.position() == cohetestiktak.length() )
         {
           cohetestiktak.rewind();
           cohetestiktak.play();
-        } else
-          cohetestiktak.play();
+        } else{
+          cohetestiktak.play();}}
         fill(#FFFFFF);
         stroke(8);
         rect(150, 40, 680, 600);

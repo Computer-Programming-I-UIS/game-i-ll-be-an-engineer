@@ -1,12 +1,12 @@
 
 void menuprincipal(){
-  salir=true;
+
 musicamenu=true;
  
   
   if(dianoche==true){
     
-    nubeee1=true; nubeee2=true; solsol=true; pastoo=true; flores=true; estrellitas=false; gusanitoo=false; cohetesss=true; planetas=false;lunaaa=false;
+    nubeee1=true; nubeee2=true; solsol=true; pastoo=true; flores=true; estrellitas=false; gusanitoo=false; cohetesss=false; planetas=false;lunaaa=false;
     
     blanco=color(#FFFFFF);
     negro=color(#000000);
@@ -22,11 +22,11 @@ else  if(dianoche==false){
   nubeee1=false; nubeee2=false; solsol=false; pastoo=false; flores=false; estrellitas=true; gusanitoo=false; cohetesss=true; planetas=true; lunaaa=true;
   colorfondo = color(0);
   blanco=color(#000000);
-  negro=color(#A7A7A7);
+  negro=color(#EDEDED);
   illbe=color(#0F00A0);
 }
 
-
+if(seecredits==false){
 
 textSize(80);
 fill(illbe);
@@ -44,17 +44,25 @@ ellipse(500,430,90,90);
 noStroke();
 fill(play);
 triangle(480,400,480,460,535,430);
+image(edad,0,550,100,150);
+
+
 if(animacionplay==true){
-  creditos=false;
+ noStroke();
+  if(dianoche==true){
 fill(color(sizeplayyyy,99,99));
-  ellipse(500,430,sizeplay,sizeplay);
-  sizeplayyyy+=4;
+sizeplayyyy+=4;
   if(sizeplayyyy>=120){
     sizeplayyyy=0;
   }
+  }
+  else if(dianoche==false){
+  fill(#D3D3D3);  
+  }
+  
+  ellipse(500,430,sizeplay,sizeplay);
   sizeplay+=25;
  if(sizeplay>=2000){
-   creditos=true;
         playy=true;
         animacionplay=false;
         
@@ -66,9 +74,9 @@ strokeplay = color(3*countercohete/2+10,99,99);}
 else{
 play = color(negro);
 strokeplay = color(negro);  
-}
+}}
 
-image(edad,0,550,100,150);
+
 
 
 }

@@ -45,7 +45,7 @@ class burbujas {
 
 
   void dibujar() {
-   salir=false;
+
  musicamenu=false;
  
     if (dianoche==true) {
@@ -86,7 +86,7 @@ class burbujas {
       
 
     if(tutorialburbujas==false){
-      movy+=mov+0.75;
+      movy+=mov;
     }
     
     
@@ -119,18 +119,24 @@ class burbujas {
       
     } 
     
-    
-    fill(blanco);
-    stroke(#E5E5E5);
-    strokeWeight(7);
-    ellipse(950, 630, 70, 70);
-    fill(#E5E5E5);
-    textSize(20);
-    if (enes==true) {
-      text("salir", 950, 620);
-    }
-    if (enes==false) {
-      text("exit", 950, 620);
+    if(reset){
+    puntos=0;
+      for (int numburbujas=0; numburbujas<50; numburbujas++) {
+        explotarburbujas[numburbujas]=false; 
+        burbuja[numburbujas]=burbujanormal;
+        xburbujasrandom[numburbujas]=random(-50, 50);
+        yburbujasrandom[numburbujas]=random(-50, 50);
+        aleatorio[numburbujas]=random(0, 1);
+        animburbuja[numburbujas]=random(-1, 1);
+        if (animburbuja[numburbujas]<=0) {
+          animburbuja[numburbujas]=-1;
+        } else if (animburbuja[numburbujas]>0) {
+          animburbuja[numburbujas]=1;
+        }
+      }  
+      u=0; 
+      movy=0;
+      reset=false;
     }
 
     textAlign(CENTER, CENTER);
@@ -198,8 +204,9 @@ class burbujas {
 
     for (int num=0; num<numburbujas; num++) {
       if (mouseX>xburbujas[num]-wburbuja[num]/2 && mouseX<xburbujas[num]+wburbuja[num]/2 && mouseY>yburbujas[num]+movy-wburbuja[num]/2 && mouseY<yburbujas[num]+movy+wburbuja[num]/2 && explotarburbujas[num]==false) {
+        if(musicaa){
         bubbles.rewind();
-        bubbles.play();
+        bubbles.play();}
         if (respuestasburbujas[num]==burbujascorrectass[num+op]) {
           puntos+=2;
           burbuja[num]=burbujabuena3;
@@ -212,24 +219,8 @@ class burbujas {
         explotarburbujas[num]=true;
       }
     }
-    if (mouseX>=915 && mouseX<=985 && mouseY>=595 && mouseY<=665) {
-      minijuegos=false;
-      puntos=0;
-      for (int numburbujas=0; numburbujas<50; numburbujas++) {
-        explotarburbujas[numburbujas]=false; 
-        burbuja[numburbujas]=burbujanormal;
-        xburbujasrandom[numburbujas]=random(-50, 50);
-        yburbujasrandom[numburbujas]=random(-50, 50);
-        aleatorio[numburbujas]=random(0, 1);
-        animburbuja[numburbujas]=random(-1, 1);
-        if (animburbuja[numburbujas]<=0) {
-          animburbuja[numburbujas]=-1;
-        } else if (animburbuja[numburbujas]>0) {
-          animburbuja[numburbujas]=1;
-        }
-      }  
-      u=0; 
-      movy=0;
-    }
+    
+
+      
   }
 }

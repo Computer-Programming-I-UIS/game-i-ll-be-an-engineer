@@ -254,7 +254,19 @@ else if(counterrayo>=10 &&  counterrayo<20){
   ////////////////////     GUSANITO   //////////////////////
   ////////////////////////////////////////////////////////////
 if(gusanitoo==true){
-  image(gusanito,x,y,w,h);}
+  if(dianoche==true){
+  lolabocaabierta=loladiabocaabierta;
+  lolabocacerrada=loladiabocacerrada;
+}
+else if(dianoche==false){
+  lolabocaabierta=lolanochebocaabierta;
+  lolabocacerrada=lolanochebocacerrada;
+}
+  lolaboa=lolabocacerrada;
+  image(lolaboa,x,y,w,h);
+
+
+}
   
   ////////////////////////////////////////////////////////////
   ///////////////////////// SETTINGS//////////////////////////
@@ -415,14 +427,65 @@ triangle(657+xdianoche,447+ydianoche,667+xdianoche,437+ydianoche,666+xdianoche,4
 
     
     
+ ////////////////////////////////////////////////////////////
+  ///////////////////////// CREDITOS//////////////////////////
+  ////////////////////////////////////////////////////////////
+
+    fill(blanco);
+    stroke(strokecredits);
+    strokeWeight(7);
+    ellipse(950, 550, 70, 70);
+    textAlign(CENTER);
+    textSize(17);
+    fill(strokecredits);
+
+    if (enes==true) {
+      text("creditos", 950, 555);
+    }
+    if (enes==false) {
+      text("credits", 950, 555);
+    }
+    
+      if(mouseX>=915 && mouseX<=985 && mouseY>=515 && mouseY<=585){
+colorMode(HSB, 100);
+strokecredits = color(countercolor,99,99);}
+else{
+strokecredits = color(negro);  
+
+}
+ 
+  
+    
+    
+    
+  
+ ////////////////////////////////////////////////////////////
+  ///////////////////////// SALIR//////////////////////////
+  ////////////////////////////////////////////////////////////
+
+  fill(blanco);
+stroke(strokeexit);
+strokeWeight(7);
+ellipse(950,630,70,70);
+fill(strokeexit);
+textSize(20);
+if(enes==true){
+text("salir",950,635);}
+if(enes==false){
+text("exit",950,635);}
+
+if(mouseX>=915 && mouseX<=985 && mouseY>=595 && mouseY<=665){
+colorMode(HSB, 100);
+strokeexit = color(countercolor,99,99);}
+else{
+strokeexit = color(negro);  
+
+}
+
 
  countercolor++;
 if(countercolor ==100){
   countercolor=0;
 }
-
-
-
-
 
 }

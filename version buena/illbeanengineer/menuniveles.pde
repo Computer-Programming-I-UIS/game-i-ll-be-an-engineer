@@ -62,8 +62,8 @@ void menuniveles() {
 
 
 
-  if (next>=5 && minijuegos ==false) {
-    salir=true;
+  if (next>=5 && minijuegos ==false ) {
+   salir=true;
     w=1000;
     h=8*w/5;
     yp1=yimg+720;
@@ -98,13 +98,13 @@ void menuniveles() {
     nivel10.niveles();
     nivel11.niveles(); 
     nivel12.niveles();
-    nivel13.niveles();
-    nivel14.niveles();
-    nivel15.niveles();}
+    }
     if (animacionjugar==true) {
-     
-      creditos=false;
-      fill(color(sizejugarrr, 99, 99));
+
+      if(dianoche==false){
+        fill(#D3D3D3);}
+        else if (dianoche){
+      fill(color(sizejugarrr, 99, 99));}
       noStroke();
       ellipse(500, 430, sizejugar, sizejugar);
       sizejugarrr+=4;
@@ -115,9 +115,10 @@ void menuniveles() {
     }
   } else if (minijuegos==true) {
 
-
+salir=false;
     if (menuminijuegos==true) {
-      salir=false;
+      
+
 
 
       nubeee1=false; 
@@ -150,7 +151,7 @@ void menuniveles() {
       imageMode(CENTER);
       image(burbujanormal, 200, 400, 200, 200);
       image(cohete1, 500, 400, 200, 200);
-      copy(normal, 300, 80, 200, 200, 700, 300, 200, 200);
+      copy(lolaboa, 300, 80, 200, 200, 700, 300, 200, 200);
     } else {
       nubeee1=false; 
       nubeee2=false; 
@@ -165,7 +166,7 @@ void menuniveles() {
       rayoo=false; 
       thinkerr=false;
       lunaaa=false;
-    }salir=false;
+    }
 
     if (jugarnivel[0]==true && nivelesss[0]==true) {
        next=10;
@@ -268,7 +269,7 @@ class botones {
     ynivel=_ynivel;
     nivel = _nivel;
 
-    for (int i=0; i<15; i++) {
+    for (int i=0; i<12; i++) {
       strokeniveles[i]=color(negro);
       nivelesss[i]=false;
       jugarnivel[i]=false;
@@ -276,7 +277,6 @@ class botones {
   }
   void niveles() {
     nivelesss[0]=true;
-    nivelesss[14]=true;
     nivelesss[1]=true;
 
     if (nivelesss[nivel]==true) {
@@ -287,7 +287,7 @@ class botones {
         strokeniveles[nivel] = color(negro);
       }
     } else if (nivelesss[nivel]==false) {
-      strokeniveles[nivel]=color(#CECECE);
+      strokeniveles[nivel]=color(#E5E5E5);
     }
     fill(blanco);
 
@@ -297,10 +297,9 @@ class botones {
     fill(strokeniveles[nivel]);
     textAlign(CENTER, CENTER);
     textSize(40);
-    text(nivel+1, xnivel+30, ynivel+20+yimg);
+    text(nivel+1, xnivel+30, ynivel+30+yimg);
 
     if (sizejugar>=1500) {
-      creditos=true;
       minijuegos=true;
       menuminijuegos=true;
       sizejugar=0;
@@ -321,7 +320,7 @@ class botones {
       for(int i=0; i<nivel; i++){
         jugarnivel[i]=false;
       }
-      for(int j=nivel; j<14; j++){
+      for(int j=nivel; j<12; j++){
         jugarnivel[j]=false;
       }
       animacionjugar=true;

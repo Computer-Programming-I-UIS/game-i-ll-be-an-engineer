@@ -222,10 +222,10 @@ inicial++;}
    
     if(countertexto<numletras*2){
    if(counter>=0 && counter<5){
-     gusanito = bocaabierta;
+     lolaboa = lolabocaabierta;
    }
    else if(counter>=5 && counter<10){
-     gusanito = normal;
+     lolaboa = lolabocacerrada;
    }
    counter++;
    if(counter==10){
@@ -240,7 +240,7 @@ inicial++;}
 if (u==numletras){
 u=numletras;
 countertexto=u*2;
-gusanito=normal;
+lolaboa = lolabocacerrada;
 inicial=finall;}
 
 

@@ -30,9 +30,7 @@ botones nivel9;
 botones nivel10;
 botones nivel11;
 botones nivel12;
-botones nivel13;
-botones nivel14;
-botones nivel15;
+
 lolaboa lolaboanivel0;
 burbujas burbujasnivel0;
 cohetes cohetenivel0;
@@ -66,9 +64,13 @@ String[] preguntas;
 String[] correctas;
 String[] incorrectas;
 
-PImage normal; 
-PImage bocaabierta; 
-PImage gusanito;
+PImage lolaboa; 
+PImage lolabocaabierta; 
+PImage lolabocacerrada;
+PImage loladiabocaabierta; 
+PImage loladiabocacerrada;
+PImage lolanochebocaabierta; 
+PImage lolanochebocacerrada;
 PImage flor1; 
 PImage flor2; 
 PImage flor3; 
@@ -156,10 +158,12 @@ float ypasto=550;
 
 boolean nubeee1=true, nubeee2=true, solsol=true, pastoo=true, flores=true, estrellitas=false, gusanitoo=false, cohetesss=false, planetas=false, ships=false, shipss=false;
 boolean rayoo=false, thinkerr=false, lunaaa=false, jugar=true, nightshifttt=true, musiquita=false, configuraciones=true, enes=false;
-boolean tutorialburbujas=true, tutoriallolaboa=true, tutorialcohetes=true; boolean salir =true;
+boolean tutorialburbujas=true, tutoriallolaboa=true, tutorialcohetes=true; 
+boolean salir =true;
+boolean reset =false;
 
 boolean saludo=false; 
-boolean musicaa=true; 
+boolean musicaa=false; 
 boolean settings=false; 
 boolean idioma = false; 
 boolean dianoche=true; 
@@ -177,9 +181,9 @@ boolean creditos=true;
 boolean seecredits=false;
 PImage[] burbuja = new PImage[50];
 
-boolean nivelesss[] = new boolean[15];
-boolean todosjuegos[] = new boolean[45];
-boolean jugarnivel[] = new boolean[15];
+boolean nivelesss[] = new boolean[12];
+boolean todosjuegos[] = new boolean[36];
+boolean jugarnivel[] = new boolean[12];
 String burbujascorrectass[] = new String[100];
 String burbujasincorrectass[] = new String[100];
 String lolaboapreguntass[] = new String[100];
@@ -227,6 +231,8 @@ color strokeplay=color(0);
 color strokemusic=color(0);
 color strokenightshift=color(0);
 color strokeconfiguracion=color(0);
+color strokeexit=color(0);
+color strokecredits=color(0);
 
 color strokeidioma=color(0);
 color blanco=color(#FFFFFF);
@@ -294,7 +300,7 @@ void setup() {
 
 
 
-  for (int i=0; i<45; i++) {
+  for (int i=0; i<36; i++) {
     todosjuegos[i]=false;
   }
 
@@ -302,32 +308,29 @@ void setup() {
   burbujasnivel1= new burbujas(0, 0.8, 0);/////////////////////////////posicion de la linea
   cohetenivel1= new cohetes(0, 1);
   lolaboanivel1=new lolaboa(0, 1.5, 2);
-  
+
   burbujasnivel2= new burbujas(30, 0.8, 3);/////////////////////////////posicion de la linea
   cohetenivel2= new cohetes(10, 4);
   lolaboanivel2=new lolaboa(15, 1.5, 5);
-  
+
 
   burbujasnivel15= new burbujas(60, 0.8, 42);
   cohetenivel15= new cohetes(20, 43);
   lolaboanivel15=new lolaboa(30, 1.5, 44);
 
 
-  nivel1= new botones(615, 1380, 0);
-  nivel2= new botones(645, 1260, 1);
-  nivel3= new botones(635, 1170, 2);
-  nivel4= new botones(500, 1140, 3);
-  nivel5= new botones(360, 1120, 4);
-  nivel6= new botones(210, 1030, 5);
-  nivel7= new botones(320, 950, 6);
-  nivel8= new botones(500, 895, 7);
-  nivel9= new botones(680, 820, 8);
-  nivel10= new botones(610, 640, 9);
-  nivel11= new botones(480, 600, 10);
-  nivel12= new botones(340, 530, 11);
-  nivel13= new botones(230, 440, 12);
-  nivel14= new botones(450, 370, 13);
-  nivel15= new botones(490, 270, 14);
+  nivel1= new botones(615, 1360, 0);
+  nivel2= new botones(610, 1140, 1);
+  nivel3= new botones(360, 1117, 2);
+  nivel4= new botones(200, 1020, 3);
+  nivel5= new botones(400, 930, 4);
+  nivel6= new botones(630, 880, 5);
+  nivel7= new botones(720, 720, 6);
+  nivel8= new botones(520, 620, 7);
+  nivel9= new botones(340, 570, 8);
+  nivel10= new botones(220, 440, 9);
+  nivel11= new botones(400, 380, 10);
+  nivel12= new botones(470, 240, 11);
 
   espanol1 = new textos(espanol, 0, 15, 15, 200, 27, 0, 0);
   espanol2 = new textos(espanol, 17, 17, 34, 200, 27, 0, 0);
@@ -364,9 +367,12 @@ void setup() {
   myFont = loadFont("ComicSansMS-Bold-48.vlw");
   textFont(myFont);
 
-  normal= loadImage("gusanitonormal.png");
-  gusanito=normal;
-  bocaabierta= loadImage("gusanitobocaabierta.png");
+  loladiabocaabierta= loadImage("lolaboadiabocaabierta.png");
+  loladiabocacerrada= loadImage("lolaboadiabocacerrada.png");
+  lolanochebocaabierta= loadImage("lolaboanochebocaabierta.png");
+  lolanochebocacerrada= loadImage("lolaboanochebocacerrada.png");
+
+
   flor1 = loadImage("flor1.png");
   flor2 = loadImage("flor2.png");
   flor3 = loadImage("flor3.png");
@@ -436,8 +442,8 @@ void draw() {
   } else {
     menus.pause();
   }
-  IMAGENES();
 
+  IMAGENES();
 
   if (playy==false) {
 
@@ -446,78 +452,54 @@ void draw() {
 
     menuniveles();
   }
-  if (creditos==true) {
-    fill(blanco);
-    stroke(negro);
-    strokeWeight(7);
-    ellipse(950, 550, 70, 70);
-    textAlign(CENTER);
-    textSize(20);
-    fill(negro);
 
+
+  if (seecredits==true) {
+    fill(0);
+    noStroke();
+    rect(0, 0, 1000, 700);
+    estrellitas=true;
+    fill(#FFFFFF);
+    textSize(80);
     if (enes==true) {
-      text("creditos", 950, 555);
+      text("CREDITOS", 500, 100);
     }
     if (enes==false) {
-      text("credits", 950, 555);
+      text("CREDITS", 500, 100);
     }
+    textSize(20);
+    if (enes==true) {
+      text("Juego creado por:", 500, 150);
+      text("Musica y sonidos:", 500, 350);
+    }
+    if (enes==false) {
+      text("Game created by", 500, 150);
+      text("Music and sound effects:", 500, 350);
+    }
+    textSize(30);
+    fill(#BC40FF);
+    text("freesound.org", 500, 400);
+    fill(#FF40FC);
+    textSize(50);
+    text("Paula Arguello", 500, 220);
+    text("Gineth Muñoz", 500, 300);
+    textSize(20);
+    fill(#FFFFFF);
+    if (enes==true) {
+      text("Agradecimientos: ", 500, 550);
+      text("a la mami y al papi de Paula,", 500, 580);
+      text("y a la mami y al papi de Gineth :)", 500, 610);
+    }
+    if (enes==false) {
+      text("acknowledgement: ", 500, 550);
+      text("Paula's mommy and daddy", 500, 580);
+      text("and Gineth's mommy and daddy :)", 500, 610);
+    }
+    strokeWeight(12);
+    stroke(#DEDEDE);
+    line(10, 10, 50, 50);
+    line(10, 50, 50, 10);
   }
-  if(salir){
-  fill(blanco);
-stroke(#FF46EA);
-strokeWeight(7);
-ellipse(950,630,70,70);
-fill(#FF46EA);
-textSize(20);
-if(enes==true){
-text("salir",950,630);}
-if(enes==false){
-text("exit",950,630);}}
-  
-  
-  ////////////////////////////////////////////////////////////
-  ///////////////////////// CREDITOS//////////////////////////
-  ////////////////////////////////////////////////////////////
-  if(seecredits==true){
-fill(0);
-rect(0,0,1000,700);
-estrellitas=true;
-fill(#FFFFFF);
-textSize(80);
-if(enes==true){
-text("CREDITOS",500,100);}
-if(enes==false){
-text("CREDITS",500,100);}
-textSize(20);
-if(enes==true){
-text("Juego creado por:",500,150);
-text("Musica y sonidos:",500,350);}
-if(enes==false){
-text("Game created by",500,150);
-text("Music and sound effects:",500,350);}
-textSize(30);
-fill(#BC40FF);
-text("freesound.org",500,400);
-fill(#FF40FC);
-textSize(50);
-text("Paula Arguello",500,220);
-text("Gineth Muñoz",500,300);
-textSize(20);
-fill(#FFFFFF);
-if(enes==true){
-text("Agradecimientos: ",500,550);
-text("a la mami y al papi de Paula,",500,580);
-text("y a la mami y al papi de Gineth :)",500,610);}
-if(enes==false){
-text("acknowledgement: ",500,550);
-text("Paula's mommy and daddy",500,580);
-text("and Gineth's mommy and daddy :)",500,610);}
-strokeWeight(12);
-stroke(#DEDEDE);
-line(10,10,50,50);
-line(10,50,50,10);
-
-}
 }
 
 
@@ -546,26 +528,19 @@ void mousePressed() {
 
     nivel1.mousePressed();
     burbujasnivel1.mousePressed();
-    lolaboanivel1.mousePressed();
+
     cohetenivel1.mousePressed();
-    
   }
-  
+
   if (nivelesss[1]==true && next>=10) {
 
     nivel2.mousePressed();
     burbujasnivel2.mousePressed();
-    lolaboanivel2.mousePressed();
+
     cohetenivel2.mousePressed();
   }
 
-  if (nivelesss[14]==true && next>=10) {
 
-    nivel15.mousePressed();
-    burbujasnivel15.mousePressed();
-    lolaboanivel15.mousePressed();
-    cohetenivel15.mousePressed();
-  }
   if (playy==false) {
 
     if (mouseX>=435 && mouseX<=545 && mouseY>=385 && mouseY<=475) {
@@ -657,17 +632,19 @@ void mousePressed() {
   if (mouseX>=0 && mouseX<=50 && mouseY>=0 && mouseY<=50 && seecredits==true) {
     seecredits=false;
   }
-  
-  
+
+
   if (mouseX>=430 && mouseX<=570 && mouseY>=550 && mouseY<=610 && tutorialburbujas==true && entergame1==true) {
     tutorialburbujas=false;
   }
   if (mouseX>=430 && mouseX<=570 && mouseY>=420 && mouseY<=480 && tutoriallolaboa==true && entergame3==true) {
     tutoriallolaboa=false;
   }
-  if(mouseX>=915 && mouseX<=985 && mouseY>=595 && mouseY<=665 && minijuegos==false && salir==true){
-     
-exit();
+  if (mouseX>=915 && mouseX<=985 && mouseY>=595 && mouseY<=665 && minijuegos==false && salir==true) {
+
+    exit();
+  } else if (mouseX>=915 && mouseX<=985 && mouseY>=595 && mouseY<=665 && salir==false) {
+    reset=true;
+    minijuegos=false;
   }
-  
 }
