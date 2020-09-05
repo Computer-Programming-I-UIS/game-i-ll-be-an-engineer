@@ -447,8 +447,13 @@ triangle(657+xdianoche,447+ydianoche,667+xdianoche,437+ydianoche,666+xdianoche,4
     }
     
       if(mouseX>=915 && mouseX<=985 && mouseY>=515 && mouseY<=585){
+        if(dianoche){
 colorMode(HSB, 100);
 strokecredits = color(countercolor,99,99);}
+else if(dianoche==false){
+  strokecredits= color(#2254A2);
+}}
+
 else{
 strokecredits = color(negro);  
 
@@ -475,8 +480,12 @@ if(enes==false){
 text("exit",950,635);}
 
 if(mouseX>=915 && mouseX<=985 && mouseY>=595 && mouseY<=665){
+  if(dianoche){
 colorMode(HSB, 100);
 strokeexit = color(countercolor,99,99);}
+else if(dianoche==false){
+  strokeexit= color(#2254A2);
+}}
 else{
 strokeexit = color(negro);  
 
@@ -487,5 +496,6 @@ strokeexit = color(negro);
 if(countercolor ==100){
   countercolor=0;
 }
+
 
 }

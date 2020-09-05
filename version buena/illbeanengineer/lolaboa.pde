@@ -16,12 +16,21 @@ class lolaboa{
     
     op=_op;
     vel=_vel;
-    lolaboa = lolabocacerrada;
+    
     nivel=_nivel;
   }
 
 
 void dibujar(){
+
+  if(dianoche==true){
+  lolabocaabierta=loladiabocaabierta;
+  lolabocacerrada=loladiabocacerrada;
+}
+else if(dianoche==false){
+  lolabocaabierta=lolanochebocaabierta;
+  lolabocacerrada=lolanochebocacerrada;
+}
 
   musicamenu=false;
   for(int i=0;i<15;i++){

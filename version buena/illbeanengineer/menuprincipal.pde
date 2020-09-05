@@ -69,8 +69,8 @@ sizeplayyyy+=4;
       }}
 if(mouseX>=435 && mouseX<=545 && mouseY>=385 && mouseY<=475){
 colorMode(HSB, 100);
-play = color(3*countercohete/2,99,99);
-strokeplay = color(3*countercohete/2+10,99,99);}
+play = color(countercolor,99,99);
+strokeplay = color(countercolor+10,99,99);}
 else{
 play = color(negro);
 strokeplay = color(negro);  
