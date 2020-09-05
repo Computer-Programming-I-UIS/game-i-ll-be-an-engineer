@@ -309,7 +309,7 @@ void setup() {
   cohetenivel1= new cohetes(0, 1);
   lolaboanivel1=new lolaboa(0, 1.5, 2);
 
-  burbujasnivel2= new burbujas(30, 0.8, 3);/////////////////////////////posicion de la linea
+  burbujasnivel2= new burbujas(31, 0.8, 3);/////////////////////////////posicion de la linea
   cohetenivel2= new cohetes(11, 4);
   lolaboanivel2=new lolaboa(15, 1.5, 5);
 
