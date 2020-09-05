@@ -13,6 +13,7 @@ void menuniveles() {
   ydianoche=-250;
 
   if (dianoche==true) {
+    
     blanco=color(#FFFFFF);
     negro=color(#000000);
     colorfondo=color(#E8F4FF);
@@ -29,9 +30,7 @@ void menuniveles() {
     rayoo=false; 
     thinkerr=false;
     lunaaa=false;
-    if (next>=4) {
-      rayoo=true;
-    }
+    
   }
 
 
@@ -280,8 +279,12 @@ class botones {
 
     if (nivelesss[nivel]==true) {
       if (mouseX>=xnivel && mouseX<=xnivel+60 && mouseY>=ynivel+yimg && mouseY<=ynivel+yimg+60) {
+        if(dianoche){
         colorMode(HSB, 100);
-        strokeniveles[nivel]= color(countercolor, 99, 99);
+        strokeniveles[nivel]= color(countercolor, 99, 99);}
+        else if(dianoche==false){
+         strokeniveles[nivel]= color(#A28BFF); 
+        }
       } else {
         strokeniveles[nivel] = color(negro);
       }

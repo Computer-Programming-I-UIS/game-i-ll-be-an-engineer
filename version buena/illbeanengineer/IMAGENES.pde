@@ -296,9 +296,17 @@ quad(xsettings-10,ysettings+4,xsettings,ysettings+14,xsettings-15,ysettings+19,x
 
     
 if(mouseX>=xsettings-35 && mouseX<=xsettings+35 && mouseY>=ysettings-35 && mouseY<=ysettings+35){
+  if(dianoche){
 colorMode(HSB, 100);
 configuracion = color(countercolor,99,99);
 strokeconfiguracion = color(countercolor+10,99,99);}
+else if(dianoche==false){
+  strokeconfiguracion= color(#2254A2);
+  configuracion= color(#CBD9ED);
+}
+
+
+}
 else{
 configuracion= color(negro);
 strokeconfiguracion = color(negro);  
@@ -331,7 +339,7 @@ else if(musicaa==false){
   
   
   
-fill(#D8D8D8);
+fill(#B9B9B9);
 noStroke();
 rect(xmusic-10,ymusic-15,20,7);
 
@@ -345,9 +353,14 @@ line(xmusic-20,ymusic-20,xmusic+20,ymusic+20);
 }
 
 if(mouseX>=xmusic-30 && mouseX<=xmusic+30 && mouseY>=ymusic-30 && mouseY<=ymusic+30){
+if(dianoche){
 colorMode(HSB, 100);
 music = color(countercolor,99,99);
 strokemusic = color(countercolor+10,99,99);}
+else if(dianoche==false){
+  strokemusic= color(#2254A2);
+  music= color(#CBD9ED);
+}}
 else{
 music= color(negro);
 strokemusic = color(negro);  
@@ -372,9 +385,14 @@ textSize(30);
 text("ES",xidioma,yidioma-5);
   }
   if(mouseX>=xidioma-30 && mouseX<=xidioma+30 && mouseY>=yidioma-30 && mouseY<=yidioma+30){
+if(dianoche){
 colorMode(HSB, 100);
 idiomaa = color(countercolor,99,99);
 strokeidioma = color(countercolor+10,99,99);}
+else if(dianoche==false){
+  strokeidioma= color(#2254A2);
+  idiomaa= color(#CBD9ED);
+}}
 else{
 idiomaa= color(negro);
 strokeidioma = color(negro);  
@@ -391,9 +409,14 @@ strokeWeight(strokewn);
 stroke(strokenightshift);
 ellipse(650+xdianoche,430+ydianoche,70,70);
 if(mouseX>=650+xdianoche-35 && mouseX<=650+xdianoche+35 && mouseY>=430+ydianoche-35 && mouseY<=430+ydianoche+35){
+if(dianoche){
 colorMode(HSB, 100);
 nightshift = color(countercolor,99,99);
 strokenightshift = color(countercolor+10,99,99);}
+else if(dianoche==false){
+  strokenightshift= color(#2254A2);
+  nightshift= color(#CBD9ED);
+}}
 else{
 nightshift= color(negro);
 strokenightshift = color(negro);  
