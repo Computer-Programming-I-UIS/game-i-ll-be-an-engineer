@@ -134,14 +134,14 @@ salir=false;
       thinkerr=false;
       lunaaa=false;
       if (dianoche==true) {
-        colorfondo=color(countercolor, 40, 99);
+        colorfondo=color(#E0EEFF);
       } else if (dianoche==false) {
         colorfondo=color(blanco);
       }
       textAlign(CENTER, CENTER);  
-      fill(color(countercolor+20, 99, 99));
+      fill(#7EA4F0);
       if (enes==false) {
-        textSize(40);
+        textSize(60);
         text("Choose a game", 500, 150);
       } else if (enes==true) {
         textSize(40);
