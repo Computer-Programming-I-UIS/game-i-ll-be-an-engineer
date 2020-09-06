@@ -33,36 +33,7 @@ class cohetes {
     op=_op;
     nivel=_nivel;
   }
-void sett(){
-  location = new PVector (100,100);
-  velocity = new PVector (10,5);
-   location2 = new PVector (700,350);
-  velocity2 = new PVector (10,5);
-}
-void dibujo1(){
-    location.add(velocity);
-  location2.add(velocity2);
-  if((location.x>850-radius)||(location.x<0+radius)){
-    velocity.x=velocity.x*-1;
-     
-  }
-  if((location.y>700-radius)||(location.y<0+radius)){
-    velocity.y=velocity.y*-1;
-   
-  }
-  if((location2.x>850-radius)||(location2.x<0+radius)){
-    velocity2.x=velocity2.x*-1;
-     
-  }
-  if((location2.y>700-radius)||(location2.y<0+radius)){
-    velocity2.y=velocity2.y*-1;
-  
-  }
-  stroke(0);
-  fill(125);
-  ellipse(location.x,location.y,radius*2,radius*2);
-   ellipse(location2.x,location2.y,radius*2,radius*2);
-}
+
   void move() {
 
 
@@ -208,6 +179,7 @@ if(salircohete){
       salircohete=true;
 
     }
+
  
   }
   void punto() { 

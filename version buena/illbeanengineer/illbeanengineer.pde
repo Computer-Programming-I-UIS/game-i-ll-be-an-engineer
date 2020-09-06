@@ -40,9 +40,9 @@ cohetes cohetenivel1;
 lolaboa lolaboanivel2;
 burbujas burbujasnivel2;
 cohetes cohetenivel2;
-lolaboa lolaboanivel15;
-burbujas burbujasnivel15;
-cohetes cohetenivel15;
+lolaboa lolaboanivel3;
+burbujas burbujasnivel3;
+cohetes cohetenivel3;
 
 
 import ddf.minim.*;//libreria para sonidos
@@ -322,9 +322,9 @@ void setup() {
   lolaboanivel2=new lolaboa(15, 1.5, 5);
 
 
-  burbujasnivel15= new burbujas(60, 0.8, 42);
-  cohetenivel15= new cohetes(22, 43);
-  lolaboanivel15=new lolaboa(30, 1.5, 44);
+  burbujasnivel3= new burbujas(60, 0.8, 6);
+  cohetenivel3= new cohetes(22, 7);
+  lolaboanivel3=new lolaboa(30, 1.5, 8);
 
 
   nivel1= new botones(615, 1360, 0);

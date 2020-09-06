@@ -356,6 +356,8 @@ nubeee2=false;
         cohetenivel1.dibujo();
         cohetenivel1.collide();
         cohetenivel1.punto();
+        cohetenivel1.dibujo1();
+        cohetenivel1.sett();
       }else {
         jugandoCohetes = false;
         
@@ -381,6 +383,8 @@ nubeee2=false;
         cohetenivel2.dibujo();
         cohetenivel2.collide();
         cohetenivel2.punto();
+        cohetenivel1.dibujo1();
+        cohetenivel1.sett();
       }else {
         jugandoCohetes = false;
         
@@ -397,16 +401,18 @@ nubeee2=false;
     else if (jugarnivel[2]==true && nivelesss[2]==true) {
       if (entergame1==true) {
         menuminijuegos=false;
-        burbujasnivel15.dibujar();
+        burbujasnivel2.dibujar();
       }
 
       if (entergame2==true) {
         jugandoCohetes = true;
         menuminijuegos=false;
-        cohetenivel15.move();
-        cohetenivel15.dibujo();
-        cohetenivel15.collide();
-        cohetenivel15.punto();
+        cohetenivel2.move();
+        cohetenivel2.dibujo();
+        cohetenivel2.collide();
+        cohetenivel2.punto();
+        cohetenivel2.dibujo1();
+        cohetenivel2.sett();
       } else {
         jugandoCohetes = false;
         
@@ -414,7 +420,7 @@ nubeee2=false;
 
       if (entergame3==true) {
         menuminijuegos=false;
-        lolaboanivel15.dibujar();
+        lolaboanivel3.dibujar();
       }
     }
     
@@ -423,16 +429,16 @@ nubeee2=false;
     else if (jugarnivel[3]==true && nivelesss[3]==true) {
       if (entergame1==true) {
         menuminijuegos=false;
-        burbujasnivel15.dibujar();
+        burbujasnivel3.dibujar();
       }
 
       if (entergame2==true) {
         jugandoCohetes = true;
         menuminijuegos=false;
-        cohetenivel15.move();
-        cohetenivel15.dibujo();
-        cohetenivel15.collide();
-        cohetenivel15.punto();
+        cohetenivel3.move();
+        cohetenivel3.dibujo();
+        cohetenivel3.collide();
+        cohetenivel3.punto();
       } else {
         jugandoCohetes = false;
         
@@ -440,7 +446,7 @@ nubeee2=false;
 
       if (entergame3==true) {
         menuminijuegos=false;
-        lolaboanivel15.dibujar();
+        lolaboanivel3.dibujar();
       }
     }
     
