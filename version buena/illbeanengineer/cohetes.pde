@@ -179,14 +179,6 @@ if(salircohete){
       salircohete=true;
 
     }
-    // }
- if (mouseX>=300&&mouseX<=700&&mouseY>=470&&mouseY<=570&&preguntando==true) {
-      tiempoEsperar_ms=0;
-     
-    } else if (mouseX>=300&&mouseX<=700&&mouseY>=350&&mouseY<=450&&preguntando==true) {
-      tiempoEsperar_ms=0;
-
-    }
  
   }
   void punto() { 

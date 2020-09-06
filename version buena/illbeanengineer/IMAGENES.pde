@@ -264,7 +264,8 @@ else if(dianoche==false){
   lolabocaabierta=lolanochebocaabierta;
   lolabocacerrada=lolanochebocacerrada;
 }
-  
+  lolaboa=lolabocacerrada;
+
   image(lolaboa,x,y,w,h);
 
 
