@@ -79,7 +79,7 @@ class cohetes {
     }
   }
   void dibujo() {
-<<<<<<< Updated upstream
+
      
 if(salircohete){
   countercoheteee++;
@@ -91,10 +91,10 @@ if(salircohete){
   }
 }
     
-=======
 
 
->>>>>>> Stashed changes
+
+
     colorfondo=#000000;
     estrellitas=true;
     noStroke();
@@ -166,7 +166,7 @@ if(salircohete){
 
         press1=true;
       }
-<<<<<<< Updated upstream
+
       }
    // }
   
@@ -177,7 +177,7 @@ if(salircohete){
     }
     else if (mouseX>=300&&mouseX<=700&&mouseY>=350&&mouseY<=450&&preguntando==true){
       salircohete=true;
-=======
+
     }
     // }
  if (mouseX>=300&&mouseX<=700&&mouseY>=470&&mouseY<=570&&preguntando==true) {
@@ -185,7 +185,7 @@ if(salircohete){
      
     } else if (mouseX>=300&&mouseX<=700&&mouseY>=350&&mouseY<=450&&preguntando==true) {
       tiempoEsperar_ms=0;
->>>>>>> Stashed changes
+
     }
  
   }
