@@ -533,10 +533,10 @@ class botones {
   }
 }
 
- class textos{
+ class texts{
   
      String texttt[]; int inicial; ; int numletras; int finall;  int ytexto;  int tamanotext; int u=0; int countertexto;
-  textos(String texttt2[], int inicial2, int numletrass, int finall2, int ytexto2,  int tamanotext2, int u2, int countertexto2){
+  texts(String texttt2[], int inicial2, int numletrass, int finall2, int ytexto2,  int tamanotext2, int u2, int countertexto2){
     texttt=texttt2;
     finall=finall2;
     ytexto=ytexto2;

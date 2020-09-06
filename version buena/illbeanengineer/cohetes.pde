@@ -1,4 +1,9 @@
 class cohetes {
+  PVector location ;
+  PVector velocity;
+  PVector location2 ;
+  PVector velocity2;
+  float radius =25;
   float x1=20;
   float x2=50;
   float y1=300;
@@ -19,6 +24,7 @@ class cohetes {
   boolean pregunta;
   boolean preguntando = false;
   boolean press1=false;
+   boolean p1=false;
   boolean puntoContado = false;
   float j=random(0, 1);
   int nivel;
@@ -32,26 +38,26 @@ class cohetes {
 
 
     musicamenu=false;
-    if(tutorialcohetes==true && !preguntando){
-        textSize(30);
+    if (tutorialcohetes==true && !preguntando) {
+      textSize(30);
 
-        if(enes==true){
+      if (enes==true) {
         fill(#EFEAFF);
-       text("Ayuda al cohete a llegar a la tierra!!!",500,450);
-       fill(#EAF2FF);
-       text("Utiliza las flechas para moverlo",500,490);
-        text("Con 7 puntos o más pasas el nivel",500,540);
+        text("Ayuda al cohete a llegar a la tierra!!!", 500, 450);
+        fill(#EAF2FF);
+        text("Utiliza las flechas para moverlo", 500, 490);
+        text("Con 7 puntos o más pasas el nivel", 500, 540);
       }
-      if(enes==false){
+      if (enes==false) {
         fill(#EFEAFF);
-       text("Help the rocket ship to reach the Earth",500,450);
-       fill(#EAF2FF);
-       text("Use arrow keys to move it",500,490);
-        text("With 7 points or more you complete level :)",500,540);
-      }       
+        text("Help the rocket ship to reach the Earth", 500, 450);
+        fill(#EAF2FF);
+        text("Use arrow keys to move it", 500, 490);
+        text("With 7 points or more you complete level :)", 500, 540);
       }
-    if (keyPressed && (key == CODED)  && !preguntando) {  //condicional si se oprime una tecla
-  
+    }
+    if (keyPressed && (key == CODED)  && !preguntando ) {  //condicional si se oprime una tecla
+
       if (keyCode==LEFT) {      //si oprime la flecha izquierda
         coheteplay=coheteplayh2;
         x1 -=speedx;
@@ -73,6 +79,7 @@ class cohetes {
     }
   }
   void dibujo() {
+<<<<<<< Updated upstream
      
 if(salircohete){
   countercoheteee++;
@@ -84,6 +91,10 @@ if(salircohete){
   }
 }
     
+=======
+
+
+>>>>>>> Stashed changes
     colorfondo=#000000;
     estrellitas=true;
     noStroke();
@@ -100,14 +111,13 @@ if(salircohete){
     if (enes==false) {
       text("Points ² "+ str(cont), 950, 300);
     }
-   
-   if(reset){
-     cont=0;
+
+    if (reset) {
+      cont=0;
       i=0;
       selector=0;
-       reset=false;
-   }
-   
+      reset=false;
+    }
   }
   void collide() { //metodo para que pase de un lado de la pantalla a otro
     if (x1 > width + 25) {
@@ -123,43 +133,40 @@ if(salircohete){
       y1=height + 25;
     }
   }
-    void mousePressed() {
+  void mousePressed() {
     if (press1==false  && jugandoCohetes==true&&preguntando==true) {
-         //if(preguntando==true){
+
       if (mouseX>=300&&mouseX<=700&&mouseY>=350&&mouseY<=450) {////////iz
-       
-          if (j<=0.5 && !puntoContado ) {
-            a=#54FF46;
-            cont=cont+1;
-            puntoContado=true;
-            
-        
+
+        if (j<=0.5 && !puntoContado ) {
+          a=#54FF46;
+          cont=cont+1;
+          puntoContado=true;
+         
         }
         if (j>=0.5) {
           a=#FF3195;
         }
         press1=true;
-      
-       }else {
-         // if(preguntando==true){
+      } else {
+        // if(preguntando==true){
         if (mouseX>=300&&mouseX<=700&&mouseY>=470&&mouseY<=570) {
-          
 
-            if (j>=0.5 && !puntoContado) {
-              b=#54FF46;
 
-              cont=cont+1;
-              puntoContado=true;
+          if (j>=0.5 && !puntoContado) {
+            b=#54FF46;
 
-            }
-            if (j<=0.5) {
-              b=#FF3195;
-            }
+            cont=cont+1;
+            puntoContado=true;
           }
-        
-        press1=true;
+          if (j<=0.5) {
+            b=#FF3195;
+          }
+        }
 
+        press1=true;
       }
+<<<<<<< Updated upstream
       }
    // }
   
@@ -170,6 +177,15 @@ if(salircohete){
     }
     else if (mouseX>=300&&mouseX<=700&&mouseY>=350&&mouseY<=450&&preguntando==true){
       salircohete=true;
+=======
+    }
+    // }
+ if (mouseX>=300&&mouseX<=700&&mouseY>=470&&mouseY<=570&&preguntando==true) {
+      tiempoEsperar_ms=0;
+     
+    } else if (mouseX>=300&&mouseX<=700&&mouseY>=350&&mouseY<=450&&preguntando==true) {
+      tiempoEsperar_ms=0;
+>>>>>>> Stashed changes
     }
  
   }
@@ -178,18 +194,19 @@ if(salircohete){
       if (!preguntando) {
         t1 = millis();
         preguntando = true;
-       
       }
       t2 = millis();
-      if (t2 - t1 < tiempoEsperar_ms) {
+      if (t2 - t1 < tiempoEsperar_ms ){
         //if(press1==false){
-          if(musicaa){
-        if ( cohetestiktak.position() == cohetestiktak.length() )
-        {
-          cohetestiktak.rewind();
-          cohetestiktak.play();
-        } else{
-          cohetestiktak.play();}}
+        if (musicaa) {
+          if ( cohetestiktak.position() == cohetestiktak.length() )
+          {
+            cohetestiktak.rewind();
+            cohetestiktak.play();
+          } else {
+            cohetestiktak.play();
+          }
+        }
         fill(#FFFFFF);
         stroke(8);
         rect(150, 40, 680, 600);
@@ -203,10 +220,11 @@ if(salircohete){
         textSize(50);
         textAlign(CENTER, CENTER);
         text(preguntas[selector+op], 500, 200);
-        if(enes==false){
-        text("La respuesta es:", 500, 300);}
-        else if(enes==true){
-        text("Answer is:", 500, 300);}
+        if (enes==false) {
+          text("La respuesta es:", 500, 300);
+        } else if (enes==true) {
+          text("Answer is:", 500, 300);
+        }
         /////////////////////////////////////////////
 
         fill(a);
@@ -214,7 +232,7 @@ if(salircohete){
         fill(b);  
         rect(300, 470, 400, 100);////////////////////////////////////////////////////
         fill(0);
-        
+
         if (j<=0.5) {
           text(correctas[selector+op], 500, 400);
           text(incorrectas[selector+op], 500, 520);
@@ -224,29 +242,23 @@ if(salircohete){
           text(correctas[selector+op], 500, 520);
         }
         textSize(50);
-        text(10-((t2-t1)/1000), 700, 100);
+        text(20-((t2-t1)/1000), 700, 100);
         t2 = millis();
-        
-        
-        if(tutorialcohetes==true){
-        textSize(30);
 
-        if(enes==true){
-        fill(#9BC0FF);
-       text("Escoje la respuesta correcta en menos de 10 segundos!",500,580);
-       
-      }
-      if(enes==false){
-        fill(#9BC0FF);
-       text("choose the correct answer in less than 10 seconds!",500,580);
- 
-          
-      }
+
+        if (tutorialcohetes==true) {
+          textSize(30);
+
+          if (enes==true) {
+            fill(#9BC0FF);
+            text("Escoje la respuesta correcta en menos de 10 segundos!", 500, 580);
+          }
+          if (enes==false) {
+            fill(#9BC0FF);
+            text("choose the correct answer in less than 10 seconds!", 500, 580);
+          }
         }
-   
-      } 
-      
-      else {
+      } else {
         //Cambiar de posicion el punto
         do {
           xp = random(30, 770);
@@ -257,7 +269,7 @@ if(salircohete){
         a=#FFFFFF;
         b=#FFFFFF;
         preguntando = false;
-         press1=false; 
+        press1=false; 
         puntoContado=false;
         tiempoEsperar_ms = 20000;
         selector ++;
@@ -289,9 +301,6 @@ if(salircohete){
           yp=3000000;///////////////////////////////////////////////////////////////////
         }
       }
-      }
-    
+    }
   }
-  
-  
 }
