@@ -51,18 +51,34 @@ class burbujas {
 
  musicamenu=false;
  if (dianoche==true) {
+   negro=#D3D3D3;
       colorfondo=color(#E0F9FF);
       burbujanormal=burbujanormald;
-      burbujamala=burbujamalad;
-      burbujabuena=burbujabuenad;
-      
+      if(counterburbujas>=0 && counterburbujas<30){
+      burbujamala=burbujamalad2;
+      burbujabuena=burbujabuenad2;}
+      else if(counterburbujas>=30 && counterburbujas<=60){
+      burbujamala=burbujamalad3;
+      burbujabuena=burbujabuenad3;}
+      counterburbujas++;
+      if(counterburbujas==60){
+       counterburbujas=0; 
+      }
 
     }
     else if (dianoche==false) {
       colorfondo=color(#0B2F76);
 burbujanormal=burbujanormalN;
-      burbujamala=burbujamalaN;
-      burbujabuena=burbujabuenaN;
+      if(counterburbujas>=0 && counterburbujas<30){
+      burbujamala=burbujamalaN2;
+      burbujabuena=burbujabuenaN2;}
+      else if(counterburbujas>=30 && counterburbujas<=60){
+      burbujamala=burbujamalaN3;
+      burbujabuena=burbujabuenaN3;}
+      counterburbujas++;
+      if(counterburbujas==60){
+       counterburbujas=0; 
+      }
     }
     
  
@@ -175,6 +191,7 @@ burbujanormal=burbujanormalN;
     for (int num=0; num<numburbujas; num++) {
 if(cambiodeimagen[num]){
   if(bienomal[num]==true){
+    
    burbuja[num]=burbujabuena; 
   }
   else if(bienomal[num]==false){

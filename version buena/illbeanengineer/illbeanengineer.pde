@@ -40,9 +40,16 @@ cohetes cohetenivel1;
 lolaboa lolaboanivel2;
 burbujas burbujasnivel2;
 cohetes cohetenivel2;
+<<<<<<< Updated upstream
 lolaboa lolaboanivel3;
 burbujas burbujasnivel3;
 cohetes cohetenivel3;
+=======
+lolaboa lolaboanivel15;
+burbujas burbujasnivel15;
+cohetes cohetenivel15;
+ranaboba ranabobanivelnose;
+>>>>>>> Stashed changes
 
 
 import ddf.minim.*;//libreria para sonidos
@@ -108,11 +115,15 @@ PImage burbujanormal;
 PImage burbujabuena;
 PImage burbujamala;
 PImage burbujanormald;
-PImage burbujabuenad;
-PImage burbujamalad;
+PImage burbujabuenad2;
+PImage burbujamalad2;
+PImage burbujabuenad3;
+PImage burbujamalad3;
 PImage burbujanormalN;
-PImage burbujabuenaN;
-PImage burbujamalaN;
+PImage burbujabuenaN2;
+PImage burbujamalaN2;
+PImage burbujabuenaN3;
+PImage burbujamalaN3;
 PFont myFont;
 PImage candy1;
 PImage candy2;
@@ -120,8 +131,15 @@ PImage candy3;
 PImage candy4;
 PImage earth, coheteplay1, coheteplay2, coheteplayh1, coheteplayh2, coheteplay;
 PImage edad;
-PImage baneradia;
-PImage baneranoche;
+PImage ranaboba;
+PImage ranabobaA;
+PImage ranabobad;
+PImage ranabobadA;
+PImage ranaboban;
+PImage ranabobanA;
+
+
+
 int i=5; 
 
 int xn1 = 0; 
@@ -255,7 +273,7 @@ int strokewm = 7;
 int strokewn = 7;
 int strokewi = 7;
 int strokewc = 7;
-
+int counterburbujas=0;
 int countertexto1 =0;
 int countertextooo=10;
 int movboca=0;
@@ -322,9 +340,17 @@ void setup() {
   lolaboanivel2=new lolaboa(15, 1.5, 5);
 
 
+<<<<<<< Updated upstream
   burbujasnivel3= new burbujas(60, 0.8, 6);
   cohetenivel3= new cohetes(22, 7);
   lolaboanivel3=new lolaboa(30, 1.5, 8);
+=======
+  burbujasnivel15= new burbujas(60, 0.8, 42);
+  cohetenivel15= new cohetes(22, 43);
+  lolaboanivel15=new lolaboa(30, 1.5, 44);
+  
+  ranabobanivelnose= new ranaboba(5);
+>>>>>>> Stashed changes
 
 
   nivel1= new botones(615, 1360, 0);
@@ -413,11 +439,15 @@ lolaboa=lolabocacerrada;
   thinker = loadImage("thinker.png");
   rayo = loadImage("rayo.png");
   burbujanormald=loadImage("burbujanormal.png");
-  burbujabuenad=loadImage("burbujabuena2.png");
-  burbujamalad=loadImage("burbujamala2.png");
+  burbujabuenad2=loadImage("burbujabuena2.png");
+  burbujamalad2=loadImage("burbujamala2.png");
+  burbujabuenad3=loadImage("burbujabuena3.png");
+  burbujamalad3=loadImage("burbujamala3.png");
   burbujanormalN=loadImage("burbujanormalN.png");
-  burbujabuenaN=loadImage("burbujabuenaN2.png");
-  burbujamalaN=loadImage("burbujamalaN2.png");
+  burbujabuenaN2=loadImage("burbujabuenaN2.png");
+  burbujamalaN2=loadImage("burbujamalaN2.png");
+  burbujabuenaN3=loadImage("burbujabuenaN3.png");
+  burbujamalaN3=loadImage("burbujamalaN3.png");
   candy1=loadImage("Candy1.png");
   candy2=loadImage("Candy2.png");
   candy3=loadImage("Candy3.png");
@@ -429,6 +459,12 @@ lolaboa=lolabocacerrada;
   coheteplayh2=loadImage("coheteplayh2.png");
   coheteplay=coheteplay1;
   edad=loadImage("e.jpeg");
+  ranabobad=loadImage("ranabobadia.png");
+  ranabobadA=loadImage("ranabobadiaA.png");
+  ranaboban=loadImage("ranabobanoche.png");
+  ranabobanA=loadImage("ranabobanocheA.png");
+  ranaboba=ranabobad;
+  ranabobaA=ranabobadA;
  
 burbujanormal=burbujanormald;
   
