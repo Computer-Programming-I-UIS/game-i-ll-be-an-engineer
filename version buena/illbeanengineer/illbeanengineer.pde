@@ -105,8 +105,14 @@ PImage p2;
 PImage rayo;
 PImage thinker;
 PImage burbujanormal;
-PImage burbujabuena3;
-PImage burbujamala3;
+PImage burbujabuena;
+PImage burbujamala;
+PImage burbujanormald;
+PImage burbujabuenad;
+PImage burbujamalad;
+PImage burbujanormalN;
+PImage burbujabuenaN;
+PImage burbujamalaN;
 PFont myFont;
 PImage candy1;
 PImage candy2;
@@ -201,7 +207,7 @@ int yimg=0;
 float w = 0;
 float h = 8*w/5;
 
-int next=0;
+int next=10;
 int weighttt=30;
 int counterstars = 0;
 int sizeplay=0;
@@ -406,10 +412,12 @@ lolaboa=lolabocacerrada;
   p2=planeta3;
   thinker = loadImage("thinker.png");
   rayo = loadImage("rayo.png");
-  burbujanormal=loadImage("burbujanormal.png");
-
-  burbujabuena3=loadImage("burbujabuena3.png");
-  burbujamala3=loadImage("burbujamala3.png");
+  burbujanormald=loadImage("burbujanormal.png");
+  burbujabuenad=loadImage("burbujabuena.png");
+  burbujamalad=loadImage("burbujamala.png");
+  burbujanormalN=loadImage("burbujanormalN.png");
+  burbujabuenaN=loadImage("burbujabuenaN.png");
+  burbujamalaN=loadImage("burbujamalaN.png");
   candy1=loadImage("Candy1.png");
   candy2=loadImage("Candy2.png");
   candy3=loadImage("Candy3.png");
@@ -421,12 +429,9 @@ lolaboa=lolabocacerrada;
   coheteplayh2=loadImage("coheteplayh2.png");
   coheteplay=coheteplay1;
   edad=loadImage("e.jpeg");
-  baneradia=loadImage("bañeradia.png");
-  baneranoche=loadImage("bañeranoche.png");
-
-  for (int j=0; j<50; j++) {
-    burbuja[j]=burbujanormal;
-  }
+ 
+burbujanormal=burbujanormald;
+  
 }
 void draw() {
   background(colorfondo);

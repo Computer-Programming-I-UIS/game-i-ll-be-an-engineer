@@ -13,7 +13,7 @@ void menuniveles() {
   ydianoche=-250;
 
   if (dianoche==true) {
-    
+    burbujanormal=burbujanormald;
     blanco=color(#FFFFFF);
     negro=color(#000000);
     colorfondo=color(#E8F4FF);
@@ -35,6 +35,7 @@ void menuniveles() {
 
 
  else if (dianoche==false) {
+   burbujanormal=burbujanormalN;
     colorfondo=color(#000000);
     blanco=color(#000000);
     negro=color(#FFFFFF);
@@ -324,7 +325,9 @@ nubeee2=false;
       image(cohete1, 500, 400, 200, 200);
       copy(lolaboa, 300, 80, 200, 200, 700, 300, 200, 200);
     } else {
-
+      lunaaa=false;
+      nubeee1=false;
+      nubeee2=false;
       solsol=false; 
       pastoo=false; 
       flores=false; 

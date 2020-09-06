@@ -10,6 +10,8 @@ class burbujas {
   float mov; 
   float movy; 
   boolean[] explotarburbujas=new boolean[50]; 
+  boolean[] cambiodeimagen=new boolean[50]; 
+  boolean[] bienomal=new boolean[50];
   float[] xburbujas=new float[50];
   float[] yburbujas=new float[50];
   float[] xburbujasrandom=new float[50];
@@ -27,6 +29,7 @@ class burbujas {
 
     for (int numburbujas=0; numburbujas<50; numburbujas++) {
       explotarburbujas[numburbujas]=false;
+      cambiodeimagen[numburbujas]=false;
     }
     for (int i=0; i<50; i++) {
       xburbujasrandom[i]=random(-50, 50);
@@ -47,9 +50,22 @@ class burbujas {
   void dibujar() {
 
  musicamenu=false;
+ if (dianoche==true) {
+      colorfondo=color(#E0F9FF);
+      burbujanormal=burbujanormald;
+      burbujamala=burbujamalad;
+      burbujabuena=burbujabuenad;
+      
+
+    }
+    else if (dianoche==false) {
+      colorfondo=color(#0B2F76);
+burbujanormal=burbujanormalN;
+      burbujamala=burbujamalaN;
+      burbujabuena=burbujabuenaN;
+    }
+    
  
-    
-    
       
       if(tutorialburbujas==true){
         textSize(30);
@@ -157,12 +173,25 @@ class burbujas {
 
 
     for (int num=0; num<numburbujas; num++) {
-
-
+if(cambiodeimagen[num]){
+  if(bienomal[num]==true){
+   burbuja[num]=burbujabuena; 
+  }
+  else if(bienomal[num]==false){
+   burbuja[num]=burbujamala; 
+  }
+}
+else if(cambiodeimagen[num]==false){
+  burbuja[num]=burbujanormal;}
+  
       imageMode(CENTER);       
       image(burbuja[num], xburbujas[num], yburbujas[num]+movy, wburbuja[num], wburbuja[num]);
       textSize(25);
-      fill(#CECECE);
+      if(dianoche==true){
+      fill(#CECECE);}
+      else if(dianoche==false){
+       fill(#FFFFFF); 
+      }
 
       if (aleatorio[num]<=0.5) {
         respuestasburbujas[num]=burbujascorrectass[num+op];
@@ -171,14 +200,7 @@ class burbujas {
       }
       text(respuestasburbujas[num], xburbujas[num], yburbujas[num]+movy);
     }
-    if (dianoche==true) {
-      colorfondo=color(#E0F9FF);
-
-    }
-    else if (dianoche==false) {
-      colorfondo=color(#000000);
-
-    }
+    
 
     if (yburbujas[numburbujas]+movy>=3100) {
       if (puntos>=20) {
@@ -207,15 +229,16 @@ class burbujas {
 
     for (int num=0; num<numburbujas; num++) {
       if (mouseX>xburbujas[num]-wburbuja[num]/2 && mouseX<xburbujas[num]+wburbuja[num]/2 && mouseY>yburbujas[num]+movy-wburbuja[num]/2 && mouseY<yburbujas[num]+movy+wburbuja[num]/2 && explotarburbujas[num]==false) {
+        cambiodeimagen[num]=true;
         if(musicaa){
         bubbles.rewind();
         bubbles.play();}
         if (respuestasburbujas[num]==burbujascorrectass[num+op]) {
           puntos+=2;
-          burbuja[num]=burbujabuena3;
+          bienomal[num]=true;
         } else if (respuestasburbujas[num]==burbujasincorrectass[num+op]) {
           puntos-=1;
-          burbuja[num]=burbujamala3;
+          bienomal[num]=false;
         }
 
 
