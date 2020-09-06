@@ -341,7 +341,7 @@ nubeee2=false;
 
     }
 
-    if (jugarnivel[0]==true && nivelesss[0]==true) {
+    if (jugarnivel[0]==true && nivelesss[0]==true) {//////////////////////////////NIVEL1
        next=10;
       
       if (entergame1==true) {
@@ -368,7 +368,7 @@ nubeee2=false;
 
     }
     
-    else if (jugarnivel[1]==true && nivelesss[1]==true) {
+    else if (jugarnivel[1]==true && nivelesss[1]==true) {//////////////////////////////////NIVEL2
       if (entergame1==true) {
         menuminijuegos=false;
         burbujasnivel2.dibujar();
@@ -394,7 +394,7 @@ nubeee2=false;
     
     
 
-    else if (jugarnivel[14]==true && nivelesss[14]==true) {
+    else if (jugarnivel[2]==true && nivelesss[2]==true) {
       if (entergame1==true) {
         menuminijuegos=false;
         burbujasnivel15.dibujar();
@@ -417,6 +417,35 @@ nubeee2=false;
         lolaboanivel15.dibujar();
       }
     }
+    
+    
+    
+    else if (jugarnivel[3]==true && nivelesss[3]==true) {
+      if (entergame1==true) {
+        menuminijuegos=false;
+        burbujasnivel15.dibujar();
+      }
+
+      if (entergame2==true) {
+        jugandoCohetes = true;
+        menuminijuegos=false;
+        cohetenivel15.move();
+        cohetenivel15.dibujo();
+        cohetenivel15.collide();
+        cohetenivel15.punto();
+      } else {
+        jugandoCohetes = false;
+        
+      }
+
+      if (entergame3==true) {
+        menuminijuegos=false;
+        lolaboanivel15.dibujar();
+      }
+    }
+    
+    
+    
   }
 
 

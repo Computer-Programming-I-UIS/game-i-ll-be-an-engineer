@@ -74,7 +74,15 @@ class cohetes {
   }
   void dibujo() {
      
-
+if(salircohete){
+  countercoheteee++;
+  
+  if(countercoheteee==20){
+    tiempoEsperar_ms=0;
+    salircohete=false;
+    countercoheteee=0;
+  }
+}
     
     colorfondo=#000000;
     estrellitas=true;
@@ -158,10 +166,10 @@ class cohetes {
      
     
     if (mouseX>=300&&mouseX<=700&&mouseY>=470&&mouseY<=570&&preguntando==true) {
-      tiempoEsperar_ms = 0;
+     salircohete=true;
     }
     else if (mouseX>=300&&mouseX<=700&&mouseY>=350&&mouseY<=450&&preguntando==true){
-       tiempoEsperar_ms = 0;
+      salircohete=true;
     }
  
   }

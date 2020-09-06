@@ -219,8 +219,8 @@ int estrellas=1;
 
 float[] xstars = new float[40];
 float[] ystars = new float[40];
-
-
+boolean salircohete=false;
+int countercoheteee=0;
 int counter = 1;
 int countertexto = 0;
 int countersol = 0;
