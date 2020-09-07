@@ -3,6 +3,8 @@ class cohetes {
   PVector velocity;
   PVector location2 ;
   PVector velocity2;
+  PVector location3 ;
+  PVector velocity3;
   float radius =25;
   float x1=20;
   float x2=50;
@@ -24,7 +26,7 @@ class cohetes {
   boolean pregunta;
   boolean preguntando = false;
   boolean press1=false;
-   boolean p1=false;
+  boolean p1=false;
   boolean puntoContado = false;
   float j=random(0, 1);
   int nivel;
@@ -32,40 +34,56 @@ class cohetes {
   cohetes(int _op, int _nivel) {
     op=_op;
     nivel=_nivel;
+    sett();
   }
-void sett(){
-  location = new PVector (100,100);
-  velocity = new PVector (10,5);
-   location2 = new PVector (700,350);
-  velocity2 = new PVector (10,5);
-}
-void dibujo1(){
+  void sett() {
+    location = new PVector (100, 100);
+    velocity = new PVector (5, 2);
+    location2 = new PVector (700, 350);
+    velocity2 = new PVector (5, 2);
+    location3 = new PVector (200, 400);
+    velocity3 = new PVector (5, 2);
+  }
+  void dibujo1() {
+
     location.add(velocity);
-  location2.add(velocity2);
-  if((location.x>850-radius)||(location.x<0+radius)){
-    velocity.x=velocity.x*-1;
-     
+    location2.add(velocity2);
+    location3.add(velocity3);
+    if ((location.x>900-radius)||(location.x<0+radius)) {
+      velocity.x=velocity.x*-1;
+    }
+    if ((location.y>700-radius)||(location.y<0+radius)) {
+      velocity.y=velocity.y*-1;
+    }
+    if ((location2.x>900-radius)||(location2.x<0+radius)) {
+      velocity2.x=velocity2.x*-1;
+    }
+    if ((location2.y>700-radius)||(location2.y<0+radius)) {
+      velocity2.y=velocity2.y*-1;
+    }
+    if ((location3.x>900-radius)||(location3.x<0+radius)) {
+      velocity3.x=velocity3.x*-1;
+    }
+    if ((location3.y>700-radius)||(location3.y<0+radius)) {
+      velocity3.y=velocity3.y*-1;
+    }
+
+    image(asteroide1, location.x, location.y, radius*2, radius*2);
+    image(asteroide2, location2.x, location2.y, radius*2, radius*2);
+    image(asteroide3, location3.x, location3.y, radius*2, radius*2);
   }
-  if((location.y>700-radius)||(location.y<0+radius)){
-    velocity.y=velocity.y*-1;
-   
-  }
-  if((location2.x>850-radius)||(location2.x<0+radius)){
-    velocity2.x=velocity2.x*-1;
-     
-  }
-  if((location2.y>700-radius)||(location2.y<0+radius)){
-    velocity2.y=velocity2.y*-1;
-  
-  }
-  stroke(0);
-  fill(125);
-  ellipse(location.x,location.y,radius*2,radius*2);
-   ellipse(location2.x,location2.y,radius*2,radius*2);
-}
   void move() {
 
-
+if(dianoche==true){
+  negro=#C6C6C6;
+  
+}
+if(dianoche==false){
+  negro=#FFFFFF;
+  
+}
+    
+    
     musicamenu=false;
     if (tutorialcohetes==true && !preguntando) {
       textSize(30);
@@ -109,17 +127,17 @@ void dibujo1(){
   }
   void dibujo() {
 
-     
-if(salircohete){
-  countercoheteee++;
-  
-  if(countercoheteee==20){
-    tiempoEsperar_ms=0;
-    salircohete=false;
-    countercoheteee=0;
-  }
-}
-    
+
+    if (salircohete) {
+      countercoheteee++;
+
+      if (countercoheteee==20) {
+        tiempoEsperar_ms=0;
+        salircohete=false;
+        countercoheteee=0;
+      }
+    }
+
 
 
 
@@ -145,6 +163,7 @@ if(salircohete){
       cont=0;
       i=0;
       selector=0;
+
       reset=false;
     }
   }
@@ -171,7 +190,6 @@ if(salircohete){
           a=#54FF46;
           cont=cont+1;
           puntoContado=true;
-         
         }
         if (j>=0.5) {
           a=#FF3195;
@@ -195,29 +213,29 @@ if(salircohete){
 
         press1=true;
       }
+    }
+    // }
 
-      }
-   // }
-  
-     
-    
+
+
     if (mouseX>=300&&mouseX<=700&&mouseY>=470&&mouseY<=570&&preguntando==true) {
-     salircohete=true;
-    }
-    else if (mouseX>=300&&mouseX<=700&&mouseY>=350&&mouseY<=450&&preguntando==true){
       salircohete=true;
-
+    } else if (mouseX>=300&&mouseX<=700&&mouseY>=350&&mouseY<=450&&preguntando==true) {
+      salircohete=true;
     }
- 
   }
   void punto() { 
+    
     if (dist(x1, y1, xp, yp)<=120) {//
       if (!preguntando) {
         t1 = millis();
         preguntando = true;
       }
       t2 = millis();
-      if (t2 - t1 < tiempoEsperar_ms ){
+      if (t2 - t1 < tiempoEsperar_ms ) {
+        velocity = new PVector (0, 0);
+        velocity2 = new PVector (0, 0);
+        velocity3 = new PVector (0, 0);
         //if(press1==false){
         if (musicaa) {
           if ( cohetestiktak.position() == cohetestiktak.length() )
@@ -286,6 +304,9 @@ if(salircohete){
           yp = random(30, 670);
           j=random(0, 1);
         } while (dist(x1, y1, xp, yp)<=120);
+        velocity = new PVector (5, 2);
+        velocity2 = new PVector (2, 5);
+        velocity3 = new PVector (4, 1);
         tutorialcohetes=false;
         a=#FFFFFF;
         b=#FFFFFF;

@@ -25,7 +25,7 @@ class burbujas {
     op=_opbuenas;
     mov=_mov;
     nivelll=_nivelll;
-     
+
 
     for (int numburbujas=0; numburbujas<50; numburbujas++) {
       explotarburbujas[numburbujas]=false;
@@ -49,108 +49,117 @@ class burbujas {
 
   void dibujar() {
 
- musicamenu=false;
- if (dianoche==true) {
-   negro=#D3D3D3;
+    musicamenu=false;
+    if (dianoche==true) {
+      negro=#D3D3D3;
       colorfondo=color(#E0F9FF);
       burbujanormal=burbujanormald;
-      if(counterburbujas>=0 && counterburbujas<30){
-      burbujamala=burbujamalad2;
-      burbujabuena=burbujabuenad2;}
-      else if(counterburbujas>=30 && counterburbujas<=60){
-      burbujamala=burbujamalad3;
-      burbujabuena=burbujabuenad3;}
-      counterburbujas++;
-      if(counterburbujas==60){
-       counterburbujas=0; 
+      if (counterburbujas>=0 && counterburbujas<40) {
+        burbujamala=burbujamalad2;
+        burbujabuena=burbujabuenad2;
+      } else if (counterburbujas>=40 && counterburbujas<=80) {
+        burbujamala=burbujamalad3;
+        burbujabuena=burbujabuenad3;
       }
-
-    }
-    else if (dianoche==false) {
+      counterburbujas++;
+      if (counterburbujas==80) {
+        counterburbujas=0;
+      }
+    } else if (dianoche==false) {
       colorfondo=color(#0B2F76);
-burbujanormal=burbujanormalN;
-      if(counterburbujas>=0 && counterburbujas<30){
-      burbujamala=burbujamalaN2;
-      burbujabuena=burbujabuenaN2;}
-      else if(counterburbujas>=30 && counterburbujas<=60){
-      burbujamala=burbujamalaN3;
-      burbujabuena=burbujabuenaN3;}
+      burbujanormal=burbujanormalN;
+      if (counterburbujas>=0 && counterburbujas<30) {
+        burbujamala=burbujamalaN2;
+        burbujabuena=burbujabuenaN2;
+      } else if (counterburbujas>=30 && counterburbujas<=60) {
+        burbujamala=burbujamalaN3;
+        burbujabuena=burbujabuenaN3;
+      }
       counterburbujas++;
-      if(counterburbujas==60){
-       counterburbujas=0; 
+      if (counterburbujas==60) {
+        counterburbujas=0;
       }
     }
-    
- 
-      
-      if(tutorialburbujas==true){
-        textSize(30);
-        movy=100;
-        if(enes==true){
-        fill(#EEB2FF);
-       text("Clickea las burbujas que contengan operaciones correctas",500,450);
-       fill(#FFB2F5);
-       text("Las burbujas buenas suman 2 puntos, las malas te quitan 1",500,490);
-       fill(#FFB2C1);
-       text("Con 20 puntos pasas el nivel :)",500,530);
+
+
+
+    if (tutorialburbujas==true) {
+      textSize(30);
+      movy=100;
+      if (enes==true) {
+        if (dianoche==true) {
+          fill(#F2D1FF);
+        } else if (dianoche==false) {
+          fill(#851CAD);
+        }
+        text("Clickea las burbujas que contengan operaciones correctas", 500, 450);
+        text("Las burbujas buenas suman 2 puntos, las malas te quitan 1", 500, 490);
+        text("Con 20 puntos pasas el nivel :)", 500, 530);
       }
-      if(enes==false){
-        fill(#EEB2FF);
-       text("Click bubbles that contain correct operations",500,450);
-       fill(#FFB2F5);
-       text("Good bubbles add 2 points, bad bubbles take 1",500,490);
-       fill(#FFB2C1);
-       text("With 20 points you complete level :)",500,530);
+      if (enes==false) {
+        if (dianoche==true) {
+          fill(#F2D1FF);
+        } else if (dianoche==false) {
+          fill(#851CAD);
+        }
+        text("Click bubbles that contain correct operations", 500, 450);
+        text("Good bubbles add 2 points, bad bubbles take 1", 500, 490);
+        text("With 20 points you complete level :)", 500, 530);
       }
       noFill();
-      stroke(#C5B2FF);
-      rect(430,550,140,60);
-      fill(#C5B2FF);
-      text("ok",500,590);
-        
-        
+      if (dianoche) {
+        stroke(#C5B2FF);
+      } else if (dianoche==false) {
+        stroke(#560076);
       }
-      
+      rect(430, 550, 140, 60);
+      if (dianoche) {
+        fill(#C5B2FF);
+      } else if (dianoche==false) {
+        fill(#560076);
+      }
+      text("ok", 500, 590);
+    }
 
-    if(tutorialburbujas==false){
+
+    if (tutorialburbujas==false) {
       movy+=mov;
     }
-    
-    
 
- 
-      numburbujas=30;
-      for (int j=0; j<50; j++) {
 
-        wburbuja[j]=200+animburbujas2*animburbuja[j];
+
+
+    numburbujas=30;
+    for (int j=0; j<50; j++) {
+
+      wburbuja[j]=200+animburbujas2*animburbuja[j];
+    }
+
+    for (int i=0; i<numburbujas; i++) {
+      if (i<10) {
+        xburbujas[i]= 150+xburbujasrandom[i];
+      } else if (i>=10 && i<20) {
+        xburbujas[i]= 450+xburbujasrandom[i];
+      } else if (i>=20 && i<30) {
+        xburbujas[i]=750+xburbujasrandom[i];
       }
+    }
 
-      for (int i=0; i<numburbujas; i++) {
-        if (i<10) {
-          xburbujas[i]= 150+xburbujasrandom[i];
-        } else if (i>=10 && i<20) {
-          xburbujas[i]= 450+xburbujasrandom[i];
-        } else if (i>=20 && i<30) {
-          xburbujas[i]=750+xburbujasrandom[i];
-        }
+    for (int i=0; i<numburbujas; i++) {
+
+      yburbujas[i]=150-u*300+yburbujasrandom[i];
+      u++;
+      if (u>=10) {
+        u=0;
       }
-
-      for (int i=0; i<numburbujas; i++) {
-
-        yburbujas[i]=150-u*300+yburbujasrandom[i];
-        u++;
-        if (u>=10) {
-          u=0;
-        }
-      
-      
     } 
-    
-    if(reset){
-    puntos=0;
+
+    if (reset) {
+
+      puntos=0;
       for (int numburbujas=0; numburbujas<50; numburbujas++) {
         explotarburbujas[numburbujas]=false; 
-        burbuja[numburbujas]=burbujanormal;
+        cambiodeimagen[numburbujas]=false;
         xburbujasrandom[numburbujas]=random(-50, 50);
         yburbujasrandom[numburbujas]=random(-50, 50);
         aleatorio[numburbujas]=random(0, 1);
@@ -163,7 +172,9 @@ burbujanormal=burbujanormalN;
       }  
       u=0; 
       movy=0;
+      
       reset=false;
+     
     }
 
     textAlign(CENTER, CENTER);
@@ -171,11 +182,17 @@ burbujanormal=burbujanormalN;
     fill(negro);
     if (enes==true) {
       text("Puntos", 950, 300);
+      textSize(17);
+      text("20 para ganar", 950, 360);
     }
     if (enes==false) {
+      textSize(20);
       text("Points", 950, 300);
+      text("20 to win", 950, 360);
     }
+    textSize(20);
     text(puntos, 950, 330);
+    
 
     if (counterburbuja>=0 && counterburbuja<15) {
       animburbujas2+=0.5;
@@ -189,25 +206,24 @@ burbujanormal=burbujanormalN;
 
 
     for (int num=0; num<numburbujas; num++) {
-if(cambiodeimagen[num]){
-  if(bienomal[num]==true){
-    
-   burbuja[num]=burbujabuena; 
-  }
-  else if(bienomal[num]==false){
-   burbuja[num]=burbujamala; 
-  }
-}
-else if(cambiodeimagen[num]==false){
-  burbuja[num]=burbujanormal;}
-  
+      if (cambiodeimagen[num]) {
+        if (bienomal[num]==true) {
+
+          burbuja[num]=burbujabuena;
+        } else if (bienomal[num]==false) {
+          burbuja[num]=burbujamala;
+        }
+      } else if (cambiodeimagen[num]==false) {
+        burbuja[num]=burbujanormal;
+      }
+
       imageMode(CENTER);       
       image(burbuja[num], xburbujas[num], yburbujas[num]+movy, wburbuja[num], wburbuja[num]);
       textSize(25);
-      if(dianoche==true){
-      fill(#CECECE);}
-      else if(dianoche==false){
-       fill(#FFFFFF); 
+      if (dianoche==true) {
+        fill(#CECECE);
+      } else if (dianoche==false) {
+        fill(#FFFFFF);
       }
 
       if (aleatorio[num]<=0.5) {
@@ -217,7 +233,7 @@ else if(cambiodeimagen[num]==false){
       }
       text(respuestasburbujas[num], xburbujas[num], yburbujas[num]+movy);
     }
-    
+
 
     if (yburbujas[numburbujas]+movy>=3100) {
       if (puntos>=20) {
@@ -247,9 +263,10 @@ else if(cambiodeimagen[num]==false){
     for (int num=0; num<numburbujas; num++) {
       if (mouseX>xburbujas[num]-wburbuja[num]/2 && mouseX<xburbujas[num]+wburbuja[num]/2 && mouseY>yburbujas[num]+movy-wburbuja[num]/2 && mouseY<yburbujas[num]+movy+wburbuja[num]/2 && explotarburbujas[num]==false) {
         cambiodeimagen[num]=true;
-        if(musicaa){
-        bubbles.rewind();
-        bubbles.play();}
+        if (musicaa) {
+          bubbles.rewind();
+          bubbles.play();
+        }
         if (respuestasburbujas[num]==burbujascorrectass[num+op]) {
           puntos+=2;
           bienomal[num]=true;
@@ -262,8 +279,5 @@ else if(cambiodeimagen[num]==false){
         explotarburbujas[num]=true;
       }
     }
-    
-
-      
   }
 }

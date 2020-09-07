@@ -278,6 +278,7 @@ puntos=0;
       aleatoriortas[j]=random(0,3);
       comer[j]=false;
     }
+
  reset=false;
 
    

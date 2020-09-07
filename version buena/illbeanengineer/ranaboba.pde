@@ -7,7 +7,7 @@ class ranaboba{
   }
   
   void dibujar(){
-    
+
     if(dianoche==true){
       ranaboba=ranabobad;
       ranabobaA=ranabobadA;
@@ -17,8 +17,8 @@ class ranaboba{
        ranaboba=ranaboban;
       ranabobaA=ranabobanA;
     }
-    
-    
+    imageMode(CENTER);
+    image(ranaboba,500,500,400,320);
     
     
     

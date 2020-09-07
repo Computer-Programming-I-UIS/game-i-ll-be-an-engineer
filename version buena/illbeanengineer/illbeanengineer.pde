@@ -40,16 +40,17 @@ cohetes cohetenivel1;
 lolaboa lolaboanivel2;
 burbujas burbujasnivel2;
 cohetes cohetenivel2;
-<<<<<<< Updated upstream
+
 lolaboa lolaboanivel3;
 burbujas burbujasnivel3;
 cohetes cohetenivel3;
-=======
-lolaboa lolaboanivel15;
-burbujas burbujasnivel15;
-cohetes cohetenivel15;
-ranaboba ranabobanivelnose;
->>>>>>> Stashed changes
+
+
+ranaboba ranabobanivel6;
+ranaboba ranabobanivel7;
+ranaboba ranabobanivel8;
+ranaboba ranabobanivel9;
+
 
 
 import ddf.minim.*;//libreria para sonidos
@@ -70,7 +71,7 @@ float yp2=random(0, 650);
 String[] preguntas;
 String[] correctas;
 String[] incorrectas;
-
+ int u=1;
 PImage lolaboa; 
 PImage lolabocaabierta; 
 PImage lolabocacerrada;
@@ -83,6 +84,13 @@ PImage flor2;
 PImage flor3; 
 PImage flor4; 
 PImage flor;
+PImage[] floresmenu=new PImage[20];
+boolean floresmenuu=false;
+float[] xfloresmenu=new float [20];
+float[] yfloresmenu=new float [20];
+float[] xrandomfloresmenu=new float [20];
+float[] yrandomfloresmenu=new float [20];
+float[] randomfloresmenu=new float [20];
 PImage f1; 
 PImage f2; 
 PImage f3; 
@@ -137,11 +145,13 @@ PImage ranabobad;
 PImage ranabobadA;
 PImage ranaboban;
 PImage ranabobanA;
+PImage asteroide1,asteroide2,asteroide3;
 
 
 
 int i=5; 
-
+int wfloresmenu=100;
+int counterwflores;
 int xn1 = 0; 
 int xn2 = -300; 
 int xn3 = 500; 
@@ -187,6 +197,7 @@ boolean rayoo=false, thinkerr=false, lunaaa=false, jugar=true, nightshifttt=true
 boolean tutorialburbujas=true, tutoriallolaboa=true, tutorialcohetes=true; 
 boolean salir =true;
 boolean reset =false;
+boolean jugando=false;
 
 boolean saludo=false; 
 boolean musicaa=false; 
@@ -330,6 +341,15 @@ void setup() {
     todosjuegos[i]=false;
   }
 
+for (int i=0; i<20; i++) {
+    xrandomfloresmenu[i]=random(-100,100);
+    yrandomfloresmenu[i]=random(-20,30);
+    randomfloresmenu[i]=random(0,4);
+  }
+  
+  
+
+    
 
   burbujasnivel1= new burbujas(0, 0.8, 0);/////////////////////////////posicion de la linea
   cohetenivel1= new cohetes(0, 1);
@@ -340,17 +360,15 @@ void setup() {
   lolaboanivel2=new lolaboa(15, 1.5, 5);
 
 
-<<<<<<< Updated upstream
+
   burbujasnivel3= new burbujas(60, 0.8, 6);
   cohetenivel3= new cohetes(22, 7);
   lolaboanivel3=new lolaboa(30, 1.5, 8);
-=======
-  burbujasnivel15= new burbujas(60, 0.8, 42);
-  cohetenivel15= new cohetes(22, 43);
-  lolaboanivel15=new lolaboa(30, 1.5, 44);
-  
-  ranabobanivelnose= new ranaboba(5);
->>>>>>> Stashed changes
+
+
+
+  ranabobanivel6= new ranaboba(6);
+
 
 
   nivel1= new botones(615, 1360, 0);
@@ -405,8 +423,8 @@ void setup() {
   loladiabocacerrada= loadImage("lolaboadiabocacerrada.png");
   lolanochebocaabierta= loadImage("lolaboanochebocaabierta.png");
   lolanochebocacerrada= loadImage("lolaboanochebocacerrada.png");
-lolabocacerrada=loladiabocacerrada;
-lolaboa=lolabocacerrada;
+  lolabocacerrada=loladiabocacerrada;
+  lolaboa=lolabocacerrada;
   flor1 = loadImage("flor1.png");
   flor2 = loadImage("flor2.png");
   flor3 = loadImage("flor3.png");
@@ -463,11 +481,13 @@ lolaboa=lolabocacerrada;
   ranabobadA=loadImage("ranabobadiaA.png");
   ranaboban=loadImage("ranabobanoche.png");
   ranabobanA=loadImage("ranabobanocheA.png");
+  asteroide1=loadImage("asteroide1.png");
+  asteroide2=loadImage("asteroide2.png");
+  asteroide3=loadImage("asteroide3.png");
   ranaboba=ranabobad;
   ranabobaA=ranabobadA;
- 
-burbujanormal=burbujanormald;
-  
+  lolaboa=lolabocacerrada;
+  burbujanormal=burbujanormald;
 }
 void draw() {
   background(colorfondo);
@@ -567,23 +587,98 @@ void mouseWheel(MouseEvent event) {
 void mousePressed() {
 
 
+  if (jugando==false) {
+    if (nivelesss[0]==true ) {
 
+      nivel1.mousePressed();
+    }
+    if (next>=10) {
+      if (nivelesss[1]==true) {
+        nivel2.mousePressed();
+      }
 
-  if (nivelesss[0]==true ) {
+      if (nivelesss[2]==true) {
+        nivel3.mousePressed();
+      }
 
-    nivel1.mousePressed();
+      if (nivelesss[3]==true) {
+        nivel4.mousePressed();
+      }
+
+      if (nivelesss[4]==true) {
+        nivel5.mousePressed();
+      }
+
+      if (nivelesss[5]==true) {
+        nivel6.mousePressed();
+      }
+
+      if (nivelesss[6]==true) {
+        nivel7.mousePressed();
+      }
+      if (nivelesss[7]==true) {
+        nivel8.mousePressed();
+      }
+
+      if (nivelesss[8]==true) {
+        nivel9.mousePressed();
+      }
+
+      if (nivelesss[9]==true) {
+        nivel10.mousePressed();
+      }
+
+      if (nivelesss[10]==true) {
+        nivel11.mousePressed();
+      }
+
+      if (nivelesss[11]==true) {
+        nivel12.mousePressed();
+      }
+    }
+  }
+
+  if (jugarnivel[0]==true) {    
     burbujasnivel1.mousePressed();
-
+    cohetenivel1.mousePressed();
+  }
+  if (jugarnivel[1]==true) {
+    burbujasnivel2.mousePressed();
+    cohetenivel2.mousePressed();
+  }
+  if (jugarnivel[2]==true) {    
+    burbujasnivel1.mousePressed();
     cohetenivel1.mousePressed();
   }
 
-  if (nivelesss[1]==true && next>=10) {
-
-    nivel2.mousePressed();
+  if (jugarnivel[3]==true) {
     burbujasnivel2.mousePressed();
-
     cohetenivel2.mousePressed();
   }
+  if (jugarnivel[4]==true) {    
+    burbujasnivel1.mousePressed();
+    cohetenivel1.mousePressed();
+  }
+
+  if (jugarnivel[5]==true) {
+    burbujasnivel2.mousePressed();
+    cohetenivel2.mousePressed();
+  }
+  if (jugarnivel[6]==true) {    
+    burbujasnivel1.mousePressed();
+    cohetenivel1.mousePressed();
+  }
+
+  if (jugarnivel[7]==true) {
+    burbujasnivel2.mousePressed();
+    cohetenivel2.mousePressed();
+  }
+
+
+
+
+
+
 
 
   if (playy==false) {
@@ -655,13 +750,16 @@ void mousePressed() {
 
   if (mouseX>=100 && mouseX<=300 && mouseY>=300 && mouseY<=500 && minijuegos==true && menuminijuegos==true) {
     entergame1=true;
+    jugando=true;
   }
 
   if (mouseX>=400 && mouseX<=600 && mouseY>=300 && mouseY<=500 && minijuegos==true && menuminijuegos==true) {
     entergame2=true;
+    jugando=true;
   }
   if (mouseX>=700 && mouseX<=900 && mouseY>=300 && mouseY<=500 && minijuegos==true && menuminijuegos==true) {
     entergame3=true;
+    jugando=true;
   }
 
 
@@ -689,6 +787,7 @@ void mousePressed() {
 
     exit();
   } else if (mouseX>=915 && mouseX<=985 && mouseY>=595 && mouseY<=665 && salir==false) {
+    jugando=false;
     reset=true;
     minijuegos=false;
   }
