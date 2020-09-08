@@ -1,10 +1,10 @@
 class lolaboa{
-  int op; float vel; int yroll;  int i=0; PImage candys1[] = new PImage[45];PImage candys2[] = new PImage[15]; int nivel; int puntos;
-  PImage candys3[] = new PImage[15]; float aleatoriocandys[]=new float[15]; float aleatorioy1[] =new float[15]; float aleatorioy2[] =new float[15]; 
-  float aleatorioy3[]=new float[15]; int xcandys=1000; float aleatoriortas[]=new float[15]; String rtas1[]=new String[15]; String rtas2[]=new String[15];
-  String rtas3[]=new String[15]; boolean[] comer = new boolean[15]; float wcandys=120;
+  int op; float vel; int yroll;  int i=0; PImage candys1[] = new PImage[30];PImage candys2[] = new PImage[10]; int nivel; int puntos;
+  PImage candys3[] = new PImage[10]; float aleatoriocandys[]=new float[10]; float aleatorioy1[] =new float[10]; float aleatorioy2[] =new float[10]; 
+  float aleatorioy3[]=new float[10]; int xcandys=1000; float aleatoriortas[]=new float[10]; String rtas1[]=new String[10]; String rtas2[]=new String[10];
+  String rtas3[]=new String[10]; boolean[] comer = new boolean[10]; float wcandys=120;
   lolaboa(int _op, float _vel, int _nivel){
-    for(int j=0;j<15;j++){
+    for(int j=0;j<10;j++){
       aleatoriocandys[j]=random(0,4);
       aleatorioy1[j]=random(150,250);
       aleatorioy2[j]=random(300,400);
@@ -32,8 +32,9 @@ else if(dianoche==false){
   lolabocacerrada=lolanochebocacerrada;
 }
 
+
   musicamenu=false;
-  for(int i=0;i<15;i++){
+  for(int i=0;i<10;i++){
       if(aleatoriocandys[i]<=1){
       candys1[i]=candy1;
       candys2[i]=candy2;
@@ -74,7 +75,11 @@ yflor5=500;
   }
   fill(blanco);
   strokeJoin(ROUND);
-  stroke(countercolor,99,99);
+  if(dianoche){
+  stroke(countercolor,99,99);}
+  else if(dianoche==false){
+   stroke(#EAEAEA); 
+  }
   strokeWeight(20);
   rect(350,20,300,100);
   
@@ -125,14 +130,14 @@ fill(#C90083);
        text("Hola! ayudame a comer los dulces buenos",500,300);
        text("Dulces tóxicos = respuestas incorrectas",500,340);
        text("Dulces buenos = respuestas correctas",500,380);
-       text("Con 10 puntos o más pasas el nivel",500,420);
+       text("Con 6 puntos o más pasas el nivel",500,420);
       }
       if(enes==false){
         fill(#FF58EC);
        text("Hi! help me eat good candys",500,300);
        text("Toxic candys = wrong answers",500,340);
        text("Good candys = correct answers",500,380);
-       text("With 10 points or more you complete level :)",500,420);
+       text("With 6 points or more you complete level :)",500,420);
 
       }
       noFill();
@@ -160,19 +165,22 @@ pushMatrix();
       yroll+=5;
     }}
     
-    if(dist(200,yroll+90,xcandys,aleatorioy1[i])<=60 || dist(200,yroll+90,xcandys,aleatorioy2[i])<=60 || dist(200,yroll+90,xcandys,aleatorioy3[i])<=60){
+    if(dist(200,yroll+90,xcandys,aleatorioy1[i])<=60 || dist(200,yroll+90,xcandys,aleatorioy2[i])<=60 || dist(200,yroll+90,xcandys,aleatorioy3[i])<=75){
       lolaboa = lolabocaabierta;
     }
+    else{lolaboa=lolabocacerrada;}
     if(dist(200,yroll+90,xcandys,aleatorioy1[i])<=20 && comer[i]==false){
      comer[i]=true;
       if(rtas1[i]==lolaboacorrectass[i+op]){
+        if(musicaa){
         candybueno.rewind();
-        candybueno.play();
+        candybueno.play();}
         puntos++;
       }
       else{
+        if(musicaa){
         candymalo.rewind();
-        candymalo.play();
+        candymalo.play();}
         puntos+=0;
       }
       
@@ -221,7 +229,7 @@ pushMatrix();
     }
     
 if(comer[i]==true){
-  if(i<14){
+  if(i<9){
   lolaboa = lolabocacerrada;
   i++;
   xcandys=1000;
@@ -239,11 +247,16 @@ text("Points",950,300);
 text(puntos,950,330);
     
     
-   if(comer[14]==true){ 
-if(puntos>=10){
-//  levelcompleted.play();
+   if(comer[9]==true){ 
+if(puntos>=6){
+  if(musicaa){
+levelcompleted.play();}
       todosjuegos[nivel]=true;
-      fill(#FF00A6);
+      if(dianoche){
+      fill(#FF00A6);}
+      else if(dianoche==false){
+        fill(#FFFFFF);
+      }
     textSize(50);
     if(enes==false){
     text("LEVEL COMPLETED", 500,300);
@@ -255,7 +268,11 @@ if(puntos>=10){
     else{
       if(musicaa){
       gameover.play();}
-      fill(#FF00A6);
+      if(dianoche){
+      fill(#FF00A6);}
+      else if(dianoche==false){
+        fill(#FFFFFF);
+      }
       textSize(50);
     if(enes==false){
     text("TRY AGAIN", 500,300);
@@ -270,7 +287,8 @@ if(reset){
 puntos=0;
   xcandys=1000;
   i=0;
-  for(int j=0;j<15;j++){
+  wcandys=120;
+  for(int j=0;j<10;j++){
       aleatoriocandys[j]=random(0,4);
       aleatorioy1[j]=random(150,250);
       aleatorioy2[j]=random(300,400);

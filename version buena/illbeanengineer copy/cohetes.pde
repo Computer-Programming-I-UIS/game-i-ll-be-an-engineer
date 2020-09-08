@@ -17,9 +17,6 @@ class cohetes {
   float multy;
   float multx;
   int last=0;
-  boolean a1=false;
-  boolean a2=false;
-  boolean a3=false;
   color a=#FFFFFF;
   color b=#FFFFFF;
   int con=0;
@@ -32,7 +29,7 @@ class cohetes {
   boolean p1=false;
   boolean puntoContado = false;
   float j=random(0, 1);
-  float xa1=100,ya1=100,xa2=700,ya2=350,xa3=200,ya3=400;
+  float xa1=100, ya1=100, xa2=700, ya2=350, xa3=200, ya3=400;
   int nivel;
   int op;
   cohetes(int _op, int _nivel) {
@@ -42,11 +39,11 @@ class cohetes {
   }
   void sett() {
     location = new PVector (xa1, ya1);
-    velocity = new PVector (5, 2);
+    velocity = new PVector (2, 1);
     location2 = new PVector (xa2, ya2);
-    velocity2 = new PVector (5, 2);
+    velocity2 = new PVector (4, 2);
     location3 = new PVector (xa3, ya3);
-    velocity3 = new PVector (5, 2);
+    velocity3 = new PVector (2, 2);
   }
   void dibujo1() {
 
@@ -80,8 +77,10 @@ class cohetes {
 
     if (dianoche==true) {
       negro=#C6C6C6;
+      colorfondo=#D6EAFF;
     }
     if (dianoche==false) {
+      colorfondo=#000000;
       negro=#FFFFFF;
     }
 
@@ -140,7 +139,7 @@ class cohetes {
       }
     }
 
-    colorfondo=#000000;
+
     estrellitas=true;
     noStroke();
     imageMode(CENTER);
@@ -154,14 +153,14 @@ class cohetes {
       text("Puntos "+ str(cont), 950, 300);
     }
     if (enes==false) {
-      text("Points ² "+ str(cont), 950, 300);
+      text("Points "+ str(cont), 950, 300);
     }
 
     if (reset) {
       cont=0;
       i=0;
       selector=0;
-
+      preguntando=false;
       reset=false;
     }
   }
@@ -223,58 +222,57 @@ class cohetes {
     }
   }
   void punto() { 
-    if ((dist(x1, y1, location.x, location.y)<=75)&&!a1) {
+    if ((dist(x1, y1, location.x, location.y)<=75)) {
       cont=cont-1;
-   
-       do {
-          location.x = random(30, 770);
-          location.y =random(30, 670);;
-           location.add(velocity);
-    if ((location.x>900-radius)||(location.x<0+radius)) {
-      velocity.x=velocity.x*-1;
-    }
-    if ((location.y>700-radius)||(location.y<0+radius)) {
-      velocity.y=velocity.y*-1;
-    }    
-          
-        } while (dist(x1, y1, location.x, location.y)<=120);
-    }
-  
-    if ((dist(x1, y1, location2.x, location2.y)<=75)&&!a2) {
-      cont=cont-1;
- 
-   
-    do {
-         
-          location2.x = random(30, 770);
-          location2.y = random(30, 670);;
-           location2.add(velocity2);
-            if ((location2.x>900-radius)||(location2.x<0+radius)) {
-      velocity2.x=velocity2.x*-1;
-    }
-    if ((location2.y>700-radius)||(location2.y<0+radius)) {
-      velocity2.y=velocity2.y*-1;
-    }           
-         
-        } while (dist(x1, y1, location2.x, location2.y)<=120);
-    }
-  
-    if ((dist(x1, y1, location3.x, location3.y)<=75)&&!a3) {
-      cont=cont-1;
-    
+
       do {
-          
-          location3.x = random(30, 770);;
-          location3.y = random(30, 670);
-           location3.add(velocity3);
-           if ((location3.x>900-radius)||(location3.x<0+radius)) {
-      velocity3.x=velocity3.x*-1;
+        location.x = random(30, 770);
+        location.y =random(30, 670);
+        location.add(velocity);
+        if ((location.x>900-radius)||(location.x<0+radius)) {
+          velocity.x=velocity.x*-1;
+        }
+        if ((location.y>700-radius)||(location.y<0+radius)) {
+          velocity.y=velocity.y*-1;
+        }
+      } while (dist(x1, y1, location.x, location.y)<=120);
     }
-    if ((location3.y>700-radius)||(location3.y<0+radius)) {
-      velocity3.y=velocity3.y*-1;
+
+    if ((dist(x1, y1, location2.x, location2.y)<=75)) {
+      cont=cont-1;
+
+
+      do {
+
+        location2.x = random(30, 770);
+        location2.y = random(30, 670);
+        ;
+        location2.add(velocity2);
+        if ((location2.x>900-radius)||(location2.x<0+radius)) {
+          velocity2.x=velocity2.x*-1;
+        }
+        if ((location2.y>700-radius)||(location2.y<0+radius)) {
+          velocity2.y=velocity2.y*-1;
+        }
+      } while (dist(x1, y1, location2.x, location2.y)<=120);
     }
-          
-        } while (dist(x1, y1,  location3.x, location3.y)<=120);
+
+    if ((dist(x1, y1, location3.x, location3.y)<=75)) {
+      cont=cont-1;
+
+      do {
+
+        location3.x = random(30, 770);
+        ;
+        location3.y = random(30, 670);
+        location3.add(velocity3);
+        if ((location3.x>900-radius)||(location3.x<0+radius)) {
+          velocity3.x=velocity3.x*-1;
+        }
+        if ((location3.y>700-radius)||(location3.y<0+radius)) {
+          velocity3.y=velocity3.y*-1;
+        }
+      } while (dist(x1, y1, location3.x, location3.y)<=120);
     }
 
     if (dist(x1, y1, xp, yp)<=120) {//
@@ -371,7 +369,9 @@ class cohetes {
 
           if (cont>=7) {
             todosjuegos[nivel]=true;
-            //levelcompleted.play();
+            if (musicaa) {
+              levelcompleted.play();
+            }
             fill(#FF00A6);
             textSize(50);
             if (enes==false) {
@@ -380,7 +380,9 @@ class cohetes {
               text("NIVEL COMPLETO", 500, 300);
             }
           } else {
-            gameover.play();
+            if (musicaa) {
+              gameover.play();
+            }
             fill(#FF00A6);
             textSize(50);
             if (enes==false) {

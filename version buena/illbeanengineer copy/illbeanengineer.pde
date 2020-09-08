@@ -31,12 +31,10 @@ botones nivel10;
 botones nivel11;
 botones nivel12;
 
-lolaboa lolaboanivel0;
-burbujas burbujasnivel0;
-cohetes cohetenivel0;
 lolaboa lolaboanivel1;
 burbujas burbujasnivel1;
 cohetes cohetenivel1;
+
 lolaboa lolaboanivel2;
 burbujas burbujasnivel2;
 cohetes cohetenivel2;
@@ -45,13 +43,41 @@ lolaboa lolaboanivel3;
 burbujas burbujasnivel3;
 cohetes cohetenivel3;
 
+lolaboa lolaboanivel4;
+burbujas burbujasnivel4;
+cohetes cohetenivel4;
 
-ranaboba ranabobanivel6;
-ranaboba ranabobanivel7;
-ranaboba ranabobanivel8;
-ranaboba ranabobanivel9;
+lolaboa lolaboanivel5;
+burbujas burbujasnivel5;
+cohetes cohetenivel5;
 
+lolaboa lolaboanivel6;
+burbujas burbujasnivel6;
+cohetes cohetenivel6;
 
+lolaboa lolaboanivel7;
+burbujas burbujasnivel7;
+cohetes cohetenivel7;
+
+lolaboa lolaboanivel8;
+burbujas burbujasnivel8;
+cohetes cohetenivel8;
+
+lolaboa lolaboanivel9;
+burbujas burbujasnivel9;
+cohetes cohetenivel9;
+
+lolaboa lolaboanivel10;
+burbujas burbujasnivel10;
+cohetes cohetenivel10;
+
+lolaboa lolaboanivel11;
+burbujas burbujasnivel11;
+cohetes cohetenivel11;
+
+lolaboa lolaboanivel12;
+burbujas burbujasnivel12;
+cohetes cohetenivel12;
 
 import ddf.minim.*;//libreria para sonidos
 Minim minim;
@@ -71,7 +97,7 @@ float yp2=random(0, 650);
 String[] preguntas;
 String[] correctas;
 String[] incorrectas;
- int u=1;
+int u=1;
 PImage lolaboa; 
 PImage lolabocaabierta; 
 PImage lolabocacerrada;
@@ -84,6 +110,7 @@ PImage flor2;
 PImage flor3; 
 PImage flor4; 
 PImage flor;
+int leccion=1;
 PImage[] floresmenu=new PImage[20];
 boolean floresmenuu=false;
 float[] xfloresmenu=new float [20];
@@ -145,7 +172,12 @@ PImage ranabobad;
 PImage ranabobadA;
 PImage ranaboban;
 PImage ranabobanA;
-PImage asteroide1,asteroide2,asteroide3;
+PImage asteroide1, asteroide2, asteroide3;
+PImage numerosE;
+PImage numerosI;
+PImage lecciondia;
+PImage leccionnoche;
+PImage rectanumerica;
 
 
 
@@ -299,7 +331,7 @@ void setup() {
   menus = minim.loadFile("menus.wav");
   gameover = minim.loadFile("gameover.wav");
   cohetestiktak = minim.loadFile("cohetestiktak.wav");
-  levelcompleted = minim.loadFile("win.wav");
+  levelcompleted = minim.loadFile("levelcompleted.wav");
   candybueno=minim.loadFile("candybueno.wav");
   candymalo=minim.loadFile("candymalo.wav");
 
@@ -341,33 +373,53 @@ void setup() {
     todosjuegos[i]=false;
   }
 
-for (int i=0; i<20; i++) {
-    xrandomfloresmenu[i]=random(-100,100);
-    yrandomfloresmenu[i]=random(-20,30);
-    randomfloresmenu[i]=random(0,4);
+  for (int i=0; i<20; i++) {
+    xrandomfloresmenu[i]=random(-100, 100);
+    yrandomfloresmenu[i]=random(-20, 30);
+    randomfloresmenu[i]=random(0, 4);
   }
-  
-  
-
-    
-
-  burbujasnivel1= new burbujas(0, 0.8, 0);/////////////////////////////posicion de la linea
-  cohetenivel1= new cohetes(0, 1);
-  lolaboanivel1=new lolaboa(0, 1.5, 2);
-
-  burbujasnivel2= new burbujas(31, 0.8, 3);/////////////////////////////posicion de la linea
-  cohetenivel2= new cohetes(11, 4);
-  lolaboanivel2=new lolaboa(15, 1.5, 5);
 
 
+  burbujasnivel1= new burbujas(1, 0.8, 0);
+  burbujasnivel2= new burbujas(32, 0.8, 0);
+  burbujasnivel3= new burbujas(63, 0.8, 0);
+  burbujasnivel4= new burbujas(94, 0.8, 0);
+  burbujasnivel5= new burbujas(125, 0.8, 0);
+  burbujasnivel6= new burbujas(156, 0.8, 0);
+  burbujasnivel7= new burbujas(0, 0.8, 0);
+  burbujasnivel8= new burbujas(0, 0.8, 0);
+  burbujasnivel9= new burbujas(0, 0.8, 0);
+  burbujasnivel10= new burbujas(0, 0.8, 0);
+  burbujasnivel11= new burbujas(187, 0.8, 0);
+  burbujasnivel12= new burbujas(218, 0.8, 0);
 
-  burbujasnivel3= new burbujas(60, 0.8, 6);
-  cohetenivel3= new cohetes(22, 7);
-  lolaboanivel3=new lolaboa(30, 1.5, 8);
+  cohetenivel1= new cohetes(1, 1);
+  cohetenivel2= new cohetes(12, 1);
+  cohetenivel3= new cohetes(23, 1);
+  cohetenivel4= new cohetes(34, 1);
+  cohetenivel5= new cohetes(45, 1);
+  cohetenivel6= new cohetes(56, 1);
+  cohetenivel7= new cohetes(0, 1);
+  cohetenivel8= new cohetes(0, 1);
+  cohetenivel9= new cohetes(0, 1);
+  cohetenivel10= new cohetes(0, 1);
+  cohetenivel11= new cohetes(67, 1);
+  cohetenivel12= new cohetes(78, 1);
+
+  lolaboanivel1 = new lolaboa(1, 0.5, 1);
+  lolaboanivel2 = new lolaboa(12, 0.5, 1);
+  lolaboanivel3 = new lolaboa(23, 0.5, 1);
+  lolaboanivel4 = new lolaboa(34, 0.5, 1);
+  lolaboanivel5 = new lolaboa(45, 0.5, 1);
+  lolaboanivel6 = new lolaboa(56, 0.5, 1);
+  lolaboanivel7 = new lolaboa(0, 0.5, 1);
+  lolaboanivel8 = new lolaboa(0, 0.5, 1);
+  lolaboanivel9 = new lolaboa(0, 0.5, 1);
+  lolaboanivel10 = new lolaboa(1, 0.5, 1);
+  lolaboanivel11 = new lolaboa(1, 0.5, 1);
+  lolaboanivel12 = new lolaboa(1, 0.5, 1);
 
 
-
-  ranabobanivel6= new ranaboba(6);
 
 
 
@@ -484,10 +536,15 @@ for (int i=0; i<20; i++) {
   asteroide1=loadImage("asteroide1.png");
   asteroide2=loadImage("asteroide2.png");
   asteroide3=loadImage("asteroide3.png");
+  numerosE=loadImage("numerosespañol.png");
+  numerosI=loadImage("numerosingles.png");
+  lecciondia=loadImage("nivel123.png");
+  leccionnoche=loadImage("nivel123N.png");
   ranaboba=ranabobad;
   ranabobaA=ranabobadA;
   lolaboa=lolabocacerrada;
   burbujanormal=burbujanormald;
+  rectanumerica=loadImage("enteros_xl.png");
 }
 void draw() {
   background(colorfondo);
@@ -647,33 +704,48 @@ void mousePressed() {
     cohetenivel2.mousePressed();
   }
   if (jugarnivel[2]==true) {    
-    burbujasnivel1.mousePressed();
-    cohetenivel1.mousePressed();
+    burbujasnivel3.mousePressed();
+    cohetenivel3.mousePressed();
   }
 
   if (jugarnivel[3]==true) {
-    burbujasnivel2.mousePressed();
-    cohetenivel2.mousePressed();
+    burbujasnivel4.mousePressed();
+    cohetenivel4.mousePressed();
   }
   if (jugarnivel[4]==true) {    
-    burbujasnivel1.mousePressed();
-    cohetenivel1.mousePressed();
+    burbujasnivel5.mousePressed();
+    burbujasnivel5.mousePressed();
   }
 
   if (jugarnivel[5]==true) {
-    burbujasnivel2.mousePressed();
-    cohetenivel2.mousePressed();
+    burbujasnivel6.mousePressed();
+    cohetenivel6.mousePressed();
   }
   if (jugarnivel[6]==true) {    
-    burbujasnivel1.mousePressed();
-    cohetenivel1.mousePressed();
+    burbujasnivel7.mousePressed();
+    cohetenivel7.mousePressed();
   }
 
-  if (jugarnivel[7]==true) {
-    burbujasnivel2.mousePressed();
-    cohetenivel2.mousePressed();
+  if (jugarnivel[7]==true) {    
+    burbujasnivel8.mousePressed();
+    cohetenivel8.mousePressed();
   }
-
+  if (jugarnivel[8]==true) {    
+    burbujasnivel9.mousePressed();
+    cohetenivel9.mousePressed();
+  }
+  if (jugarnivel[9]==true) {    
+    burbujasnivel10.mousePressed();
+    cohetenivel10.mousePressed();
+  }
+  if (jugarnivel[10]==true) {    
+    burbujasnivel11.mousePressed();
+    cohetenivel11.mousePressed();
+  }
+  if (jugarnivel[11]==true) {    
+    burbujasnivel12.mousePressed();
+    cohetenivel8.mousePressed();
+  }
 
 
 
@@ -748,16 +820,16 @@ void mousePressed() {
   }
 
 
-  if (mouseX>=100 && mouseX<=300 && mouseY>=300 && mouseY<=500 && minijuegos==true && menuminijuegos==true) {
+  if (mouseX>=690 && mouseX<=810 && mouseY>=140 && mouseY<=260 && minijuegos==true && menuminijuegos==true) {
     entergame1=true;
     jugando=true;
   }
 
-  if (mouseX>=400 && mouseX<=600 && mouseY>=300 && mouseY<=500 && minijuegos==true && menuminijuegos==true) {
+  if (mouseX>=690 && mouseX<=810 && mouseY>=290 && mouseY<=410 && minijuegos==true && menuminijuegos==true) {
     entergame2=true;
     jugando=true;
   }
-  if (mouseX>=700 && mouseX<=900 && mouseY>=300 && mouseY<=500 && minijuegos==true && menuminijuegos==true) {
+  if (mouseX>=690 && mouseX<=810 && mouseY>=440 && mouseY<=560 && minijuegos==true && menuminijuegos==true) {
     entergame3=true;
     jugando=true;
   }

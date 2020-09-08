@@ -94,7 +94,7 @@ class burbujas {
         }
         text("Clickea las burbujas que contengan operaciones correctas", 500, 450);
         text("Las burbujas buenas suman 2 puntos, las malas te quitan 1", 500, 490);
-        text("Con 20 puntos pasas el nivel :)", 500, 530);
+        text("Con 30 puntos pasas el nivel :)", 500, 530);
       }
       if (enes==false) {
         if (dianoche==true) {
@@ -104,7 +104,7 @@ class burbujas {
         }
         text("Click bubbles that contain correct operations", 500, 450);
         text("Good bubbles add 2 points, bad bubbles take 1", 500, 490);
-        text("With 20 points you complete level :)", 500, 530);
+        text("With 30 points you complete level :)", 500, 530);
       }
       noFill();
       if (dianoche) {
@@ -183,12 +183,12 @@ class burbujas {
     if (enes==true) {
       text("Puntos", 950, 300);
       textSize(17);
-      text("20 para ganar", 950, 360);
+      text("30 para ganar", 950, 360);
     }
     if (enes==false) {
       textSize(20);
       text("Points", 950, 300);
-      text("20 to win", 950, 360);
+      text("30 to win", 950, 360);
     }
     textSize(20);
     text(puntos, 950, 330);
@@ -236,8 +236,9 @@ class burbujas {
 
 
     if (yburbujas[numburbujas]+movy>=3100) {
-      if (puntos>=20) {
-        //levelcompleted.play();
+      if (puntos>=30) {
+        if(musicaa){
+levelcompleted.play();}
         todosjuegos[nivelll]=true;
         textSize(50);
         if (enes==false) {
@@ -246,7 +247,8 @@ class burbujas {
           text("NIVEL COMPLETO", 500, 300);
         }
       } else {
-        gameover.play();
+        if(musicaa){
+        gameover.play();}
         textSize(50);
         if (enes==false) {
           text("TRY AGAIN", 500, 300);
