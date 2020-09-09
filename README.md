@@ -52,12 +52,12 @@ Cada nivel tiene 3 minijuegos que se mostrarán en pantalla en forma de menú al
      los que tengan la  respueta correcta a la operación  que aparezca la parte de arriba.Podrás mover a lola con las teclas de de 
      dirección arriba y abajo.
      
-       ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-08-26%20at%201.47.46%20PM.png)
+       ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-09-09%20at%208.39.28%20AM.png)
        
 ## CLASIFICACIÓN
  Para todo público.
  
-   ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-09-09%20at%208.39.28%20AM.pngg)
+   ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/data/e.jpeg)
    
 ## AUTORAS ✒️
 Este video juego fue realizado por las estudiantes de ingeniería electrónica de la Universidad indsutrial de Santander para 
