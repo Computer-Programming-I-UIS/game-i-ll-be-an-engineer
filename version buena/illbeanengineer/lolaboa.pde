@@ -2,7 +2,7 @@ class lolaboa{
   int op; float vel; int yroll;  int i=0; PImage candys1[] = new PImage[30];PImage candys2[] = new PImage[10]; int nivel; int puntos;
   PImage candys3[] = new PImage[10]; float aleatoriocandys[]=new float[10]; float aleatorioy1[] =new float[10]; float aleatorioy2[] =new float[10]; 
   float aleatorioy3[]=new float[10]; int xcandys=1000; float aleatoriortas[]=new float[10]; String rtas1[]=new String[10]; String rtas2[]=new String[10];
-  String rtas3[]=new String[10]; boolean[] comer = new boolean[10]; float wcandys=120;
+  String rtas3[]=new String[10]; boolean[] comer = new boolean[10]; float wcandys=120; PImage nivel7[] = new PImage[3];PImage nivel8[] = new PImage[5]; PImage nivel9[] = new PImage[5];PImage nivel10[] = new PImage[3];
   lolaboa(int _op, float _vel, int _nivel){
     for(int j=0;j<10;j++){
       aleatoriocandys[j]=random(0,4);
@@ -13,7 +13,22 @@ class lolaboa{
       comer[j]=false;
         
     }
-    
+    nivel7[0]=loadImage("lolaboa/lola14.png");
+    nivel7[1]=loadImage("lolaboa/lola15.png");
+    nivel7[2]=loadImage("lolaboa/lola16.png");
+    nivel8[0]=loadImage("lolaboa/lola1.png");
+    nivel8[1]=loadImage("lolaboa/lola2.png");
+    nivel8[2]=loadImage("lolaboa/lola3.png");
+    nivel8[3]=loadImage("lolaboa/lola4.png");
+    nivel8[4]=loadImage("lolaboa/lola5.png");
+    nivel9[0]=loadImage("lolaboa/lola6.png");
+    nivel9[1]=loadImage("lolaboa/lola7.png");
+    nivel9[2]=loadImage("lolaboa/lola8.png");
+    nivel9[3]=loadImage("lolaboa/lola9.png");
+    nivel9[4]=loadImage("lolaboa/lola10.png");
+    nivel10[0]=loadImage("lolaboa/lola11.png");
+    nivel10[1]=loadImage("lolaboa/lola12.png");
+    nivel10[2]=loadImage("lolaboa/lola13.png");
     op=_op;
     vel=_vel;
     
@@ -93,7 +108,29 @@ yflor5=500;
   textAlign(CENTER,CENTER);
  fill(negro);
  textSize(30);
- text(lolaboapreguntass[i+op],500,60);
+
+ if(nivel==7){
+    imageMode(CENTER);
+   image(nivel7[i],500,40,400,200);
+   imageMode(CORNER);
+ }
+ if(nivel==8){
+    imageMode(CENTER);
+   image(nivel8[i],500,40,400,200);
+   imageMode(CORNER);
+ }
+ if(nivel==9){
+    imageMode(CENTER);
+   image(nivel9[i],500,40,400,200);
+   imageMode(CORNER);
+ }
+ if(nivel==10){
+    imageMode(CENTER);
+   image(nivel10[i],500,80,400,200);
+   imageMode(CORNER);
+ }
+ else{
+ text(lolaboapreguntass[i+op],500,60);}
  imageMode(CENTER);
  image(candys1[i],xcandys,aleatorioy1[i],wcandys,wcandys);
  image(candys2[i],xcandys,aleatorioy2[i],wcandys,wcandys);
@@ -278,7 +315,17 @@ pushMatrix();
     }
     
 if(comer[i]==true){
-  if(nivel==11){
+  
+  if(nivel==7 || nivel==3){
+    if(i<3){
+  lolaboa = lolabocacerrada;
+  i++;
+  xcandys=1000;
+  wcandys=120;
+  }
+  }
+  
+  if(nivel==11 || nivel==8 || nivel==9){
     if(i<5){
   lolaboa = lolabocacerrada;
   i++;

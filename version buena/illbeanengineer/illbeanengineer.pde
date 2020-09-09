@@ -274,7 +274,7 @@ int yimg=0;
 float w = 0;
 float h = 8*w/5;
 
-int next=0;
+int next=10;
 int weighttt=30;
 int counterstars = 0;
 int sizeplay=0;
@@ -392,12 +392,12 @@ void setup() {
   cohetenivel4= new cohetes(34, 4);
   cohetenivel5= new cohetes(45, 5);
   cohetenivel6= new cohetes(56, 6);
-  cohetenivel7= new cohetes(0, 7);
-  cohetenivel8= new cohetes(0, 8);
-  cohetenivel9= new cohetes(0, 9);
-  cohetenivel10= new cohetes(0, 10);
-  cohetenivel11= new cohetes(67, 11);
-  cohetenivel12= new cohetes(73, 12);
+  cohetenivel7= new cohetes(67, 7);
+  cohetenivel8= new cohetes(71, 8);
+  cohetenivel9= new cohetes(77, 9);
+  cohetenivel10= new cohetes(83, 10);
+  cohetenivel11= new cohetes(87, 11);
+  cohetenivel12= new cohetes(93, 12);
 
   lolaboanivel1 = new lolaboa(1, 0.5, 1);
   lolaboanivel2 = new lolaboa(12, 0.5, 2);
@@ -405,12 +405,12 @@ void setup() {
   lolaboanivel4 = new lolaboa(34, 0.5, 4);
   lolaboanivel5 = new lolaboa(45, 0.3, 5);
   lolaboanivel6 = new lolaboa(56, 0.2, 6);
-  lolaboanivel7 = new lolaboa(0, 0.3, 7);
-  lolaboanivel8 = new lolaboa(0, 0.3, 8);
-  lolaboanivel9 = new lolaboa(0, 0.3, 9);
-  lolaboanivel10 = new lolaboa(0, 0.3, 10);
-  lolaboanivel11 = new lolaboa(67, 0.2, 11);
-  lolaboanivel12 = new lolaboa(73, 0.2, 12);
+  lolaboanivel7 = new lolaboa(67, 0.3, 7);
+  lolaboanivel8 = new lolaboa(71, 0.3, 8);
+  lolaboanivel9 = new lolaboa(77, 0.3, 9);
+  lolaboanivel10 = new lolaboa(83, 0.3, 10);
+  lolaboanivel11 = new lolaboa(87, 0.2, 11);
+  lolaboanivel12 = new lolaboa(93, 0.2, 12);
 
 
 

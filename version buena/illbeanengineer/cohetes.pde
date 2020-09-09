@@ -32,10 +32,31 @@ class cohetes {
   float xa1=100, ya1=100, xa2=700, ya2=350, xa3=200, ya3=400;
   int nivel;
   int op;
+  PImage[] nivel7=new PImage[3];
+  PImage[] nivel8=new PImage[5];
+  PImage[] nivel9=new PImage[5];
+  PImage[] nivel10=new PImage[3];
   cohetes(int _op, int _nivel) {
     op=_op;
     nivel=_nivel;
     sett();
+    
+   nivel7[0]=loadImage("cohetess/cohete14.png");
+    nivel7[1]=loadImage("cohetess/cohete15.png");
+    nivel7[2]=loadImage("cohetess/cohete16.png");
+    nivel8[0]=loadImage("cohetess/cohete1.png");
+    nivel8[1]=loadImage("cohetess/cohete2.png");
+    nivel8[2]=loadImage("cohetess/cohete3.png");
+    nivel8[3]=loadImage("cohetess/cohete4.png");
+    nivel8[4]=loadImage("cohetess/cohete5.png");
+    nivel9[0]=loadImage("cohetess/cohete6.png");
+    nivel9[1]=loadImage("cohetess/cohete7.png");
+    nivel9[2]=loadImage("cohetess/cohete8.png");
+    nivel9[3]=loadImage("cohetess/cohete9.png");
+    nivel9[4]=loadImage("cohetess/cohete10.png");
+    nivel10[0]=loadImage("cohetess/cohete11.png");
+    nivel10[1]=loadImage("cohetess/cohete12.png");
+    nivel10[2]=loadImage("cohetess/cohete13.png");
   }
   void sett() {
     location = new PVector (xa1, ya1);
@@ -307,7 +328,28 @@ class cohetes {
         fill(0);
         textSize(50);
         textAlign(CENTER, CENTER);
-        text(preguntas[selector+op], 500, 200);
+        if(nivel==7){
+          imageMode(CENTER);
+          image(nivel7[selector],500,200,400,200);
+          
+        }
+        if(nivel==8){
+          imageMode(CENTER);
+          image(nivel8[selector],500,200,400,200);
+          
+        }
+        if(nivel==9){
+          imageMode(CENTER);
+          image(nivel9[selector],500,200,400,200);
+          
+        }
+        if(nivel==10){
+          imageMode(CENTER);
+          image(nivel10[selector],500,200,400,200);
+          
+        }
+        else{
+        text(preguntas[selector+op], 500, 200);}
         if (enes) {
           text("La respuesta es:", 500, 300);
         } else if (enes==false) {
@@ -389,7 +431,40 @@ class cohetes {
         puntoContado=false;
         tiempoEsperar_ms = 20000;
         selector ++;
-        if(nivel==11 || nivel ==12){
+        if(nivel==7 || nivel ==10){
+         if (selector>2) {
+          selector= 2;
+
+          if (cont>=3) {
+            todosjuegos[nivel]=true;
+            if (musicaa) {
+              levelcompleted.play();
+            }
+            fill(#FF00A6);
+            textSize(50);
+            if (enes==false) {
+              text("LEVEL COMPLETED", 500, 300);
+            } else if (enes) {
+              text("NIVEL COMPLETO", 500, 300);
+            }
+          } else {
+            if (musicaa) {
+              gameover.play();
+            }
+            fill(#FF00A6);
+            textSize(50);
+            if (enes==false) {
+              text("TRY AGAIN", 500, 300);
+            } else if (enes==true) {
+              text("INTENTALO DE NUEVO", 500, 300);
+            }
+          }
+
+          xp=3000000;
+          yp=3000000;///////////////////////////////////////////////////////////////////
+        } 
+        }
+        else if(nivel==11 || nivel ==12 || nivel==8 || nivel==9){
          if (selector>4) {
           selector= 4;
 
@@ -422,7 +497,7 @@ class cohetes {
           yp=3000000;///////////////////////////////////////////////////////////////////
         } 
         }
-        if (selector>9) {
+        else if (selector>9) {
           selector= 9;
 
           if (cont>=7) {
