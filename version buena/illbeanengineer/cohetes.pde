@@ -90,17 +90,17 @@ class cohetes {
       textSize(30);
 
       if (enes==true) {
-        fill(#EFEAFF);
-        text("Ayuda al cohete a llegar a la tierra!!!", 500, 450);
-        fill(#EAF2FF);
-        text("Utiliza las flechas para moverlo", 500, 490);
+        fill(#D6D6D6);
+        text("Ayuda al cohete a llegar a la tierra!!!", 500, 420);
+        text("Utiliza las flechas para moverlo", 500, 460);
+        text("Evita los asteroides o te quitaran puntos", 500, 500);
         text("Con 7 puntos o más pasas el nivel", 500, 540);
       }
       if (enes==false) {
-        fill(#EFEAFF);
-        text("Help the rocket ship to reach the Earth", 500, 450);
-        fill(#EAF2FF);
-        text("Use arrow keys to move it", 500, 490);
+        fill(#D6D6D6);
+        text("Help the rocket ship to reach the Earth", 500, 420);
+        text("Use arrow keys to move it", 500, 460);
+        text("Avoid asteroids or they will take you points",500, 500);
         text("With 7 points or more you complete level :)", 500, 540);
       }
     }
@@ -308,9 +308,9 @@ class cohetes {
         textSize(50);
         textAlign(CENTER, CENTER);
         text(preguntas[selector+op], 500, 200);
-        if (enes==false) {
+        if (enes) {
           text("La respuesta es:", 500, 300);
-        } else if (enes==true) {
+        } else if (enes==false) {
           text("Answer is:", 500, 300);
         }
         /////////////////////////////////////////////
@@ -320,7 +320,7 @@ class cohetes {
         fill(b);  
         rect(300, 470, 400, 100);////////////////////////////////////////////////////
         fill(0);
-
+        if(nivel!=4){
         if (j<=0.5) {
           text(correctas[selector+op], 500, 400);
           text(incorrectas[selector+op], 500, 520);
@@ -328,6 +328,31 @@ class cohetes {
         if (j>=0.5) {
           text(incorrectas[selector+op], 500, 400);
           text(correctas[selector+op], 500, 520);
+        }}
+        if(nivel==4){
+          if(enes){
+           if (j<=0.5) {
+          text(correctas[selector+op], 500, 400);
+          text(incorrectas[selector+op], 500, 520);
+        }
+        if (j>=0.5) {
+          text(incorrectas[selector+op], 500, 400);
+          text(correctas[selector+op], 500, 520);
+        } 
+            
+          }
+          else if(enes==false){
+           if (j<=0.5) {
+          text(correctasI[selector+op], 500, 400);
+          text(incorrectasI[selector+op], 500, 520);
+        }
+        if (j>=0.5) {
+          text(incorrectasI[selector+op], 500, 400);
+          text(correctasI[selector+op], 500, 520);
+        } 
+            
+          }
+          
         }
         textSize(50);
         text(20-((t2-t1)/1000), 700, 100);
@@ -335,15 +360,15 @@ class cohetes {
 
 
         if (tutorialcohetes==true) {
-          textSize(30);
+          textSize(25);
 
           if (enes==true) {
-            fill(#9BC0FF);
-            text("Escoje la respuesta correcta en menos de 10 segundos!", 500, 580);
+            fill(0);
+            text("Escoje la respuesta correcta en menos de 10 segundos!", 500, 590);
           }
           if (enes==false) {
-            fill(#9BC0FF);
-            text("choose the correct answer in less than 10 seconds!", 500, 580);
+            fill(0);
+            text("choose the correct answer in less than 10 seconds!", 500, 590);
           }
         }
       } else {
@@ -364,6 +389,39 @@ class cohetes {
         puntoContado=false;
         tiempoEsperar_ms = 20000;
         selector ++;
+        if(nivel==11 || nivel ==12){
+         if (selector>4) {
+          selector= 4;
+
+          if (cont>=3) {
+            todosjuegos[nivel]=true;
+            if (musicaa) {
+              levelcompleted.play();
+            }
+            fill(#FF00A6);
+            textSize(50);
+            if (enes==false) {
+              text("LEVEL COMPLETED", 500, 300);
+            } else if (enes) {
+              text("NIVEL COMPLETO", 500, 300);
+            }
+          } else {
+            if (musicaa) {
+              gameover.play();
+            }
+            fill(#FF00A6);
+            textSize(50);
+            if (enes==false) {
+              text("TRY AGAIN", 500, 300);
+            } else if (enes==true) {
+              text("INTENTALO DE NUEVO", 500, 300);
+            }
+          }
+
+          xp=3000000;
+          yp=3000000;///////////////////////////////////////////////////////////////////
+        } 
+        }
         if (selector>9) {
           selector= 9;
 

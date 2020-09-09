@@ -392,7 +392,7 @@ if (gusanitoo==true) {
     lolabocacerrada=lolanochebocacerrada;
   }
 
-lolaboa=lolabocacerrada;
+
   image(lolaboa, x, y, w, h);
 }
 

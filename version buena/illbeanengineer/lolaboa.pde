@@ -99,6 +99,8 @@ yflor5=500;
  image(candys2[i],xcandys,aleatorioy2[i],wcandys,wcandys);
  image(candys3[i],xcandys,aleatorioy3[i],wcandys,wcandys);
  imageMode(CORNER);
+ 
+ if(nivel!=4){
  if(aleatoriortas[i]>=0 && aleatoriortas[i]<1){
   rtas1[i]=lolaboacorrectass[i+op];
   rtas2[i]=lolaboaincorrectass1[i+op];
@@ -117,7 +119,54 @@ if(aleatoriortas[i]>=2 && aleatoriortas[i]<=3){
 fill(#C90083);
  text(rtas1[i],xcandys,aleatorioy1[i]);
  text(rtas2[i],xcandys,aleatorioy2[i]);
- text(rtas3[i],xcandys,aleatorioy3[i]);
+ text(rtas3[i],xcandys,aleatorioy3[i]);}
+ if(nivel==4){
+   if(enes){
+     if(aleatoriortas[i]>=0 && aleatoriortas[i]<1){
+  rtas1[i]=lolaboacorrectass[i+op];
+  rtas2[i]=lolaboaincorrectass1[i+op];
+  rtas3[i]=lolaboaincorrectass2[i+op];
+}
+if(aleatoriortas[i]>=1 && aleatoriortas[i]<2){
+  rtas2[i]=lolaboacorrectass[i+op];
+  rtas3[i]=lolaboaincorrectass1[i+op];
+  rtas1[i]=lolaboaincorrectass2[i+op];
+}
+if(aleatoriortas[i]>=2 && aleatoriortas[i]<=3){
+  rtas3[i]=lolaboacorrectass[i+op];
+  rtas1[i]=lolaboaincorrectass1[i+op];
+  rtas2[i]=lolaboaincorrectass2[i+op];
+}
+fill(#C90083);
+ text(rtas1[i],xcandys,aleatorioy1[i]);
+ text(rtas2[i],xcandys,aleatorioy2[i]);
+ text(rtas3[i],xcandys,aleatorioy3[i]);}
+     
+    else if(enes==false){
+       if(aleatoriortas[i]>=0 && aleatoriortas[i]<1){
+  rtas1[i]=lolaboacorrectassI[i+op];
+  rtas2[i]=lolaboaincorrectass1I[i+op];
+  rtas3[i]=lolaboaincorrectass2I[i+op];
+}
+if(aleatoriortas[i]>=1 && aleatoriortas[i]<2){
+  rtas2[i]=lolaboacorrectassI[i+op];
+  rtas3[i]=lolaboaincorrectass1I[i+op];
+  rtas1[i]=lolaboaincorrectass2I[i+op];
+}
+if(aleatoriortas[i]>=2 && aleatoriortas[i]<=3){
+  rtas3[i]=lolaboacorrectassI[i+op];
+  rtas1[i]=lolaboaincorrectass1I[i+op];
+  rtas2[i]=lolaboaincorrectass2I[i+op];
+}
+fill(#C90083);
+ text(rtas1[i],xcandys,aleatorioy1[i]);
+ text(rtas2[i],xcandys,aleatorioy2[i]);
+ text(rtas3[i],xcandys,aleatorioy3[i]);}
+       
+     }
+   
+   
+ 
  
  
  
@@ -149,7 +198,7 @@ fill(#C90083);
       }
  
  if(tutoriallolaboa==false){
- xcandys-=vel+1;}
+ xcandys-=vel*3;}
 pushMatrix();
   imageMode(CORNER);
  scale(-1.0, 1.0);
@@ -229,12 +278,29 @@ pushMatrix();
     }
     
 if(comer[i]==true){
-  if(i<9){
+  if(nivel==11){
+    if(i<5){
   lolaboa = lolabocacerrada;
   i++;
   xcandys=1000;
   wcandys=120;
-  }  
+  }
+  }
+  if(nivel==12){
+    if(i<7){
+  lolaboa = lolabocacerrada;
+  i++;
+  xcandys=1000;
+  wcandys=120;
+  }
+  }
+  else{
+  if(i<10){
+  lolaboa = lolabocacerrada;
+  i++;
+  xcandys=1000;
+  wcandys=120;
+  } } 
 }
     textSize(20);
 fill(negro);

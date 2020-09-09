@@ -31,7 +31,7 @@ class burbujas {
       explotarburbujas[numburbujas]=false;
       cambiodeimagen[numburbujas]=false;
     }
-    for (int i=0; i<50; i++) {
+    for (int i=0; i<20; i++) {
       xburbujasrandom[i]=random(-50, 50);
       yburbujasrandom[i]=random(-50, 50);
       aleatorio[i]=random(0, 1);
@@ -94,7 +94,7 @@ class burbujas {
         }
         text("Clickea las burbujas que contengan operaciones correctas", 500, 450);
         text("Las burbujas buenas suman 2 puntos, las malas te quitan 1", 500, 490);
-        text("Con 30 puntos pasas el nivel :)", 500, 530);
+        text("Con 15 puntos pasas el nivel :)", 500, 530);
       }
       if (enes==false) {
         if (dianoche==true) {
@@ -104,7 +104,7 @@ class burbujas {
         }
         text("Click bubbles that contain correct operations", 500, 450);
         text("Good bubbles add 2 points, bad bubbles take 1", 500, 490);
-        text("With 30 points you complete level :)", 500, 530);
+        text("With 15 points you complete level :)", 500, 530);
       }
       noFill();
       if (dianoche) {
@@ -129,18 +129,18 @@ class burbujas {
 
 
 
-    numburbujas=30;
-    for (int j=0; j<50; j++) {
+    numburbujas=18;
+    for (int j=0; j<20; j++) {
 
       wburbuja[j]=200+animburbujas2*animburbuja[j];
     }
 
     for (int i=0; i<numburbujas; i++) {
-      if (i<10) {
+      if (i<6) {
         xburbujas[i]= 150+xburbujasrandom[i];
-      } else if (i>=10 && i<20) {
+      } else if (i>=6 && i<12) {
         xburbujas[i]= 450+xburbujasrandom[i];
-      } else if (i>=20 && i<30) {
+      } else if (i>=12 && i<18) {
         xburbujas[i]=750+xburbujasrandom[i];
       }
     }
@@ -149,7 +149,7 @@ class burbujas {
 
       yburbujas[i]=150-u*300+yburbujasrandom[i];
       u++;
-      if (u>=10) {
+      if (u>=6) {
         u=0;
       }
     } 
@@ -157,7 +157,7 @@ class burbujas {
     if (reset) {
 
       puntos=0;
-      for (int numburbujas=0; numburbujas<50; numburbujas++) {
+      for (int numburbujas=0; numburbujas<20; numburbujas++) {
         explotarburbujas[numburbujas]=false; 
         cambiodeimagen[numburbujas]=false;
         xburbujasrandom[numburbujas]=random(-50, 50);
@@ -183,12 +183,12 @@ class burbujas {
     if (enes==true) {
       text("Puntos", 950, 300);
       textSize(17);
-      text("30 para ganar", 950, 360);
+      text("15 para ganar", 950, 360);
     }
     if (enes==false) {
       textSize(20);
       text("Points", 950, 300);
-      text("30 to win", 950, 360);
+      text("15 to win", 950, 360);
     }
     textSize(20);
     text(puntos, 950, 330);
@@ -235,8 +235,8 @@ class burbujas {
     }
 
 
-    if (yburbujas[numburbujas]+movy>=3100) {
-      if (puntos>=30) {
+    if (yburbujas[numburbujas]+movy>=1800) {
+      if (puntos>=15) {
         if(musicaa){
 levelcompleted.play();}
         todosjuegos[nivelll]=true;

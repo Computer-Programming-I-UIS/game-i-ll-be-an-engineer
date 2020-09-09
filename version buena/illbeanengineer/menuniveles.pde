@@ -326,14 +326,19 @@ void menuniveles() {
         text("Choose a game", 750, 50);
         text("LESSON "+leccion, 250, 50);
       } else if (enes==true) {
-        textSize(30);
+        textSize(40);
         text("Elije un juego", 750, 50);
         text("LECCIÓN "+leccion, 250, 50);
       }
       imageMode(CENTER);
-      image(burbujanormal, 750, 200, 120, 120);
-      image(cohete1, 750, 400, 120, 120);
-      copy(lolaboa, 300, 80, 200, 200, 700, 500, 120, 120);
+      if (jugarnivel[0] || jugarnivel[1] || jugarnivel[2] || jugarnivel[4] || jugarnivel[5]) {
+        image(burbujanormal, 750, 200, 120, 120);
+        image(cohete1, 750, 400, 120, 120);
+        copy(lolaboa, 300, 80, 200, 200, 700, 500, 120, 120);
+      } else {
+        image(cohete1, 750, 300, 200, 200);
+        copy(lolaboa, 300, 80, 200, 200, 650, 400, 200, 200);
+      }
       if (dianoche) {
         stroke(0);
       } else if (dianoche==false) {
@@ -426,6 +431,123 @@ void menuniveles() {
             image(numerosI, 250, 380, 400, 450);
           }
           leccion=4;
+        } else if (jugarnivel[4]) {
+          fill(0);
+          if (enes) {
+            textSize(25);
+            text("Fraccionarios", 250, 120);
+            image(fraccionarioE, 250, 380, 400, 450);
+          } else if (enes==false) {
+            textSize(25);
+            text("Fractionaries", 250, 120);
+            image(fraccionarioI, 250, 380, 400, 450);
+          }
+          leccion=5;
+        } else if (jugarnivel[5]) {
+          fill(0);
+          image(potencia, 250, 380, 400, 450);
+          if (enes) {
+            textSize(25);
+            text("Potencias y raices", 250, 120);
+          } else if (enes==false) {
+            textSize(25);
+            text("Roots & powers", 250, 120);
+          }
+          leccion=6;
+        } else if (jugarnivel[6]) {
+          fill(0);
+          image(congruentes, 250, 400, 300, 450);
+          if (enes) {
+            textSize(25);
+            text("Figuras semejantes y congruentes", 250, 120);
+            text("Similares", 130, 180);
+            textSize(15);
+            text("Tasa de proporcionalidad", 250, 350);
+            textSize(25);
+            text("congruentes", 130, 400);
+          } else if (enes==false) {
+            textSize(25);
+            text("congruence and similarity shapes", 250, 120);
+            text("Similar", 130, 180);
+            textSize(15);
+            text("Proporcionality rate", 250, 350);
+            textSize(25);
+            text("congruent", 130, 400);
+          }
+          leccion=7;
+        } else if (jugarnivel[7]) {
+          fill(0);
+          image(hipotenusa, 250, 400, 400, 300);
+          if (enes) {
+            textSize(25);
+            text("Hipotenusa y angulos", 250, 120);
+          } else if (enes==false) {
+            textSize(25);
+            text("hypotenuse", 250, 120);
+          }
+          leccion=8;
+        }
+        else if (jugarnivel[8]) {
+          fill(0);
+          image(perimetro, 250, 450, 300, 450);
+          if (enes) {
+            textSize(25);
+            text("Perimetro", 250, 120);
+            textSize(20);
+            text("La suma de todos los lados", 250, 200);
+          } else if (enes==false) {
+            textSize(25);
+            text("Perimeter", 250, 120);
+            textSize(20);
+            text("addition of all sides", 250, 200);
+          }
+          leccion=9;
+        }
+        else if (jugarnivel[9]) {
+          fill(0);
+          image(area, 250, 400, 350, 350);
+          if (enes) {
+            textSize(25);
+            text("Area", 250, 120);
+          } else if (enes==false) {
+            textSize(25);
+            text("Area", 250, 120);
+          }
+          leccion=10;
+        }
+        else if (jugarnivel[10]) {
+          fill(0);
+          image(eq, 200, 500, 250, 250);
+          if (enes) {
+            textSize(25);
+            text("Ecuaciones", 250, 120);
+            textSize(20);
+            text("Despeja la x", 250, 200);
+            text("Manten la igualdad", 250, 230);
+          } else if (enes==false) {
+            textSize(25);
+            text("Equations", 250, 120);
+            textSize(20);
+            text("Find x", 250, 200);
+            text("Keep equality", 250, 230);
+          }
+          leccion=11;
+        }
+        else if (jugarnivel[11]) {
+          fill(0);
+          
+          if (enes) {
+            textSize(30);
+            text("Ecuaciones", 250, 120);
+            textSize(20);
+            text("pracitca", 250, 200);
+          } else if (enes==false) {
+            textSize(30);
+            text("Equations", 250, 120);
+            textSize(20);
+            text("practice", 250, 200);
+          }
+          leccion=12;
         }
       }
     } else {
@@ -519,17 +641,13 @@ void menuniveles() {
     } else if (jugarnivel[3]==true && nivelesss[3]==true) {
 
 
-      if (entergame1==true) {
-        menuminijuegos=false;
-        burbujasnivel4.dibujar();
-      }
-
       if (entergame2==true) {
         jugandoCohetes = true;
         menuminijuegos=false;
         cohetenivel4.move();
         cohetenivel4.dibujo();
         cohetenivel4.collide();
+        cohetenivel4.dibujo1();
         cohetenivel4.punto();
       } else {
         jugandoCohetes = false;
@@ -580,10 +698,7 @@ void menuniveles() {
         lolaboanivel6.dibujar();
       }
     } else if (jugarnivel[6]==true && nivelesss[6]==true) {
-      if (entergame1==true) {
-        menuminijuegos=false;
-        burbujasnivel7.dibujar();
-      }
+
       if (entergame2==true) {
         jugandoCohetes = true;
         menuminijuegos=false;
@@ -600,10 +715,7 @@ void menuniveles() {
         lolaboanivel7.dibujar();
       }
     } else if (jugarnivel[7]==true && nivelesss[7]==true) {
-      if (entergame1==true) {
-        menuminijuegos=false;
-        burbujasnivel8.dibujar();
-      }
+
       if (entergame2==true) {
         jugandoCohetes = true;
         menuminijuegos=false;
@@ -620,10 +732,7 @@ void menuniveles() {
         lolaboanivel8.dibujar();
       }
     } else if (jugarnivel[8]==true && nivelesss[8]==true) {
-      if (entergame1==true) {
-        menuminijuegos=false;
-        burbujasnivel9.dibujar();
-      }
+
       if (entergame2==true) {
         jugandoCohetes = true;
         menuminijuegos=false;
@@ -640,10 +749,7 @@ void menuniveles() {
         lolaboanivel9.dibujar();
       }
     } else if (jugarnivel[9]==true && nivelesss[9]==true) {
-      if (entergame1==true) {
-        menuminijuegos=false;
-        burbujasnivel10.dibujar();
-      }
+
       if (entergame2==true) {
         jugandoCohetes = true;
         menuminijuegos=false;
@@ -660,10 +766,7 @@ void menuniveles() {
         lolaboanivel10.dibujar();
       }
     } else if (jugarnivel[10]==true && nivelesss[10]==true ) {
-      if (entergame1==true) {
-        menuminijuegos=false;
-        burbujasnivel11.dibujar();
-      }
+
       if (entergame2==true) {
         jugandoCohetes = true;
         menuminijuegos=false;
@@ -680,10 +783,7 @@ void menuniveles() {
         lolaboanivel11.dibujar();
       }
     } else if (jugarnivel[11]==true && nivelesss[11]==true) {
-      if (entergame1==true) {
-        menuminijuegos=false;
-        burbujasnivel12.dibujar();
-      }
+
       if (entergame2==true) {
         jugandoCohetes = true;
         menuminijuegos=false;
