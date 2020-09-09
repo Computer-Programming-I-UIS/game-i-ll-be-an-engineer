@@ -32,19 +32,23 @@ Para avanzar al primer nivel debes hacer scroll con tu mouse hasta llegar a la c
 
 ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-09-09%20at%208.38.40%20AM.png)
 
-Cada nivel tiene 3 minijuegos que se mostrarán en pantalla en forma de menú al seleccionar el nivel. Los minijuegos consisten en lo siguiente:
+Cada nivel tiene 3 minijuegos que se mostrarán en pantalla en forma de menú al seleccionar el nivel en la parte derecha de la pantalla, y a la izquierda hay un banner con un resumen de lo que se verá en la lección. Los minijuegos consisten en lo siguiente:
 
 ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-09-09%20at%208.39.59%20AM.png)
    - El primero consiste en burbujas con operaciones matemáticas que van cayendo. Para ganar puntos y completar el minijuego debes 
      presionar solamente las burbujas con ecuaciones correctas, estas serán identificadas cuando al presionar sobre ellas queden 
      del mismo color; si se presiona una incorrecta la burbuja se tornará de un color fucsia. Debes obtener 20 puntos para completar este minijuego.
      
-     ![alt tag]()
+     ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-09-09%20at%209.05.42%20AM.png)
      
-  - El segundo juego es sobre un cohete que quiere llegar a la tierra, y cada vez que llega aparece una ventan con una operación 
-    matematica que  debes resolver en menos de 10 segundos, ya que si demoras más tiempo se cerrará y no podrás hacer un punto. 
-    Este minijuego tiene diez preguntas,pero para pasarlo se deden acertar un mínimo de 7. El cohete se deplazará con las teclas       de dirección arriba, abajo, izquierda y derecha de tu teclado.  
+  - El segundo juego es sobre un cohete que quiere llegar a la tierra, pero antes de lllegar debe evitar tres asteroides que se encuentran en su camino, 
+  ya que     cada vez que se encuentre con ellos, estos le restaran -1 puntos a su calificación.Cada vez que llega a la tierra aparece una ventan con
+  una  operación  matemática que  debes resolver en menos de 20 segundos, ya que si demoras más tiempo se cerrará y no podrás hacer un punto. 
+    Este minijuego tiene diez preguntas, por cada pregunta bien contestada se le otorgará al jugador 3 puntos, pero para pasarlo se debe tener una   calificación final mayor o igual a 15 puntos. El cohete se deplazará con las teclas  de dirección arriba, abajo, izquierda y derecha de tu teclado.  
     
+    
+     ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-09-09%20at%209.05.12%20AM.png)
+     
       ![alt tag](https://raw.githubusercontent.com/Computer-Programming-I-UIS/game-i-ll-be-an-engineer/master/version%20buena/illbeanengineer/Screen%20Shot%202020-09-09%20at%208.39.08%20AM.png)
       
       
